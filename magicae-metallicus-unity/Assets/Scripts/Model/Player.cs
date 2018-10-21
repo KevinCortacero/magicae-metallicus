@@ -95,7 +95,7 @@ public class Player : MonoBehaviour {
                 }
 
                // rotation = (Mathf.Rad2Deg * rad);
-                this.transform.eulerAngles = new Vector3(0, 0, rotation);
+                this.renderer.gameObject.transform.eulerAngles = new Vector3(0, 0, rotation);
 
             }
             else {
@@ -105,8 +105,8 @@ public class Player : MonoBehaviour {
 
             
 
-            x = gamepad.GetAxis(GamepadAxis.LeftStickX);
-            y = gamepad.GetAxis(GamepadAxis.LeftStickY);
+            x = gamepad.GetAxis(GamepadAxis.RightStickX);
+            y = gamepad.GetAxis(GamepadAxis.RightStickY);
 
             mulSin = 1;
             if (Mathf.Asin(y) < 0) {
@@ -146,7 +146,7 @@ public class Player : MonoBehaviour {
                 }
 
                 // rotation = (Mathf.Rad2Deg * rad);
-                this.transform.eulerAngles = new Vector3(0, 0, rotation);
+                this.renderer.gameObject.transform.eulerAngles = new Vector3(0, 0, rotation);
 
             }
             else {
