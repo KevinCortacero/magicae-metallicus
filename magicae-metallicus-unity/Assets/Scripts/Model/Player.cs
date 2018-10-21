@@ -20,6 +20,7 @@ public class Player : MonoBehaviour {
     private GamepadDevice gamepad;
     private bool focusing = false;
     private Projectile bullet;
+    private ControllerType type;
 
     public GamepadInput input {
         get {
@@ -38,28 +39,49 @@ public class Player : MonoBehaviour {
     void Update() {
 
 
-        if (input.gamepads.Count == 0) {
-            Debug.Log("No gamepad connected");
+        if (input.gamepads.Count <= number) {
+            //Debug.Log("No gamepad connected");
+            this.type = ControllerType.KEYBORD;
         }
         else {
+
+            this.type = ControllerType.CONTROLLER;
             gamepad = input.gamepads[number];
-            Debug.Log(input.gamepads.Count + " gamepads connected");
-
-            HandleMovement();
-
-            if (gamepad.GetButton(GamepadButton.Action3)) {
-                Mine();
-            }
-            else if (gamepad.GetTrigger(GamepadTrigger.Right) > 0.8) {
-                
-                Focus();
-            }
-            else if (gamepad.GetTrigger(GamepadTrigger.Right) <= 0.8 && focusing) {
-                focusing = false;
-                Shoot();
-            }
-
         }
+
+        //Debug.Log(input.gamepads.Count + " gamepads connected");
+
+        HandleMovement();
+
+        switch (this.type) {
+            case ControllerType.CONTROLLER:
+                if (gamepad.GetButton(GamepadButton.Action3)) {
+                    Mine();
+                }
+                else if (gamepad.GetTrigger(GamepadTrigger.Right) > 0.8) {
+
+                    Focus();
+                }
+                else if ((gamepad.GetTrigger(GamepadTrigger.Right) <= 0.8) && focusing) {
+                    focusing = false;
+                    Shoot();
+                }
+                break;
+            case ControllerType.KEYBORD:
+                if (Input.GetMouseButton(1)) {
+                    Mine();
+                }
+                else if (Input.GetMouseButton(0)) {
+
+                    Focus();
+                }
+                else if (Input.GetMouseButtonUp(0) && focusing) {
+                    focusing = false;
+                    Shoot();
+                }
+                break;
+        }
+
     }
 
     private void Mine() {
@@ -67,7 +89,7 @@ public class Player : MonoBehaviour {
     }
 
     private void Focus() {
-        if(!focusing){
+        if (!focusing) {
             focusing = true;
 
             GameObject go = Instantiate(projectile, transform.position, renderer.gameObject.transform.rotation) as GameObject;
@@ -77,14 +99,26 @@ public class Player : MonoBehaviour {
 
         }
         else {
+            Debug.Log(bullet);
             this.bullet.Focus(Time.deltaTime);
         }
     }
 
     private void Shoot() {
 
-        
-        
+        /*Vector3 sp = Camera.main.WorldToScreenPoint(transform.position);
+        Vector3 dir = (Input.mousePosition - sp).normalized;
+        Debug.Log("DIR = " + dir);*/
+
+
+        Vector2 XY = GetXYFromAnyController();
+
+        float x = XY.x;
+        float y = XY.y;
+
+        //rigidbody2D.AddForce(dir * amount);
+
+        /*
 
         float x = gamepad.GetAxis(GamepadAxis.RightStickX);
         float y = gamepad.GetAxis(GamepadAxis.RightStickY);
@@ -92,7 +126,7 @@ public class Player : MonoBehaviour {
         if(x+y == 0) {
             x = gamepad.GetAxis(GamepadAxis.LeftStickX);
             y = gamepad.GetAxis(GamepadAxis.LeftStickY);
-            
+
         }
 
         float angle = GetRadFromXY(x, y);
@@ -101,9 +135,9 @@ public class Player : MonoBehaviour {
 
 
         x = Mathf.Cos(angle);
-        y = Mathf.Sin(angle);
+        y = Mathf.Sin(angle);*/
 
-        
+
         this.bullet.gameObject.transform.position = transform.position;
         this.bullet.gameObject.transform.rotation = renderer.gameObject.transform.rotation;
         this.bullet.gameObject.SetActive(true);
@@ -141,16 +175,73 @@ public class Player : MonoBehaviour {
         return rad;
     }
 
+    private Vector2 GetXYFromAnyController() {
+
+        float x = 0;
+        float y = 0;
+
+        switch (this.type) {
+            case ControllerType.CONTROLLER:
+
+                x = gamepad.GetAxis(GamepadAxis.RightStickX);
+                y = gamepad.GetAxis(GamepadAxis.RightStickY);
+
+                if (x + y == 0) {
+                    x = gamepad.GetAxis(GamepadAxis.LeftStickX);
+                    y = gamepad.GetAxis(GamepadAxis.LeftStickY);
+                }
+
+                break;
+            case ControllerType.KEYBORD:
+                Vector3 sp = Camera.main.WorldToScreenPoint(transform.position);
+                Vector3 dir = (Input.mousePosition - sp).normalized;
+                x = dir.x;
+                y = dir.y;
+                break;
+        }
+
+        return new Vector2(x, y);
+    }
+
     private void HandleMovement() {
-        this.transform.Translate(gamepad.GetAxis(GamepadAxis.LeftStickX) * speed * Time.deltaTime, gamepad.GetAxis(GamepadAxis.LeftStickY) * speed * Time.deltaTime, 0);
+
+
+
+        float x = 0;
+        float y = 0;
+
+        switch (this.type) {
+            case ControllerType.CONTROLLER:
+                x = gamepad.GetAxis(GamepadAxis.LeftStickX);
+                y = gamepad.GetAxis(GamepadAxis.LeftStickY);
+                break;
+            case ControllerType.KEYBORD:
+                if (Input.GetKey(KeyCode.Z)) {
+                    y += 1;
+                }
+                else if (Input.GetKey(KeyCode.Q)) {
+                    x -= 1;
+                }
+                else if (Input.GetKey(KeyCode.S)) {
+                    y -= 1;
+                }
+                else if (Input.GetKey(KeyCode.D)) {
+                    x += 1;
+                }
+                break;
+        }
+
+
+
+        this.transform.Translate(x * speed * Time.deltaTime, y * speed * Time.deltaTime, 0);
+        //this.transform.Translate(gamepad.GetAxis(GamepadAxis.LeftStickX) * speed * Time.deltaTime, gamepad.GetAxis(GamepadAxis.LeftStickY) * speed * Time.deltaTime, 0);
         //this.transform.Translate(Mathf.Abs(gamepad.GetAxis(GamepadAxis.LeftStickX)) * speed * Time.deltaTime, Mathf.Abs(gamepad.GetAxis(GamepadAxis.LeftStickY)) * speed * Time.deltaTime, 0);
 
 
-        Debug.Log(Mathf.Cos(gamepad.GetAxis(GamepadAxis.RightStickX)) + " vs " + Mathf.Sin(gamepad.GetAxis(GamepadAxis.RightStickY)));
+        //Debug.Log(Mathf.Cos(gamepad.GetAxis(GamepadAxis.RightStickX)) + " vs " + Mathf.Sin(gamepad.GetAxis(GamepadAxis.RightStickY)));
 
 
-        float x = gamepad.GetAxis(GamepadAxis.LeftStickX);
-        float y = gamepad.GetAxis(GamepadAxis.LeftStickY);
+
 
         float rad = GetRadFromXY(x, y);
         float rotation = 0;
@@ -188,10 +279,23 @@ public class Player : MonoBehaviour {
             //Debug.Log("Joystick in the middle");
         }
 
+        Vector2 XY = GetXYFromAnyController();
 
+        x = XY.x;
+        y = XY.y;
 
-        x = gamepad.GetAxis(GamepadAxis.RightStickX);
-        y = gamepad.GetAxis(GamepadAxis.RightStickY);
+        /*switch (this.type) {
+            case ControllerType.CONTROLLER:
+                x = gamepad.GetAxis(GamepadAxis.RightStickX);
+                y = gamepad.GetAxis(GamepadAxis.RightStickY);
+                break;
+            case ControllerType.KEYBORD:
+                Vector3 sp = Camera.main.WorldToScreenPoint(transform.position);
+                Vector3 dir = (Input.mousePosition - sp).normalized;
+                x = dir.x;
+                y = dir.y;
+                break;
+        }*/
 
         rad = GetRadFromXY(x, y);
         rotation = 0;
