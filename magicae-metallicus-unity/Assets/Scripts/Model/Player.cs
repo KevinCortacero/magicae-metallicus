@@ -40,7 +40,29 @@ public class Player : MonoBehaviour {
         }
         else {
             gamepad = input.gamepads[number];
-            Debug.Log(input.gamepads.Count+" gamepads connected");
+            Debug.Log(input.gamepads.Count + " gamepads connected");
+
+            HandleMovement();
+
+            if (gamepad.GetButton(GamepadButton.Action3)) {
+                Mine();
+            }
+            else if (gamepad.GetTrigger(GamepadTrigger.Right) > 0.8) {
+                Shoot();
+            }
+
+        }
+    }
+
+    private void Mine() {
+
+    }
+
+    private void Shoot() {
+
+    }
+
+    private void HandleMovement() {
             this.transform.Translate(gamepad.GetAxis(GamepadAxis.LeftStickX) * speed * Time.deltaTime, gamepad.GetAxis(GamepadAxis.LeftStickY) * speed * Time.deltaTime, 0);
             //this.transform.Translate(Mathf.Abs(gamepad.GetAxis(GamepadAxis.LeftStickX)) * speed * Time.deltaTime, Mathf.Abs(gamepad.GetAxis(GamepadAxis.LeftStickY)) * speed * Time.deltaTime, 0);
 
@@ -52,17 +74,17 @@ public class Player : MonoBehaviour {
             float y = gamepad.GetAxis(GamepadAxis.LeftStickY);
 
             float mulSin = 1;
-            if(Mathf.Asin(y) < 0) {
+            if (Mathf.Asin(y) < 0) {
                 mulSin = -1;
             }
             float mulCos = Mathf.Asin(y);
             if (x < 0) {
-                mulCos = Mathf.PI- Mathf.Asin(y);
+                mulCos = Mathf.PI - Mathf.Asin(y);
             }
 
             float rad;
             float rotation = 0;
-            if(Mathf.Abs(x) <= Mathf.Abs(y)){
+            if (Mathf.Abs(x) <= Mathf.Abs(y)) {
                 rad = mulSin * Mathf.Acos(x);
                 Debug.Log("Y Win");
             }
@@ -74,8 +96,8 @@ public class Player : MonoBehaviour {
             Debug.Log(rad / Mathf.PI);
             Debug.Log("ANGLE = " + (Mathf.Rad2Deg * rad));
 
-            
-            if (x+y != 0) {
+
+            if (x + y != 0) {
                 if (rad <= Mathf.PI / 4 && rad > Mathf.PI / -4) {
                     this.renderer.sprite = right;
                     rotation = (Mathf.Rad2Deg * rad);
@@ -91,19 +113,19 @@ public class Player : MonoBehaviour {
                 }
                 else {
                     this.renderer.sprite = left;
-                    rotation = (Mathf.Rad2Deg * rad) -180;
+                    rotation = (Mathf.Rad2Deg * rad) - 180;
                 }
 
-               // rotation = (Mathf.Rad2Deg * rad);
+                // rotation = (Mathf.Rad2Deg * rad);
                 this.renderer.gameObject.transform.eulerAngles = new Vector3(0, 0, rotation);
 
             }
             else {
-                
+
                 Debug.Log("Joystick in the middle");
             }
 
-            
+
 
             x = gamepad.GetAxis(GamepadAxis.RightStickX);
             y = gamepad.GetAxis(GamepadAxis.RightStickY);
@@ -116,7 +138,7 @@ public class Player : MonoBehaviour {
             if (x < 0) {
                 mulCos = Mathf.PI - Mathf.Asin(y);
             }
-            
+
             if (Mathf.Abs(x) <= Mathf.Abs(y)) {
                 rad = mulSin * Mathf.Acos(x);
             }
@@ -179,15 +201,6 @@ public class Player : MonoBehaviour {
 
 
 
-
-
-
-            //input.gamepads.
-
-        }
-
-
-
         /*if (Input.GetKey(KeyCode.Z)) {
             this.renderer.sprite = top;
             this.transform.Translate(0, speed*Time.deltaTime, 0);
@@ -205,4 +218,8 @@ public class Player : MonoBehaviour {
             this.transform.Translate(speed * Time.deltaTime, 0, 0);
         }*/
     }
+
+
+    
+
 }
