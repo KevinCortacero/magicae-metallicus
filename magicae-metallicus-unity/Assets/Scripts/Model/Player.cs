@@ -103,8 +103,7 @@ public class Player : MonoBehaviour {
                 Debug.Log("Joystick in the middle");
             }
 
-
-
+            
 
             x = gamepad.GetAxis(GamepadAxis.LeftStickX);
             y = gamepad.GetAxis(GamepadAxis.LeftStickY);
@@ -124,28 +123,37 @@ public class Player : MonoBehaviour {
             else {
                 rad = mulCos;
             }
-            
+
 
 
             if (x + y != 0) {
                 if (rad <= Mathf.PI / 4 && rad > Mathf.PI / -4) {
                     this.renderer.sprite = right;
+                    rotation = (Mathf.Rad2Deg * rad);
                 }
                 else if (rad <= Mathf.PI * 3 / 4 && rad > Mathf.PI / -4) {
                     this.renderer.sprite = top;
+
+                    rotation = (Mathf.Rad2Deg * rad) - 90;
                 }
                 else if (rad <= Mathf.PI / -4 && rad > Mathf.PI * -3 / 4) {
                     this.renderer.sprite = bottom;
+                    rotation = (Mathf.Rad2Deg * rad) + 90;
                 }
                 else {
                     this.renderer.sprite = left;
+                    rotation = (Mathf.Rad2Deg * rad) - 180;
                 }
+
+                // rotation = (Mathf.Rad2Deg * rad);
+                this.transform.eulerAngles = new Vector3(0, 0, rotation);
+
             }
             else {
 
-                //Debug.Log("Joystick in the middle");
+                Debug.Log("Joystick in the middle");
             }
-            
+
 
             /*mul = 1;
             if (Mathf.Asin(gamepad.GetAxis(GamepadAxis.RightStickY)) < 0) {
