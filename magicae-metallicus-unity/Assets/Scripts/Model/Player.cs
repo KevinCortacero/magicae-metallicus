@@ -232,8 +232,10 @@ public class Player : MonoBehaviour {
         }
 
 
+        GetComponentInChildren<Rigidbody2D>().velocity = new Vector2(x, y) * speed;
 
-        this.transform.Translate(x * speed * Time.deltaTime, y * speed * Time.deltaTime, 0);
+
+        //this.transform.Translate(x * speed * Time.deltaTime, y * speed * Time.deltaTime, 0);
         //this.transform.Translate(gamepad.GetAxis(GamepadAxis.LeftStickX) * speed * Time.deltaTime, gamepad.GetAxis(GamepadAxis.LeftStickY) * speed * Time.deltaTime, 0);
         //this.transform.Translate(Mathf.Abs(gamepad.GetAxis(GamepadAxis.LeftStickX)) * speed * Time.deltaTime, Mathf.Abs(gamepad.GetAxis(GamepadAxis.LeftStickY)) * speed * Time.deltaTime, 0);
 
