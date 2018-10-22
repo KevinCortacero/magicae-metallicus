@@ -252,7 +252,7 @@ public class Player : MonoBehaviour {
 
 
         if (x + y != 0) {
-            if (rad <= Mathf.PI / 4 && rad > Mathf.PI / -4) {
+            /*if (rad <= Mathf.PI / 4 && rad > Mathf.PI / -4) {
                 this.renderer.sprite = right;
                 rotation = (Mathf.Rad2Deg * rad);
             }
@@ -268,7 +268,9 @@ public class Player : MonoBehaviour {
             else {
                 this.renderer.sprite = left;
                 rotation = (Mathf.Rad2Deg * rad) - 180;
-            }
+            }*/
+
+            rotation = (Mathf.Rad2Deg * rad) - 90;
 
             // rotation = (Mathf.Rad2Deg * rad);
             this.renderer.gameObject.transform.eulerAngles = new Vector3(0, 0, rotation);
@@ -302,23 +304,25 @@ public class Player : MonoBehaviour {
 
 
         if (x + y != 0) {
-            if (rad <= Mathf.PI / 4 && rad > Mathf.PI / -4) {
-                this.renderer.sprite = right;
-                rotation = (Mathf.Rad2Deg * rad);
-            }
-            else if (rad <= Mathf.PI * 3 / 4 && rad > Mathf.PI / -4) {
-                this.renderer.sprite = top;
+            /* if (rad <= Mathf.PI / 4 && rad > Mathf.PI / -4) {
+                 this.renderer.sprite = right;
+                 rotation = (Mathf.Rad2Deg * rad);
+             }
+             else if (rad <= Mathf.PI * 3 / 4 && rad > Mathf.PI / -4) {
+                 this.renderer.sprite = top;
 
-                rotation = (Mathf.Rad2Deg * rad) - 90;
-            }
-            else if (rad <= Mathf.PI / -4 && rad > Mathf.PI * -3 / 4) {
-                this.renderer.sprite = bottom;
-                rotation = (Mathf.Rad2Deg * rad) + 90;
-            }
-            else {
-                this.renderer.sprite = left;
-                rotation = (Mathf.Rad2Deg * rad) - 180;
-            }
+                 rotation = (Mathf.Rad2Deg * rad) - 90;
+             }
+             else if (rad <= Mathf.PI / -4 && rad > Mathf.PI * -3 / 4) {
+                 this.renderer.sprite = bottom;
+                 rotation = (Mathf.Rad2Deg * rad) + 90;
+             }
+             else {
+                 this.renderer.sprite = left;
+                 rotation = (Mathf.Rad2Deg * rad) - 180;
+             }*/
+
+            rotation = (Mathf.Rad2Deg * rad)-90;
 
             // rotation = (Mathf.Rad2Deg * rad);
             this.renderer.gameObject.transform.eulerAngles = new Vector3(0, 0, rotation);
