@@ -26,6 +26,9 @@ public class Projectile : MonoBehaviour {
     public void Shoot(float x, float y) {
         float ratio = this.focusTime / this.maxFocusTime;
 
+        ratio = Mathf.Max(0.2f, ratio);
+        ratio = Mathf.Min(1, ratio);
+
         GetComponent<Rigidbody2D>().velocity = new Vector2(x, y) * ratio*maxSpeed;
     }
 }
