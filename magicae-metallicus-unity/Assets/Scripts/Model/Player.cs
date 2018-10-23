@@ -92,7 +92,7 @@ public class Player : MonoBehaviour {
         if (!focusing) {
             focusing = true;
 
-            GameObject go = Instantiate(projectile, transform.position, renderer.gameObject.transform.rotation) as GameObject;
+            GameObject go = Instantiate(projectile, transform.Find("BulletSpawn").position, renderer.gameObject.transform.rotation) as GameObject;
             go.SetActive(false);
             this.bullet = go.GetComponent<Projectile>();
 
@@ -275,7 +275,7 @@ public class Player : MonoBehaviour {
             rotation = (Mathf.Rad2Deg * rad) - 90;
 
             // rotation = (Mathf.Rad2Deg * rad);
-            this.renderer.gameObject.transform.eulerAngles = new Vector3(0, 0, rotation);
+            this./*renderer.*/gameObject.transform.eulerAngles = new Vector3(0, 0, rotation);
 
         }
         else {
@@ -327,7 +327,7 @@ public class Player : MonoBehaviour {
             rotation = (Mathf.Rad2Deg * rad)-90;
 
             // rotation = (Mathf.Rad2Deg * rad);
-            this.renderer.gameObject.transform.eulerAngles = new Vector3(0, 0, rotation);
+            this./*renderer.*/gameObject.transform.eulerAngles = new Vector3(0, 0, rotation);
 
         }
         else {
