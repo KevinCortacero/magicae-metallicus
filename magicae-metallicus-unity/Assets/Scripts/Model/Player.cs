@@ -138,7 +138,7 @@ public class Player : MonoBehaviour {
         y = Mathf.Sin(angle);*/
 
 
-        this.bullet.gameObject.transform.position = transform.position;
+        this.bullet.gameObject.transform.position = transform.Find("BulletSpawn").position;
         this.bullet.gameObject.transform.rotation = renderer.gameObject.transform.rotation;
         this.bullet.gameObject.SetActive(true);
         this.bullet.Shoot(x, y);
