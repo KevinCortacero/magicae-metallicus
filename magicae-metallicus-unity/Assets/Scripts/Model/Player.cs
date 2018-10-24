@@ -35,7 +35,7 @@ public class Player : MonoBehaviour {
     // Use this for initialization
     void Start() {
         this.renderer.sprite = right;
-        this.number = Int32.Parse(gameObject.name.Split(null)[1])-1;
+        this.number = Int32.Parse(gameObject.name.Split(null)[1]) - 1;
     }
 
     // Update is called once per frame
@@ -118,6 +118,14 @@ public class Player : MonoBehaviour {
 
         float x = XY.x;
         float y = XY.y;
+
+        if (x + y == 0) {
+            //Debug.Log("We are here with " + x + "," + y);
+            //x = 0;
+            //y = 1;
+            x = transform.up.x;
+            y = transform.up.y;
+        }
 
         //rigidbody2D.AddForce(dir * amount);
 
@@ -207,8 +215,6 @@ public class Player : MonoBehaviour {
     }
 
     private void HandleMovement() {
-
-
 
         float x = 0;
         float y = 0;
@@ -327,7 +333,7 @@ public class Player : MonoBehaviour {
                  rotation = (Mathf.Rad2Deg * rad) - 180;
              }*/
 
-            rotation = (Mathf.Rad2Deg * rad)-90;
+            rotation = (Mathf.Rad2Deg * rad) - 90;
 
             // rotation = (Mathf.Rad2Deg * rad);
             this./*renderer.*/gameObject.transform.eulerAngles = new Vector3(0, 0, rotation);

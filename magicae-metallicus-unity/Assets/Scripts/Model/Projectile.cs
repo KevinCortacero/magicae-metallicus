@@ -29,6 +29,9 @@ public class Projectile : MonoBehaviour {
         ratio = Mathf.Max(0.2f, ratio);
         ratio = Mathf.Min(1, ratio);
 
+        Debug.Log("ratio = " + ratio);
+        Debug.Log("velocity = " + new Vector2(x, y) * ratio * maxSpeed);
+
         GetComponent<Rigidbody2D>().velocity = new Vector2(x, y) * ratio*maxSpeed;
     }
 }
