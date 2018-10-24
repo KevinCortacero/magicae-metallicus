@@ -8,8 +8,8 @@ public class RockAreaScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		RockLineScript[] lines;
-		for(i=0; i<numberOfLines; ++i) {
+		RockLineScript[] lines = new RockLineScript[numberOfLines];
+		for(int i=0; i<numberOfLines; ++i) {
 			lines[i] = new RockLineScript();
 		}
 		
