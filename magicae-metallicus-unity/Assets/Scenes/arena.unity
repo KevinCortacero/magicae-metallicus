@@ -5570,7 +5570,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1001 &1051955853
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -5628,7 +5627,53 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3428fd79a06013241940ff9cca692c19, type: 2}
   m_IsPrefabAsset: 0
+<<<<<<< HEAD
 --- !u!1001 &1086969111
+=======
+--- !u!1001 &1090997848
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4772956743322022, guid: cb1f896ef1b8dc442b2ed1f5cdf09b1d, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -2.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772956743322022, guid: cb1f896ef1b8dc442b2ed1f5cdf09b1d, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772956743322022, guid: cb1f896ef1b8dc442b2ed1f5cdf09b1d, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772956743322022, guid: cb1f896ef1b8dc442b2ed1f5cdf09b1d, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772956743322022, guid: cb1f896ef1b8dc442b2ed1f5cdf09b1d, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772956743322022, guid: cb1f896ef1b8dc442b2ed1f5cdf09b1d, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772956743322022, guid: cb1f896ef1b8dc442b2ed1f5cdf09b1d, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772956743322022, guid: cb1f896ef1b8dc442b2ed1f5cdf09b1d, type: 2}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cb1f896ef1b8dc442b2ed1f5cdf09b1d, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!1001 &1209153801
+>>>>>>> a962a1fbdb4a9c4a819913e413c110de03f8baf6
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
