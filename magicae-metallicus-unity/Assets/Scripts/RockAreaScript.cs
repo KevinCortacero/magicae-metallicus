@@ -5,13 +5,11 @@ using UnityEngine;
 public class RockAreaScript : MonoBehaviour {
 
 	int numberOfLines = 10;
+	public RockLineScript[] lines;
 
 	// Use this for initialization
 	void Start () {
-		RockLineScript[] lines = new RockLineScript[numberOfLines];
-		for(int i=0; i<numberOfLines; ++i) {
-			lines[i] = new RockLineScript();
-		}
+		
 		
 	}
 	

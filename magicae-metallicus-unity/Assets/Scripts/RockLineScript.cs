@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class RockLineScript : MonoBehaviour {
 
+	public RockScript[] rocks;
+
 	// Use this for initialization
 	void Start () {
 		
