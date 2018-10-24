@@ -4,8 +4,14 @@ using UnityEngine;
 
 public class RockAreaScript : MonoBehaviour {
 
+	int numberOfLines = 10;
+
 	// Use this for initialization
 	void Start () {
+		RockLineScript[] lines;
+		for(i=0; i<numberOfLines; ++i) {
+			lines[i] = new RockLineScript();
+		}
 		
 	}
 	
