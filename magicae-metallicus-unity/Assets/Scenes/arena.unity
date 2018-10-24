@@ -377,7 +377,8 @@ Prefab:
   m_IsPrefabAsset: 0
 --- !u!4 &196312168 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 4772956743322022, guid: cb1f896ef1b8dc442b2ed1f5cdf09b1d,
+    type: 2}
   m_PrefabInternal: {fileID: 196312167}
 --- !u!1 &207007429
 GameObject:
@@ -10631,7 +10632,8 @@ Prefab:
   m_IsPrefabAsset: 0
 --- !u!4 &1513161171 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 4772956743322022, guid: cb1f896ef1b8dc442b2ed1f5cdf09b1d,
+    type: 2}
   m_PrefabInternal: {fileID: 1513161170}
 --- !u!1 &1587097041
 GameObject:
@@ -10861,7 +10863,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: 3c6f249f87a5b7e42b45d041188fc5ed, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4f6f9937510814e42af577e7b97b7645, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
