@@ -843,12 +843,6 @@ Prefab:
       propertyPath: m_Name
       value: Player1
       objectReference: {fileID: 0}
-    - target: {fileID: 114315398263782502, guid: 8a4dbbead68ab7e41932475ae6362fb3,
-        type: 2}
-      propertyPath: projectile
-      value: 
-      objectReference: {fileID: 1981087003916888, guid: f97d8715b26a64f42b2d309a51dcfa90,
-        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a4dbbead68ab7e41932475ae6362fb3, type: 2}
   m_IsPrefabAsset: 0
