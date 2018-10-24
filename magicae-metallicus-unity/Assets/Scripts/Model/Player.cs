@@ -102,7 +102,7 @@ public class Player : MonoBehaviour {
 
         }
         else {
-            Debug.Log(bullet);
+            //Debug.Log(bullet);
             this.bullet.Focus(Time.deltaTime);
         }
     }
@@ -153,7 +153,6 @@ public class Player : MonoBehaviour {
         this.bullet.gameObject.transform.rotation = renderer.gameObject.transform.rotation;
         this.bullet.gameObject.SetActive(true);
         this.bullet.Shoot(x, y);
-        Destroy(bullet.gameObject, 2.0f);
 
 
         //float angle = Mathf.Atan2(x, y);

@@ -149,7 +149,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1820608248669222}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.11, y: 0.12, z: 2}
+  m_LocalPosition: {x: 0, y: 0.215, z: 2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4967959562888896}
@@ -200,8 +200,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1630739656357144}
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 1.5, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: -1.5, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4976056629565186}
@@ -258,9 +258,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.009543309, y: -0.040684637}
   serializedVersion: 2
-  m_Radius: 0.15
+  m_Radius: 0.15301374
 --- !u!61 &61015005524236164
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -368,8 +368,7 @@ MonoBehaviour:
   top: {fileID: 21300000, guid: 3f9f30a969f60024f80236a66ee0d00e, type: 3}
   bottom: {fileID: 21300000, guid: 3f9f30a969f60024f80236a66ee0d00e, type: 3}
   speed: 3
-  number: 1
-  projectile: {fileID: 1588116901545304, guid: 37f9049db44d5944faf38383386991aa, type: 2}
+  projectile: {fileID: 1606260683489300, guid: 8787a8af704206b468c6ea0dda321aa9, type: 2}
 --- !u!114 &114934801393429194
 MonoBehaviour:
   m_ObjectHideFlags: 1

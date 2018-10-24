@@ -29,9 +29,27 @@ public class Projectile : MonoBehaviour {
         ratio = Mathf.Max(0.2f, ratio);
         ratio = Mathf.Min(1, ratio);
 
-        Debug.Log("ratio = " + ratio);
-        Debug.Log("velocity = " + new Vector2(x, y) * ratio * maxSpeed);
+        //Debug.Log("ratio = " + ratio);
+        //Debug.Log("velocity = " + new Vector2(x, y) * ratio * maxSpeed);
 
         GetComponent<Rigidbody2D>().velocity = new Vector2(x, y) * ratio*maxSpeed;
+
+        
+    }
+
+    void OnCollisionEnter2D(Collision2D col) {
+        Debug.Log("OnCollisionEnter2D");
+        Debug.Log(col.gameObject.name);
+
+        if(col.gameObject.tag == "Destructible") {
+
+            Destroy(col.gameObject);
+        }
+        else if (col.gameObject.tag == "Player") {
+
+            Destroy(col.gameObject);
+        }
+
+        Destroy(gameObject);
     }
 }
