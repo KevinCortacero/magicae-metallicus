@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,7 +14,7 @@ public class Player : MonoBehaviour {
 
     public float speed;
 
-    public int number = 0;
+    //public int number = 0;
     public GameObject projectile;
 
     private GamepadInput _input;
@@ -21,6 +22,7 @@ public class Player : MonoBehaviour {
     private bool focusing = false;
     private Projectile bullet;
     private ControllerType type;
+    private int number;
 
     public GamepadInput input {
         get {
@@ -33,6 +35,7 @@ public class Player : MonoBehaviour {
     // Use this for initialization
     void Start() {
         this.renderer.sprite = right;
+        this.number = Int32.Parse(gameObject.name.Split(null)[1])-1;
     }
 
     // Update is called once per frame
