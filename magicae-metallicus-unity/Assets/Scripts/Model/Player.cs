@@ -21,9 +21,10 @@ public class Player : MonoBehaviour {
     private GamepadDevice gamepad;
     private bool focusing = false;
     private Projectile bullet;
-    
+    private bool canMove;
     private ControllerType type;
     private int number;
+    private float tempsMine;
 
     public GamepadInput input {
         get {
@@ -35,6 +36,7 @@ public class Player : MonoBehaviour {
 
     // Use this for initialization
     void Start() {
+        this.canMove = true;
         this.renderer.sprite = right;
         this.number = Int32.Parse(gameObject.name.Split(null)[1]) - 1;
     }
@@ -42,7 +44,13 @@ public class Player : MonoBehaviour {
     // Update is called once per frame
     void Update() {
 
-
+        if (!canMove)
+        {
+            if(Time.time - tempsMine > 0.2)
+            {
+                stopMine();
+            }
+        }
         if (input.gamepads.Count <= number) {
             //Debug.Log("No gamepad connected");
             this.type = ControllerType.KEYBORD;
@@ -91,8 +99,15 @@ public class Player : MonoBehaviour {
 
     private void Mine() {
         this.pickace.GetComponent<Collider2D>().enabled = true;
-        //yield return new WaitForSeconds(5);
-        //this.pickace.GetComponent<Collider2D>().enabled = false;
+        canMove = false;
+        tempsMine = Time.time;
+    }
+
+    private void stopMine()
+    {
+        this.pickace.GetComponent<Collider2D>().enabled = false;
+        canMove = true;
+
     }
 
     private void Focus() {
@@ -218,176 +233,187 @@ public class Player : MonoBehaviour {
     }
 
     private void HandleMovement() {
+        if (canMove)
+        {
+            float x = 0;
+            float y = 0;
 
-        float x = 0;
-        float y = 0;
-
-        switch (this.type) {
-            case ControllerType.CONTROLLER:
-                x = gamepad.GetAxis(GamepadAxis.LeftStickX);
-                y = gamepad.GetAxis(GamepadAxis.LeftStickY);
-                break;
-            case ControllerType.KEYBORD:
-                if (Input.GetKey(KeyCode.Z)) {
-                    y += 1;
-                }
-                else if (Input.GetKey(KeyCode.Q)) {
-                    x -= 1;
-                }
-                else if (Input.GetKey(KeyCode.S)) {
-                    y -= 1;
-                }
-                else if (Input.GetKey(KeyCode.D)) {
-                    x += 1;
-                }
-                break;
-        }
-
-
-        GetComponentInChildren<Rigidbody2D>().velocity = new Vector2(x, y) * speed;
-
-
-        //this.transform.Translate(x * speed * Time.deltaTime, y * speed * Time.deltaTime, 0);
-        //this.transform.Translate(gamepad.GetAxis(GamepadAxis.LeftStickX) * speed * Time.deltaTime, gamepad.GetAxis(GamepadAxis.LeftStickY) * speed * Time.deltaTime, 0);
-        //this.transform.Translate(Mathf.Abs(gamepad.GetAxis(GamepadAxis.LeftStickX)) * speed * Time.deltaTime, Mathf.Abs(gamepad.GetAxis(GamepadAxis.LeftStickY)) * speed * Time.deltaTime, 0);
-
-
-        //Debug.Log(Mathf.Cos(gamepad.GetAxis(GamepadAxis.RightStickX)) + " vs " + Mathf.Sin(gamepad.GetAxis(GamepadAxis.RightStickY)));
-
-
-
-
-        float rad = GetRadFromXY(x, y);
-        float rotation = 0;
-
-
-        //Debug.Log(rad / Mathf.PI);
-        // Debug.Log("ANGLE = " + (Mathf.Rad2Deg * rad));
-
-
-        if (x + y != 0) {
-            /*if (rad <= Mathf.PI / 4 && rad > Mathf.PI / -4) {
-                this.renderer.sprite = right;
-                rotation = (Mathf.Rad2Deg * rad);
+            switch (this.type)
+            {
+                case ControllerType.CONTROLLER:
+                    x = gamepad.GetAxis(GamepadAxis.LeftStickX);
+                    y = gamepad.GetAxis(GamepadAxis.LeftStickY);
+                    break;
+                case ControllerType.KEYBORD:
+                    if (Input.GetKey(KeyCode.Z))
+                    {
+                        y += 1;
+                    }
+                    else if (Input.GetKey(KeyCode.Q))
+                    {
+                        x -= 1;
+                    }
+                    else if (Input.GetKey(KeyCode.S))
+                    {
+                        y -= 1;
+                    }
+                    else if (Input.GetKey(KeyCode.D))
+                    {
+                        x += 1;
+                    }
+                    break;
             }
-            else if (rad <= Mathf.PI * 3 / 4 && rad > Mathf.PI / -4) {
-                this.renderer.sprite = top;
+
+
+            GetComponentInChildren<Rigidbody2D>().velocity = new Vector2(x, y) * speed;
+
+
+            //this.transform.Translate(x * speed * Time.deltaTime, y * speed * Time.deltaTime, 0);
+            //this.transform.Translate(gamepad.GetAxis(GamepadAxis.LeftStickX) * speed * Time.deltaTime, gamepad.GetAxis(GamepadAxis.LeftStickY) * speed * Time.deltaTime, 0);
+            //this.transform.Translate(Mathf.Abs(gamepad.GetAxis(GamepadAxis.LeftStickX)) * speed * Time.deltaTime, Mathf.Abs(gamepad.GetAxis(GamepadAxis.LeftStickY)) * speed * Time.deltaTime, 0);
+
+
+            //Debug.Log(Mathf.Cos(gamepad.GetAxis(GamepadAxis.RightStickX)) + " vs " + Mathf.Sin(gamepad.GetAxis(GamepadAxis.RightStickY)));
+
+
+
+
+            float rad = GetRadFromXY(x, y);
+            float rotation = 0;
+
+
+            //Debug.Log(rad / Mathf.PI);
+            // Debug.Log("ANGLE = " + (Mathf.Rad2Deg * rad));
+
+
+            if (x + y != 0)
+            {
+                /*if (rad <= Mathf.PI / 4 && rad > Mathf.PI / -4) {
+                    this.renderer.sprite = right;
+                    rotation = (Mathf.Rad2Deg * rad);
+                }
+                else if (rad <= Mathf.PI * 3 / 4 && rad > Mathf.PI / -4) {
+                    this.renderer.sprite = top;
+
+                    rotation = (Mathf.Rad2Deg * rad) - 90;
+                }
+                else if (rad <= Mathf.PI / -4 && rad > Mathf.PI * -3 / 4) {
+                    this.renderer.sprite = bottom;
+                    rotation = (Mathf.Rad2Deg * rad) + 90;
+                }
+                else {
+                    this.renderer.sprite = left;
+                    rotation = (Mathf.Rad2Deg * rad) - 180;
+                }*/
 
                 rotation = (Mathf.Rad2Deg * rad) - 90;
+
+                // rotation = (Mathf.Rad2Deg * rad);
+                this./*renderer.*/gameObject.transform.eulerAngles = new Vector3(0, 0, rotation);
+
             }
-            else if (rad <= Mathf.PI / -4 && rad > Mathf.PI * -3 / 4) {
-                this.renderer.sprite = bottom;
-                rotation = (Mathf.Rad2Deg * rad) + 90;
+            else
+            {
+
+                //Debug.Log("Joystick in the middle");
             }
-            else {
-                this.renderer.sprite = left;
-                rotation = (Mathf.Rad2Deg * rad) - 180;
+
+            Vector2 XY = GetXYFromAnyController();
+
+            x = XY.x;
+            y = XY.y;
+
+            /*switch (this.type) {
+                case ControllerType.CONTROLLER:
+                    x = gamepad.GetAxis(GamepadAxis.RightStickX);
+                    y = gamepad.GetAxis(GamepadAxis.RightStickY);
+                    break;
+                case ControllerType.KEYBORD:
+                    Vector3 sp = Camera.main.WorldToScreenPoint(transform.position);
+                    Vector3 dir = (Input.mousePosition - sp).normalized;
+                    x = dir.x;
+                    y = dir.y;
+                    break;
             }*/
 
-            rotation = (Mathf.Rad2Deg * rad) - 90;
-
-            // rotation = (Mathf.Rad2Deg * rad);
-            this./*renderer.*/gameObject.transform.eulerAngles = new Vector3(0, 0, rotation);
-
-        }
-        else {
-
-            //Debug.Log("Joystick in the middle");
-        }
-
-        Vector2 XY = GetXYFromAnyController();
-
-        x = XY.x;
-        y = XY.y;
-
-        /*switch (this.type) {
-            case ControllerType.CONTROLLER:
-                x = gamepad.GetAxis(GamepadAxis.RightStickX);
-                y = gamepad.GetAxis(GamepadAxis.RightStickY);
-                break;
-            case ControllerType.KEYBORD:
-                Vector3 sp = Camera.main.WorldToScreenPoint(transform.position);
-                Vector3 dir = (Input.mousePosition - sp).normalized;
-                x = dir.x;
-                y = dir.y;
-                break;
-        }*/
-
-        rad = GetRadFromXY(x, y);
-        rotation = 0;
+            rad = GetRadFromXY(x, y);
+            rotation = 0;
 
 
-        if (x + y != 0) {
-            /* if (rad <= Mathf.PI / 4 && rad > Mathf.PI / -4) {
-                 this.renderer.sprite = right;
-                 rotation = (Mathf.Rad2Deg * rad);
-             }
-             else if (rad <= Mathf.PI * 3 / 4 && rad > Mathf.PI / -4) {
-                 this.renderer.sprite = top;
+            if (x + y != 0)
+            {
+                /* if (rad <= Mathf.PI / 4 && rad > Mathf.PI / -4) {
+                     this.renderer.sprite = right;
+                     rotation = (Mathf.Rad2Deg * rad);
+                 }
+                 else if (rad <= Mathf.PI * 3 / 4 && rad > Mathf.PI / -4) {
+                     this.renderer.sprite = top;
 
-                 rotation = (Mathf.Rad2Deg * rad) - 90;
-             }
-             else if (rad <= Mathf.PI / -4 && rad > Mathf.PI * -3 / 4) {
-                 this.renderer.sprite = bottom;
-                 rotation = (Mathf.Rad2Deg * rad) + 90;
-             }
-             else {
-                 this.renderer.sprite = left;
-                 rotation = (Mathf.Rad2Deg * rad) - 180;
-             }*/
+                     rotation = (Mathf.Rad2Deg * rad) - 90;
+                 }
+                 else if (rad <= Mathf.PI / -4 && rad > Mathf.PI * -3 / 4) {
+                     this.renderer.sprite = bottom;
+                     rotation = (Mathf.Rad2Deg * rad) + 90;
+                 }
+                 else {
+                     this.renderer.sprite = left;
+                     rotation = (Mathf.Rad2Deg * rad) - 180;
+                 }*/
 
-            rotation = (Mathf.Rad2Deg * rad) - 90;
+                rotation = (Mathf.Rad2Deg * rad) - 90;
 
-            // rotation = (Mathf.Rad2Deg * rad);
-            this./*renderer.*/gameObject.transform.eulerAngles = new Vector3(0, 0, rotation);
+                // rotation = (Mathf.Rad2Deg * rad);
+                this./*renderer.*/gameObject.transform.eulerAngles = new Vector3(0, 0, rotation);
 
-        }
-        else {
-
-            //Debug.Log("Joystick in the middle");
-        }
-
-
-        /*mul = 1;
-        if (Mathf.Asin(gamepad.GetAxis(GamepadAxis.RightStickY)) < 0) {
-            mul = -1;
-        }
-
-        rad = mul * Mathf.Acos(gamepad.GetAxis(GamepadAxis.RightStickX));
-
-        if(rad != Mathf.PI/2) {
-            if (rad <= Mathf.PI / 4 && rad > Mathf.PI / -4) {
-                this.renderer.sprite = right;
             }
-            else if (rad <= Mathf.PI * 3 / 4 && rad > Mathf.PI / -4) {
+            else
+            {
+
+                //Debug.Log("Joystick in the middle");
+            }
+
+
+            /*mul = 1;
+            if (Mathf.Asin(gamepad.GetAxis(GamepadAxis.RightStickY)) < 0) {
+                mul = -1;
+            }
+
+            rad = mul * Mathf.Acos(gamepad.GetAxis(GamepadAxis.RightStickX));
+
+            if(rad != Mathf.PI/2) {
+                if (rad <= Mathf.PI / 4 && rad > Mathf.PI / -4) {
+                    this.renderer.sprite = right;
+                }
+                else if (rad <= Mathf.PI * 3 / 4 && rad > Mathf.PI / -4) {
+                    this.renderer.sprite = top;
+                }
+                else if (rad <= Mathf.PI / -4 && rad > Mathf.PI * -3 / 4) {
+                    this.renderer.sprite = bottom;
+                }
+                else {
+                    this.renderer.sprite = left;
+                }
+            }*/
+
+
+
+            /*if (Input.GetKey(KeyCode.Z)) {
                 this.renderer.sprite = top;
-            }
-            else if (rad <= Mathf.PI / -4 && rad > Mathf.PI * -3 / 4) {
-                this.renderer.sprite = bottom;
-            }
-            else {
+                this.transform.Translate(0, speed*Time.deltaTime, 0);
+                Debug.Log(speed * Time.deltaTime);
+            }else if (Input.GetKey(KeyCode.Q)) {
                 this.renderer.sprite = left;
+                this.transform.Translate(-speed * Time.deltaTime, 0, 0);
             }
-        }*/
-
-
-
-        /*if (Input.GetKey(KeyCode.Z)) {
-            this.renderer.sprite = top;
-            this.transform.Translate(0, speed*Time.deltaTime, 0);
-            Debug.Log(speed * Time.deltaTime);
-        }else if (Input.GetKey(KeyCode.Q)) {
-            this.renderer.sprite = left;
-            this.transform.Translate(-speed * Time.deltaTime, 0, 0);
+            else if (Input.GetKey(KeyCode.S)) {
+                this.renderer.sprite = bottom;
+                this.transform.Translate(0, -speed * Time.deltaTime, 0);
+            }
+            else if (Input.GetKey(KeyCode.D)) {
+                this.renderer.sprite = right;
+                this.transform.Translate(speed * Time.deltaTime, 0, 0);
+            }*/
         }
-        else if (Input.GetKey(KeyCode.S)) {
-            this.renderer.sprite = bottom;
-            this.transform.Translate(0, -speed * Time.deltaTime, 0);
-        }
-        else if (Input.GetKey(KeyCode.D)) {
-            this.renderer.sprite = right;
-            this.transform.Translate(speed * Time.deltaTime, 0, 0);
-        }*/
     }
 
 
