@@ -11,7 +11,7 @@ public class Player : MonoBehaviour {
     public Sprite right;
     public Sprite top;
     public Sprite bottom;
-
+    public PickaceCollider pickace;
     public float speed;
 
     //public int number = 0;
@@ -21,6 +21,7 @@ public class Player : MonoBehaviour {
     private GamepadDevice gamepad;
     private bool focusing = false;
     private Projectile bullet;
+   
     private ControllerType type;
     private int number;
 
@@ -73,6 +74,7 @@ public class Player : MonoBehaviour {
             case ControllerType.KEYBORD:
                 if (Input.GetMouseButton(1)) {
                     Mine();
+                    
                 }
                 else if (Input.GetMouseButton(0)) {
 
@@ -88,7 +90,9 @@ public class Player : MonoBehaviour {
     }
 
     private void Mine() {
-
+        this.pickace.GetComponent<Collider2D>().enabled = true;
+        //yield return new WaitForSeconds(5);
+        //this.pickace.GetComponent<Collider2D>().enabled = false;
     }
 
     private void Focus() {
