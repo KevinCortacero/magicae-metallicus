@@ -39,17 +39,23 @@ public class Projectile : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D col) {
         Debug.Log("OnCollisionEnter2D");
-        Debug.Log(col.gameObject.name);
+        Debug.Log(col.gameObject.tag);
 
         if(col.gameObject.tag == "Destructible") {
 
             Destroy(col.gameObject);
+            Destroy(gameObject);
         }
         else if (col.gameObject.tag == "Player") {
 
             Destroy(col.gameObject);
+            Destroy(gameObject);
+        }
+        else if (col.gameObject.tag == "Arena")
+        {
+            Physics2D.IgnoreCollision(col.gameObject.GetComponent<Collider2D>(), this.gameObject.GetComponent<Collider2D>());
         }
 
-        Destroy(gameObject);
+        
     }
 }
