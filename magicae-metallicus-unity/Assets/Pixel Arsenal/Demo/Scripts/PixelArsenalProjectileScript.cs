@@ -24,11 +24,15 @@ public class PixelArsenalProjectileScript : MonoBehaviour
  
     void OnCollisionEnter2D(Collision2D hit)
     {
-        if (hit.gameObject.tag != "Arena" && !hasCollided)
+        if (!hasCollided)
         {
             hasCollided = true;
             impactParticle = Instantiate(impactParticle, transform.position, Quaternion.FromToRotation(Vector3.up, impactNormal)) as GameObject;
-            
+ 
+            if (hit.gameObject.tag == "Destructible") // Projectile will destroy objects tagged as Destructible
+            {
+                Destroy(hit.gameObject);
+            }
 
             foreach (GameObject trail in trailParticles)
             {
