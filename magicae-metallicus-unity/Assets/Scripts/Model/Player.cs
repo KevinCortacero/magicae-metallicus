@@ -21,7 +21,7 @@ public class Player : MonoBehaviour {
     private GamepadDevice gamepad;
     private bool focusing = false;
     private Projectile bullet;
-    
+    private bool canMove;
     private ControllerType type;
     private int number;
 
@@ -35,6 +35,7 @@ public class Player : MonoBehaviour {
 
     // Use this for initialization
     void Start() {
+        this.canMove = true;
         this.renderer.sprite = right;
         this.number = Int32.Parse(gameObject.name.Split(null)[1]) - 1;
     }
