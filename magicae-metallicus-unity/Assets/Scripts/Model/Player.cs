@@ -21,7 +21,7 @@ public class Player : MonoBehaviour {
     private GamepadDevice gamepad;
     private bool focusing = false;
     private Projectile bullet;
-   
+    
     private ControllerType type;
     private int number;
 
