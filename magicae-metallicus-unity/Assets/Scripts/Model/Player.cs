@@ -13,6 +13,7 @@ public class Player : MonoBehaviour {
     public Sprite bottom;
     public PickaceCollider pickace;
     public float speed;
+    public GameObject slash;
 
     //public int number = 0;
     public GameObject projectile;
@@ -99,6 +100,7 @@ public class Player : MonoBehaviour {
 
     private void Mine() {
         this.pickace.GetComponent<Collider2D>().enabled = true;
+        GameObject go = Instantiate(this.slash, this.gameObject.transform.position, renderer.gameObject.transform.rotation) as GameObject;
         canMove = false;
         tempsMine = Time.time;
     }
