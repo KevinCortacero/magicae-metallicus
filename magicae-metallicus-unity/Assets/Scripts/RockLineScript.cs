@@ -15,4 +15,15 @@ public class RockLineScript : MonoBehaviour {
 	void Update () {
 		
 	}
+
+	public int getNumberOfRock() {
+		int numberOfRock = 0;
+		for(int i=0; i<rocks.Length; ++i) {
+			if(rocks[i] != null) {
+				numberOfRock++;
+			}
+		}
+		return numberOfRock;
+	}
+
 }
