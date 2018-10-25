@@ -9,7 +9,7 @@ public class RockAreaScript : MonoBehaviour {
 	public int direction = 0;
 	Vector3 start;
 	Vector3 end;
-	int flag = 0;
+	int flagStop = 0;
 	int lineInd = 0;
 
 	// Use this for initialization
@@ -20,18 +20,18 @@ public class RockAreaScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if((lines[lineInd].getNumberOfRock() == 0) && (flag == 0)) {
+		if((lines[lineInd].getNumberOfRock() == 0) && (flagStop == 0)) {
 			start = transform.position;
 			if(direction == 0) {
-				end = start + new Vector3(0.5f, 0f, 0f);
+				end = end + new Vector3(0.5f, 0f, 0f);
 			}
 			else {
-				end = start + new Vector3(-0.5f, 0f, 0f);
+				end = end + new Vector3(-0.5f, 0f, 0f);
 			}
 			lineInd++;
 			
 			if(lineInd == 6) {
-				flag = 1;
+				flagStop = 1;
 			}
 		}
 
@@ -43,14 +43,11 @@ public class RockAreaScript : MonoBehaviour {
 		}
 		else {
 			if(start[0] > end[0]) {
-				transform.position += new Vector3 (speed * Time.deltaTime, 0.0f, 0.0f);
+				transform.position -= new Vector3 (speed * Time.deltaTime, 0.0f, 0.0f);
 				start = transform.position;
 			}
 		}
 		
-		
-		
-
 		if (Input.GetKey(KeyCode.M)) {
 			print("Number of rocks: " + getNumberOfRock());
 		}
