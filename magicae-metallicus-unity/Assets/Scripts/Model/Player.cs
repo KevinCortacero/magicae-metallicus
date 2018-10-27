@@ -131,7 +131,7 @@ public class Player : MonoBehaviour {
             if (hit.collider != null) {
                 float distance = Vector3.Distance(hit.point, transform.position);
 
-                Debug.Log("Got " + distance);
+                //Debug.Log("Got " + distance);
 
                 this.rockMined = hit.collider.gameObject.GetComponent<RockScript>();
 
@@ -139,7 +139,12 @@ public class Player : MonoBehaviour {
                     this.rockMined = null;
                 }
 
-                Debug.Log(this.rockMined);
+                if (rockMined != null) {
+                    GameObject go = Instantiate(this.slash, transform.Find("Pickace").position, transform.Find("Pickace").rotation) as GameObject;
+                    Destroy(go, 0.4f);
+                }
+
+                //Debug.Log(this.rockMined);
 
                 // Calculate the distance from the surface and the "error" relative
                 // to the floating height.

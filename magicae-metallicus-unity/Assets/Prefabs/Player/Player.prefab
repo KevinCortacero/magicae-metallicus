@@ -57,7 +57,6 @@ GameObject:
   - component: {fileID: 114549510489551596}
   - component: {fileID: 50906511509481328}
   - component: {fileID: 58462838037397370}
-  - component: {fileID: 114165292278918548}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -233,8 +232,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1468936312708326}
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 1.5, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: -1.4343731, y: -0.14875731, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4119706959232140}
@@ -370,17 +369,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   autoActive: 1
---- !u!114 &114165292278918548
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1468936312708326}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffb686f7ecb703948a2b6dc247ada64c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114255328212634264
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -405,7 +393,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 212478455699601502}
   speed: 3
-  slash: {fileID: 0}
+  slash: {fileID: 1226439177418918, guid: 2b2bd7574e495ca4c807ac55bdf9dccc, type: 2}
   projectile: {fileID: 1606260683489300, guid: 8787a8af704206b468c6ea0dda321aa9, type: 2}
 --- !u!114 &114494311331585918
 MonoBehaviour:
