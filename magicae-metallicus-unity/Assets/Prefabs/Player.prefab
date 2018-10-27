@@ -36,7 +36,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4601280173469278}
-  - component: {fileID: 61404594588420360}
   - component: {fileID: 114255328212634264}
   m_Layer: 0
   m_Name: Pickace
@@ -58,6 +57,7 @@ GameObject:
   - component: {fileID: 114549510489551596}
   - component: {fileID: 50906511509481328}
   - component: {fileID: 58462838037397370}
+  - component: {fileID: 114165292278918548}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -225,7 +225,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4256116498400678}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: -80, y: 0, z: 0}
 --- !u!4 &4256116498400678
 Transform:
@@ -233,17 +233,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1468936312708326}
-  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -1.4343731, y: -0.14875731, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 1.5, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4119706959232140}
   - {fileID: 4957286881064242}
   - {fileID: 4101171163771726}
-  - {fileID: 4601280173469278}
   - {fileID: 4253827129163584}
-  - {fileID: 4209390702912286}
   - {fileID: 4491992134727734}
+  - {fileID: 4209390702912286}
+  - {fileID: 4601280173469278}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
@@ -258,7 +258,7 @@ Transform:
   m_LocalScale: {x: 1.0000002, y: 1.0000002, z: 1}
   m_Children: []
   m_Father: {fileID: 4256116498400678}
-  m_RootOrder: 6
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4601280173469278
 Transform:
@@ -267,11 +267,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1380569067464042}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.1263, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4256116498400678}
-  m_RootOrder: 3
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4957286881064242
 Transform:
@@ -321,31 +321,6 @@ CircleCollider2D:
   m_Offset: {x: -0.009543309, y: -0.040684637}
   serializedVersion: 2
   m_Radius: 0.15301374
---- !u!61 &61404594588420360
-BoxCollider2D:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1380569067464042}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.2}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.01, y: 0.2}
-  m_EdgeRadius: 0
 --- !u!108 &108518139701118224
 Light:
   m_ObjectHideFlags: 1
@@ -395,6 +370,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   autoActive: 1
+--- !u!114 &114165292278918548
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1468936312708326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffb686f7ecb703948a2b6dc247ada64c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114255328212634264
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -417,15 +403,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c1f44ec5e8320d4d9da841639fbdacf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  renderer: {fileID: 212478455699601502}
-  left: {fileID: 21300000, guid: 463bf378aac6ebd4e931b3a9eaf5c63d, type: 3}
-  right: {fileID: 21300000, guid: 463bf378aac6ebd4e931b3a9eaf5c63d, type: 3}
-  top: {fileID: 21300000, guid: 463bf378aac6ebd4e931b3a9eaf5c63d, type: 3}
-  bottom: {fileID: 21300000, guid: 463bf378aac6ebd4e931b3a9eaf5c63d, type: 3}
-  pickace: {fileID: 114255328212634264}
+  spriteRenderer: {fileID: 212478455699601502}
   speed: 3
   slash: {fileID: 0}
-  pv: 10
   projectile: {fileID: 1606260683489300, guid: 8787a8af704206b468c6ea0dda321aa9, type: 2}
 --- !u!114 &114494311331585918
 MonoBehaviour:

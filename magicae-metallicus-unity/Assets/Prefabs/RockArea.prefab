@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 114300664972642612}
   m_Layer: 0
   m_Name: rock (1)
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 114000623326836740}
   m_Layer: 0
   m_Name: rock (1)
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -63,7 +63,7 @@ GameObject:
   - component: {fileID: 114688911223724802}
   m_Layer: 0
   m_Name: rock (2)
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -82,7 +82,7 @@ GameObject:
   - component: {fileID: 114434783007323768}
   m_Layer: 0
   m_Name: rock (4)
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -101,7 +101,7 @@ GameObject:
   - component: {fileID: 114781884153491954}
   m_Layer: 0
   m_Name: rock (9)
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -120,7 +120,7 @@ GameObject:
   - component: {fileID: 114413950584520968}
   m_Layer: 0
   m_Name: rock
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -139,7 +139,7 @@ GameObject:
   - component: {fileID: 114155714209152394}
   m_Layer: 0
   m_Name: rock (6)
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -158,7 +158,7 @@ GameObject:
   - component: {fileID: 114882176798738476}
   m_Layer: 0
   m_Name: rock (6)
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -177,7 +177,7 @@ GameObject:
   - component: {fileID: 114402395915446544}
   m_Layer: 0
   m_Name: rock (4)
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -196,7 +196,7 @@ GameObject:
   - component: {fileID: 114430931214021644}
   m_Layer: 0
   m_Name: rock (8)
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -215,7 +215,7 @@ GameObject:
   - component: {fileID: 114615045633365156}
   m_Layer: 0
   m_Name: rock (4)
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -234,7 +234,7 @@ GameObject:
   - component: {fileID: 114079421179442882}
   m_Layer: 0
   m_Name: rock (4)
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -253,7 +253,7 @@ GameObject:
   - component: {fileID: 114232176263340930}
   m_Layer: 0
   m_Name: rock (9)
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -272,7 +272,7 @@ GameObject:
   - component: {fileID: 114401102227364768}
   m_Layer: 0
   m_Name: rock (5)
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -291,7 +291,7 @@ GameObject:
   - component: {fileID: 114365076149147992}
   m_Layer: 0
   m_Name: rock (9)
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -326,7 +326,7 @@ GameObject:
   - component: {fileID: 114785387711696028}
   m_Layer: 0
   m_Name: rock (2)
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -345,7 +345,7 @@ GameObject:
   - component: {fileID: 114277249312788934}
   m_Layer: 0
   m_Name: rock (8)
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -380,7 +380,7 @@ GameObject:
   - component: {fileID: 114611701663741050}
   m_Layer: 0
   m_Name: rock (3)
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -399,7 +399,7 @@ GameObject:
   - component: {fileID: 114617369402072730}
   m_Layer: 0
   m_Name: rock (6)
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -418,7 +418,7 @@ GameObject:
   - component: {fileID: 114350126600513128}
   m_Layer: 0
   m_Name: rock (6)
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -437,7 +437,7 @@ GameObject:
   - component: {fileID: 114368080346337664}
   m_Layer: 0
   m_Name: rock (6)
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -456,7 +456,7 @@ GameObject:
   - component: {fileID: 114322686089482382}
   m_Layer: 0
   m_Name: rock (8)
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -475,7 +475,7 @@ GameObject:
   - component: {fileID: 114779474014327192}
   m_Layer: 0
   m_Name: rock (6)
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -494,7 +494,7 @@ GameObject:
   - component: {fileID: 114930907237566978}
   m_Layer: 0
   m_Name: rock (2)
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -513,7 +513,7 @@ GameObject:
   - component: {fileID: 114321433367300102}
   m_Layer: 0
   m_Name: rock (6)
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -532,7 +532,7 @@ GameObject:
   - component: {fileID: 114894807496089706}
   m_Layer: 0
   m_Name: rock (7)
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -551,7 +551,7 @@ GameObject:
   - component: {fileID: 114467825627467500}
   m_Layer: 0
   m_Name: rock (5)
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -570,7 +570,7 @@ GameObject:
   - component: {fileID: 114472387576251110}
   m_Layer: 0
   m_Name: rock (8)
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -608,7 +608,7 @@ GameObject:
   - component: {fileID: 114867645330045816}
   m_Layer: 0
   m_Name: rock (8)
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -627,7 +627,7 @@ GameObject:
   - component: {fileID: 114323552005401130}
   m_Layer: 0
   m_Name: rock (3)
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -662,7 +662,7 @@ GameObject:
   - component: {fileID: 114544319732046282}
   m_Layer: 0
   m_Name: rock
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -681,7 +681,7 @@ GameObject:
   - component: {fileID: 114927764201520200}
   m_Layer: 0
   m_Name: rock (1)
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -700,7 +700,7 @@ GameObject:
   - component: {fileID: 114270094274504832}
   m_Layer: 0
   m_Name: rock (8)
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -719,7 +719,7 @@ GameObject:
   - component: {fileID: 114313449882083624}
   m_Layer: 0
   m_Name: rock (1)
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -738,7 +738,7 @@ GameObject:
   - component: {fileID: 114891164084225788}
   m_Layer: 0
   m_Name: rock (3)
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -757,7 +757,7 @@ GameObject:
   - component: {fileID: 114762650562600948}
   m_Layer: 0
   m_Name: rock
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -776,7 +776,7 @@ GameObject:
   - component: {fileID: 114485782688274704}
   m_Layer: 0
   m_Name: rock (1)
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -795,7 +795,7 @@ GameObject:
   - component: {fileID: 114703828712276904}
   m_Layer: 0
   m_Name: rock (2)
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -814,7 +814,7 @@ GameObject:
   - component: {fileID: 114637927386168600}
   m_Layer: 0
   m_Name: rock (9)
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -833,7 +833,7 @@ GameObject:
   - component: {fileID: 114280629228388234}
   m_Layer: 0
   m_Name: rock (8)
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -852,7 +852,7 @@ GameObject:
   - component: {fileID: 114364814885965262}
   m_Layer: 0
   m_Name: rock (8)
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -871,7 +871,7 @@ GameObject:
   - component: {fileID: 114108944547282614}
   m_Layer: 0
   m_Name: rock (5)
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -890,7 +890,7 @@ GameObject:
   - component: {fileID: 114786512068560378}
   m_Layer: 0
   m_Name: rock
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -909,7 +909,7 @@ GameObject:
   - component: {fileID: 114429364777326510}
   m_Layer: 0
   m_Name: rock (4)
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -928,7 +928,7 @@ GameObject:
   - component: {fileID: 114032507492065488}
   m_Layer: 0
   m_Name: rock (6)
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -947,7 +947,7 @@ GameObject:
   - component: {fileID: 114780143941616034}
   m_Layer: 0
   m_Name: rock (5)
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -982,7 +982,7 @@ GameObject:
   - component: {fileID: 114113259795309624}
   m_Layer: 0
   m_Name: rock (3)
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1001,7 +1001,7 @@ GameObject:
   - component: {fileID: 114107989270472096}
   m_Layer: 0
   m_Name: rock (9)
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1020,7 +1020,7 @@ GameObject:
   - component: {fileID: 114082289152815346}
   m_Layer: 0
   m_Name: rock (4)
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1039,7 +1039,7 @@ GameObject:
   - component: {fileID: 114594469752071610}
   m_Layer: 0
   m_Name: rock (2)
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1058,7 +1058,7 @@ GameObject:
   - component: {fileID: 114807563092726638}
   m_Layer: 0
   m_Name: rock (5)
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1077,7 +1077,7 @@ GameObject:
   - component: {fileID: 114317415077032458}
   m_Layer: 0
   m_Name: rock (9)
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1096,7 +1096,7 @@ GameObject:
   - component: {fileID: 114057653750035574}
   m_Layer: 0
   m_Name: rock (5)
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1115,7 +1115,7 @@ GameObject:
   - component: {fileID: 114521349466630266}
   m_Layer: 0
   m_Name: rock (3)
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1134,7 +1134,7 @@ GameObject:
   - component: {fileID: 114170829908872438}
   m_Layer: 0
   m_Name: rock (7)
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1153,7 +1153,7 @@ GameObject:
   - component: {fileID: 114806664525156502}
   m_Layer: 0
   m_Name: rock
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1188,7 +1188,7 @@ GameObject:
   - component: {fileID: 114374398095244468}
   m_Layer: 0
   m_Name: rock (4)
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1207,7 +1207,7 @@ GameObject:
   - component: {fileID: 114277276360323358}
   m_Layer: 0
   m_Name: rock (4)
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1226,7 +1226,7 @@ GameObject:
   - component: {fileID: 114970522617352900}
   m_Layer: 0
   m_Name: rock (6)
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1245,7 +1245,7 @@ GameObject:
   - component: {fileID: 114443059722708690}
   m_Layer: 0
   m_Name: rock (2)
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1264,7 +1264,7 @@ GameObject:
   - component: {fileID: 114773539416478444}
   m_Layer: 0
   m_Name: rock (2)
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1283,7 +1283,7 @@ GameObject:
   - component: {fileID: 114081245311821618}
   m_Layer: 0
   m_Name: rock (1)
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1302,7 +1302,7 @@ GameObject:
   - component: {fileID: 114369946171839704}
   m_Layer: 0
   m_Name: rock (1)
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1321,7 +1321,7 @@ GameObject:
   - component: {fileID: 114941340387218350}
   m_Layer: 0
   m_Name: rock
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1340,7 +1340,7 @@ GameObject:
   - component: {fileID: 114598332261153616}
   m_Layer: 0
   m_Name: rock (1)
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1359,7 +1359,7 @@ GameObject:
   - component: {fileID: 114376144858969738}
   m_Layer: 0
   m_Name: rock (5)
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1378,7 +1378,7 @@ GameObject:
   - component: {fileID: 114351037940862204}
   m_Layer: 0
   m_Name: rock (9)
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1397,7 +1397,7 @@ GameObject:
   - component: {fileID: 114213561220963072}
   m_Layer: 0
   m_Name: rock (3)
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1432,7 +1432,7 @@ GameObject:
   - component: {fileID: 114958916402002592}
   m_Layer: 0
   m_Name: rock (1)
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1467,7 +1467,7 @@ GameObject:
   - component: {fileID: 114818625127984962}
   m_Layer: 0
   m_Name: rock (5)
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1486,7 +1486,7 @@ GameObject:
   - component: {fileID: 114331486738905602}
   m_Layer: 0
   m_Name: rock (9)
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1505,7 +1505,7 @@ GameObject:
   - component: {fileID: 114599546476511736}
   m_Layer: 0
   m_Name: rock (7)
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1524,7 +1524,7 @@ GameObject:
   - component: {fileID: 114285392083791952}
   m_Layer: 0
   m_Name: rock (3)
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1559,7 +1559,7 @@ GameObject:
   - component: {fileID: 114409175518476740}
   m_Layer: 0
   m_Name: rock (7)
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1578,7 +1578,7 @@ GameObject:
   - component: {fileID: 114349720340320378}
   m_Layer: 0
   m_Name: rock (4)
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1597,7 +1597,7 @@ GameObject:
   - component: {fileID: 114323689633751244}
   m_Layer: 0
   m_Name: rock (2)
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1616,7 +1616,7 @@ GameObject:
   - component: {fileID: 114297968072708094}
   m_Layer: 0
   m_Name: rock (9)
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1635,7 +1635,7 @@ GameObject:
   - component: {fileID: 114305875207270916}
   m_Layer: 0
   m_Name: rock (6)
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1654,7 +1654,7 @@ GameObject:
   - component: {fileID: 114012477442512286}
   m_Layer: 0
   m_Name: rock (7)
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1673,7 +1673,7 @@ GameObject:
   - component: {fileID: 114547078299427334}
   m_Layer: 0
   m_Name: rock (5)
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1692,7 +1692,7 @@ GameObject:
   - component: {fileID: 114395772090791228}
   m_Layer: 0
   m_Name: rock
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1711,7 +1711,7 @@ GameObject:
   - component: {fileID: 114438362669724172}
   m_Layer: 0
   m_Name: rock (3)
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1730,7 +1730,7 @@ GameObject:
   - component: {fileID: 114487536909620986}
   m_Layer: 0
   m_Name: rock (7)
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1749,7 +1749,7 @@ GameObject:
   - component: {fileID: 114321804812840830}
   m_Layer: 0
   m_Name: rock (7)
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1768,7 +1768,7 @@ GameObject:
   - component: {fileID: 114148969250606168}
   m_Layer: 0
   m_Name: rock (3)
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1787,7 +1787,7 @@ GameObject:
   - component: {fileID: 114211603051665088}
   m_Layer: 0
   m_Name: rock (7)
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1806,7 +1806,7 @@ GameObject:
   - component: {fileID: 114676783998884016}
   m_Layer: 0
   m_Name: rock
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1825,7 +1825,7 @@ GameObject:
   - component: {fileID: 114762211571765262}
   m_Layer: 0
   m_Name: rock (8)
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1844,7 +1844,7 @@ GameObject:
   - component: {fileID: 114882710925609006}
   m_Layer: 0
   m_Name: rock
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1863,7 +1863,7 @@ GameObject:
   - component: {fileID: 114711071189232984}
   m_Layer: 0
   m_Name: rock (8)
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1882,7 +1882,7 @@ GameObject:
   - component: {fileID: 114343516906131236}
   m_Layer: 0
   m_Name: rock (2)
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1901,7 +1901,7 @@ GameObject:
   - component: {fileID: 114333885679234030}
   m_Layer: 0
   m_Name: rock (2)
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1952,7 +1952,7 @@ GameObject:
   - component: {fileID: 114813513545127490}
   m_Layer: 0
   m_Name: rock (9)
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1971,7 +1971,7 @@ GameObject:
   - component: {fileID: 114609504445301276}
   m_Layer: 0
   m_Name: rock (7)
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1990,7 +1990,7 @@ GameObject:
   - component: {fileID: 114753968384411500}
   m_Layer: 0
   m_Name: rock (4)
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2009,7 +2009,7 @@ GameObject:
   - component: {fileID: 114217533688608996}
   m_Layer: 0
   m_Name: rock (3)
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2028,7 +2028,7 @@ GameObject:
   - component: {fileID: 114734134790745930}
   m_Layer: 0
   m_Name: rock (7)
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2047,7 +2047,7 @@ GameObject:
   - component: {fileID: 114655503781111214}
   m_Layer: 0
   m_Name: rock (1)
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2082,7 +2082,7 @@ GameObject:
   - component: {fileID: 114502359295888894}
   m_Layer: 0
   m_Name: rock (5)
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3320,8 +3320,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1162224806271674}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.25, y: -0.65, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
+  m_LocalPosition: {x: 2.25, y: 0.65, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4411730232823636}
@@ -3336,7 +3336,7 @@ Transform:
   - {fileID: 4131891631399102}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!4 &4797573849800666
 Transform:
   m_ObjectHideFlags: 1
@@ -7627,7 +7627,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.017032087, y: -0.034065723}
+  m_Offset: {x: 0.04028225, y: 0.109220624}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -7638,7 +7638,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.7153567, y: 1.9538088}
+  m_Size: {x: 2.6705914, y: 2.7753131}
   m_EdgeRadius: 0
 --- !u!61 &61777501852043968
 BoxCollider2D:
@@ -8175,7 +8175,7 @@ MonoBehaviour:
   - {fileID: 114638410137966304}
   - {fileID: 114981366376670980}
   speed: 1
-  direction: 0
+  direction: 1
 --- !u!114 &114012477442512286
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -5,16 +5,16 @@ using UnityEngine;
 
 public class Player : MonoBehaviour {
 
-    public SpriteRenderer renderer;
+    public SpriteRenderer spriteRenderer;
 
-    public Sprite left;
+    /*public Sprite left;
     public Sprite right;
     public Sprite top;
-    public Sprite bottom;
-    public PickaceCollider pickace;
+    public Sprite bottom;*/
+    //public PickaceCollider pickace;
     public float speed;
     public GameObject slash;
-    public float pv;
+
 
     //public int number = 0;
     public GameObject projectile;
@@ -22,11 +22,21 @@ public class Player : MonoBehaviour {
     private GamepadInput _input;
     private GamepadDevice gamepad;
     private bool focusing = false;
+    private bool mining = false;
     private Projectile bullet;
     private bool canMove;
     private ControllerType type;
     private int number;
     private float tempsMine;
+    private RockScript rockMined;
+
+    private float pv;
+    public float PV {
+        get {
+            return pv;
+        }
+    }
+
 
     public GamepadInput input {
         get {
@@ -39,22 +49,20 @@ public class Player : MonoBehaviour {
     // Use this for initialization
     void Start() {
         this.canMove = true;
-        this.renderer.sprite = right;
+        //this.spriteRenderer.sprite = right;
         this.number = Int32.Parse(gameObject.name.Split(null)[1]) - 1;
         this.pv = 10;
     }
 
     // Update is called once per frame
     void Update() {
-        if(this.pv<= 0)
-        {
+        if (this.pv <= 0) {
             Destroy(gameObject);
         }
-        if (!canMove)
-        {
-            if(Time.time - tempsMine > 0.2)
-            {
-                stopMine();
+
+        if (mining) {
+            if (Time.time - tempsMine > 0.5) {
+                StopMine();
             }
         }
         if (input.gamepads.Count <= number) {
@@ -88,7 +96,7 @@ public class Player : MonoBehaviour {
             case ControllerType.KEYBORD:
                 if (Input.GetMouseButton(1)) {
                     Mine();
-                    
+
                 }
                 else if (Input.GetMouseButton(0)) {
 
@@ -103,25 +111,81 @@ public class Player : MonoBehaviour {
 
     }
 
-    private void Mine() {
-        this.pickace.GetComponent<Collider2D>().enabled = true;
-        GetComponentInChildren<Rigidbody2D>().velocity = Vector2.zero;
-        //GameObject go = Instantiate(this.slash, this.gameObject.transform.position, renderer.gameObject.transform.rotation) as GameObject;
-        canMove = false;
-        tempsMine = Time.time;
+    public void Damage(float value) {
+        this.pv -= value;
     }
 
-    private void stopMine()
-    {
-        this.pickace.GetComponent<Collider2D>().enabled = false;
+    private void Mine() {
+        if (!mining) {
+            mining = true;
+
+            canMove = false;
+            tempsMine = Time.time;
+
+            GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+
+            RaycastHit2D hit = Physics2D.Raycast(transform.Find("Pickace").position, transform.Find("Pickace").up);
+            Debug.DrawRay(transform.Find("Pickace").position, transform.Find("Pickace").up, Color.green);
+
+            // If it hits something...
+            if (hit.collider != null) {
+                float distance = Vector3.Distance(hit.point, transform.position);
+
+                Debug.Log("Got " + distance);
+
+                this.rockMined = hit.collider.gameObject.GetComponent<RockScript>();
+
+                if (distance > 0.2f) {
+                    this.rockMined = null;
+                }
+
+                Debug.Log(this.rockMined);
+
+                // Calculate the distance from the surface and the "error" relative
+                // to the floating height.
+                //
+                //float heightError = floatHeight - distance;
+
+                // The force is proportional to the height error, but we remove a part of it
+                // according to the object's speed.
+                //float force = liftForce * heightError - rb2D.velocity.y * damping;
+
+                // Apply the force to the rigidbody.
+                //rb2D.AddForce(Vector3.up * force);
+            }
+
+
+        }
+        else {
+            //Debug.Log(bullet);
+            //this.bullet.Focus(Time.deltaTime);
+        }
+        
+
+        //this.pickace.GetComponent<Collider2D>().enabled = true;
+        //GetComponentInChildren<Rigidbody2D>().velocity = Vector2.zero;
+        //GameObject go = Instantiate(this.slash, this.gameObject.transform.position, renderer.gameObject.transform.rotation) as GameObject;
+        
+
+
+        
+
+    }
+
+    private void StopMine() {
+        //this.pickace.GetComponent<Collider2D>().enabled = false;
         canMove = true;
+        mining = false;
+        if(this.rockMined != null) {
+            this.rockMined.pv -= 1;
+        }
     }
 
     private void Focus() {
         if (!focusing) {
             focusing = true;
 
-            GameObject go = Instantiate(projectile, transform.Find("BulletSpawn").position, renderer.gameObject.transform.rotation) as GameObject;
+            GameObject go = Instantiate(projectile, transform.Find("BulletSpawn").position, spriteRenderer.gameObject.transform.rotation) as GameObject;
             go.SetActive(false);
             this.bullet = go.GetComponent<Projectile>();
 
@@ -176,7 +240,7 @@ public class Player : MonoBehaviour {
 
 
         this.bullet.gameObject.transform.position = transform.Find("BulletSpawn").position;
-        this.bullet.gameObject.transform.rotation = renderer.gameObject.transform.rotation;
+        this.bullet.gameObject.transform.rotation = spriteRenderer.gameObject.transform.rotation;
         this.bullet.gameObject.SetActive(true);
         this.bullet.Shoot(x, y);
 
@@ -240,32 +304,26 @@ public class Player : MonoBehaviour {
     }
 
     private void HandleMovement() {
-        if (canMove)
-        {
+        if (canMove) {
             float x = 0;
             float y = 0;
 
-            switch (this.type)
-            {
+            switch (this.type) {
                 case ControllerType.CONTROLLER:
                     x = gamepad.GetAxis(GamepadAxis.LeftStickX);
                     y = gamepad.GetAxis(GamepadAxis.LeftStickY);
                     break;
                 case ControllerType.KEYBORD:
-                    if (Input.GetKey(KeyCode.Z))
-                    {
+                    if (Input.GetKey(KeyCode.Z)) {
                         y += 1;
                     }
-                    else if (Input.GetKey(KeyCode.Q))
-                    {
+                    else if (Input.GetKey(KeyCode.Q)) {
                         x -= 1;
                     }
-                    else if (Input.GetKey(KeyCode.S))
-                    {
+                    else if (Input.GetKey(KeyCode.S)) {
                         y -= 1;
                     }
-                    else if (Input.GetKey(KeyCode.D))
-                    {
+                    else if (Input.GetKey(KeyCode.D)) {
                         x += 1;
                     }
                     break;
@@ -293,8 +351,7 @@ public class Player : MonoBehaviour {
             // Debug.Log("ANGLE = " + (Mathf.Rad2Deg * rad));
 
 
-            if (x + y != 0)
-            {
+            if (x + y != 0) {
                 /*if (rad <= Mathf.PI / 4 && rad > Mathf.PI / -4) {
                     this.renderer.sprite = right;
                     rotation = (Mathf.Rad2Deg * rad);
@@ -319,8 +376,7 @@ public class Player : MonoBehaviour {
                 this./*renderer.*/gameObject.transform.eulerAngles = new Vector3(0, 0, rotation);
 
             }
-            else
-            {
+            else {
 
                 //Debug.Log("Joystick in the middle");
             }
@@ -347,8 +403,7 @@ public class Player : MonoBehaviour {
             rotation = 0;
 
 
-            if (x + y != 0)
-            {
+            if (x + y != 0) {
                 /* if (rad <= Mathf.PI / 4 && rad > Mathf.PI / -4) {
                      this.renderer.sprite = right;
                      rotation = (Mathf.Rad2Deg * rad);
@@ -373,8 +428,7 @@ public class Player : MonoBehaviour {
                 this./*renderer.*/gameObject.transform.eulerAngles = new Vector3(0, 0, rotation);
 
             }
-            else
-            {
+            else {
 
                 //Debug.Log("Joystick in the middle");
             }
@@ -422,6 +476,20 @@ public class Player : MonoBehaviour {
             }*/
         }
     }
+
+    /*private void OnTriggerEnter2D(Collider2D other) {
+        //Debug.Log("entered with " + GetComponent<BoxCollider2D>().GetComponent<Rigidbody2D>());
+
+        if (other.gameObject.tag == "Rock") {
+            RockScript rock = other.gameObject.GetComponent<RockScript>();
+            rock.pv--;
+        }
+
+    }
+
+    private void OnTriggerStay() { }
+
+    private void OnTriggerExit() { }*/
 
 
 

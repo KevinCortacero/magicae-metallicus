@@ -55,7 +55,7 @@ public class Projectile : MonoBehaviour {
         else if (col.gameObject.tag == "Player") {
 
             Player player = col.gameObject.GetComponent<Player>();
-            player.pv -= GetRatio();
+            player.Damage(GetRatio());
         }
 
         Destroy(gameObject);
