@@ -43,13 +43,15 @@ public class Projectile : MonoBehaviour {
 
         if(col.gameObject.tag == "Destructible") {
 
-            Destroy(col.gameObject);
-            Destroy(gameObject);
+            RockScript rock = col.gameObject.GetComponent<RockScript>();
+            rock.pv--;
         }
         else if (col.gameObject.tag == "Player") {
 
-            Destroy(col.gameObject);
-            Destroy(gameObject);
+            Player player = col.gameObject.GetComponent<Player>();
+            player.pv--;
         }
+
+        Destroy(gameObject);
     }
 }

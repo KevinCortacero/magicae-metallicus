@@ -14,6 +14,7 @@ public class Player : MonoBehaviour {
     public PickaceCollider pickace;
     public float speed;
     public GameObject slash;
+    public int pv;
 
     //public int number = 0;
     public GameObject projectile;
@@ -40,11 +41,15 @@ public class Player : MonoBehaviour {
         this.canMove = true;
         this.renderer.sprite = right;
         this.number = Int32.Parse(gameObject.name.Split(null)[1]) - 1;
+        this.pv = 10;
     }
 
     // Update is called once per frame
     void Update() {
-
+        if(this.pv<= 0)
+        {
+            Destroy(gameObject);
+        }
         if (!canMove)
         {
             if(Time.time - tempsMine > 0.2)
