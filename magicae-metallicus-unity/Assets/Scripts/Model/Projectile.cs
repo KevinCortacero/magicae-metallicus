@@ -24,32 +24,38 @@ public class Projectile : MonoBehaviour {
     }
 
     public void Shoot(float x, float y) {
+        
+
+        //Debug.Log("ratio = " + ratio);
+        //Debug.Log("velocity = " + new Vector2(x, y) * ratio * maxSpeed);
+
+        GetComponent<Rigidbody2D>().velocity = new Vector2(x, y) * GetRatio() *maxSpeed;
+
+        
+    }
+
+    private float GetRatio() {
         float ratio = this.focusTime / this.maxFocusTime;
 
         ratio = Mathf.Max(0.2f, ratio);
         ratio = Mathf.Min(1, ratio);
 
-        //Debug.Log("ratio = " + ratio);
-        //Debug.Log("velocity = " + new Vector2(x, y) * ratio * maxSpeed);
-
-        GetComponent<Rigidbody2D>().velocity = new Vector2(x, y) * ratio*maxSpeed;
-
-        
+        return ratio;
     }
 
     void OnCollisionEnter2D(Collision2D col) {
         Debug.Log("OnCollisionEnter2D");
         Debug.Log(col.gameObject.tag);
 
-        if(col.gameObject.tag == "Rock") {
+        if (col.gameObject.tag == "Rock") {
 
             RockScript rock = col.gameObject.GetComponent<RockScript>();
-            rock.pv--;
+            rock.pv -= GetRatio();
         }
         else if (col.gameObject.tag == "Player") {
 
             Player player = col.gameObject.GetComponent<Player>();
-            player.pv--;
+            player.pv -= GetRatio();
         }
 
         Destroy(gameObject);

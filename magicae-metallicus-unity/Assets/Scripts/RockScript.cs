@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RockScript : MonoBehaviour {
 
-    public int pv;
+    public float pv;
 	// Use this for initialization
 	void Start () {
         this.pv = 2;

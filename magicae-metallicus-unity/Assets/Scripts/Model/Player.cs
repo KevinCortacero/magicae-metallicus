@@ -14,7 +14,7 @@ public class Player : MonoBehaviour {
     public PickaceCollider pickace;
     public float speed;
     public GameObject slash;
-    public int pv;
+    public float pv;
 
     //public int number = 0;
     public GameObject projectile;
