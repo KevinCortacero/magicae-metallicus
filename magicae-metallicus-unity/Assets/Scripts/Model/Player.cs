@@ -115,7 +115,6 @@ public class Player : MonoBehaviour {
     {
         this.pickace.GetComponent<Collider2D>().enabled = false;
         canMove = true;
-
     }
 
     private void Focus() {
