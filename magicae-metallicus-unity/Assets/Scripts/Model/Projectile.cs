@@ -41,7 +41,7 @@ public class Projectile : MonoBehaviour {
         Debug.Log("OnCollisionEnter2D");
         Debug.Log(col.gameObject.tag);
 
-        if(col.gameObject.tag == "Destructible") {
+        if(col.gameObject.tag == "Rock") {
 
             RockScript rock = col.gameObject.GetComponent<RockScript>();
             rock.pv--;

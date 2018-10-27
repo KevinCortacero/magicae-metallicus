@@ -25,9 +25,10 @@ public class PickaceCollider : MonoBehaviour
     void OnCollisionEnter2D(Collision2D col)
     {
         Debug.Log("Pickace");
-        if (col.gameObject.tag == "Destructible")
+        if (col.gameObject.tag == "Rock")
         {
-            Destroy(col.gameObject);
+            RockScript rock = col.gameObject.GetComponent<RockScript>();
+            rock.pv--;
         }
     }
 }

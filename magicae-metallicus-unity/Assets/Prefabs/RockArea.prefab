@@ -589,7 +589,7 @@ GameObject:
   - component: {fileID: 114883920565648770}
   m_Layer: 0
   m_Name: rock
-  m_TagString: Destructible
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8257,7 +8257,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 836d5e98b8ffa9741a8c4065b2695ca8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pv: 0
+  pv: 2
 --- !u!114 &114082289152815346
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -8293,7 +8293,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 836d5e98b8ffa9741a8c4065b2695ca8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pv: 0
+  pv: 2
 --- !u!114 &114113259795309624
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -8621,7 +8621,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 836d5e98b8ffa9741a8c4065b2695ca8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pv: 0
+  pv: 2
 --- !u!114 &114322686089482382
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -8693,7 +8693,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 836d5e98b8ffa9741a8c4065b2695ca8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pv: 0
+  pv: 2
 --- !u!114 &114349720340320378
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -8705,7 +8705,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 836d5e98b8ffa9741a8c4065b2695ca8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pv: 0
+  pv: 2
 --- !u!114 &114350126600513128
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -8753,7 +8753,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 836d5e98b8ffa9741a8c4065b2695ca8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pv: 0
+  pv: 2
 --- !u!114 &114368080346337664
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -8945,7 +8945,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 836d5e98b8ffa9741a8c4065b2695ca8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pv: 0
+  pv: 2
 --- !u!114 &114485782688274704
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -9311,7 +9311,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 836d5e98b8ffa9741a8c4065b2695ca8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pv: 0
+  pv: 2
 --- !u!114 &114780143941616034
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -9455,7 +9455,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 836d5e98b8ffa9741a8c4065b2695ca8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pv: 0
+  pv: 2
 --- !u!114 &114891164084225788
 MonoBehaviour:
   m_ObjectHideFlags: 1
