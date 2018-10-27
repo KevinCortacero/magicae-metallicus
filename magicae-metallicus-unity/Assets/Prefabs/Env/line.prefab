@@ -586,7 +586,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.76, y: 1.74}
+    oldSize: {x: 3.52, y: 3.48}
     newSize: {x: 1.76, y: 1.74}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -611,7 +611,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.76, y: 1.74}
+    oldSize: {x: 3.52, y: 3.48}
     newSize: {x: 1.76, y: 1.74}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -636,7 +636,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.76, y: 1.74}
+    oldSize: {x: 3.52, y: 3.48}
     newSize: {x: 1.76, y: 1.74}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -661,7 +661,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.76, y: 1.74}
+    oldSize: {x: 3.52, y: 3.48}
     newSize: {x: 1.76, y: 1.74}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -686,7 +686,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.76, y: 1.74}
+    oldSize: {x: 3.52, y: 3.48}
     newSize: {x: 1.76, y: 1.74}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -711,7 +711,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.76, y: 1.74}
+    oldSize: {x: 3.52, y: 3.48}
     newSize: {x: 1.76, y: 1.74}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -736,7 +736,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.76, y: 1.74}
+    oldSize: {x: 3.52, y: 3.48}
     newSize: {x: 1.76, y: 1.74}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -761,7 +761,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.76, y: 1.74}
+    oldSize: {x: 3.52, y: 3.48}
     newSize: {x: 1.76, y: 1.74}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -786,7 +786,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.76, y: 1.74}
+    oldSize: {x: 3.52, y: 3.48}
     newSize: {x: 1.76, y: 1.74}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -811,7 +811,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.76, y: 1.74}
+    oldSize: {x: 3.52, y: 3.48}
     newSize: {x: 1.76, y: 1.74}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -853,6 +853,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 836d5e98b8ffa9741a8c4065b2695ca8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pv: 0
 --- !u!114 &114103568399298776
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -864,6 +865,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 836d5e98b8ffa9741a8c4065b2695ca8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pv: 0
 --- !u!114 &114147269719123832
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -875,6 +877,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 836d5e98b8ffa9741a8c4065b2695ca8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pv: 0
 --- !u!114 &114383297864160176
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -886,6 +889,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 836d5e98b8ffa9741a8c4065b2695ca8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pv: 0
 --- !u!114 &114390968952474912
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -897,6 +901,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 836d5e98b8ffa9741a8c4065b2695ca8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pv: 0
 --- !u!114 &114551006848130012
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -908,6 +913,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 836d5e98b8ffa9741a8c4065b2695ca8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pv: 0
 --- !u!114 &114666104724017172
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -919,6 +925,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 836d5e98b8ffa9741a8c4065b2695ca8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pv: 0
 --- !u!114 &114756826784688600
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -930,6 +937,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 836d5e98b8ffa9741a8c4065b2695ca8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pv: 0
 --- !u!114 &114854544466036968
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -941,6 +949,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 836d5e98b8ffa9741a8c4065b2695ca8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pv: 0
 --- !u!114 &114979494662355394
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -952,6 +961,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 836d5e98b8ffa9741a8c4065b2695ca8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pv: 0
 --- !u!212 &212065749790873764
 SpriteRenderer:
   m_ObjectHideFlags: 1
