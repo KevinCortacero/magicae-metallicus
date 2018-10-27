@@ -101,7 +101,7 @@ public class Player : MonoBehaviour {
     private void Mine() {
         this.pickace.GetComponent<Collider2D>().enabled = true;
         GetComponentInChildren<Rigidbody2D>().velocity = Vector2.zero;
-        GameObject go = Instantiate(this.slash, this.gameObject.transform.position, renderer.gameObject.transform.rotation) as GameObject;
+        //GameObject go = Instantiate(this.slash, this.gameObject.transform.position, renderer.gameObject.transform.rotation) as GameObject;
         canMove = false;
         tempsMine = Time.time;
     }
