@@ -5,6 +5,7 @@ using UnityEngine;
 public class Item : MonoBehaviour {
 
     public GameObject projectile;
+    public float utilization;
 
     // Use this for initialization
     void Start() {
@@ -19,7 +20,8 @@ public class Item : MonoBehaviour {
     void OnCollisionEnter2D(Collision2D col) {
         if (col.gameObject.tag == "Player") {
 
-            //DO SMTH
+
+            col.gameObject.GetComponent<Player>().PickUpItem(this);
 
 
         }

@@ -19,6 +19,8 @@ public class Player : MonoBehaviour {
     //public int number = 0;
     public GameObject projectile;
 
+    
+
     private GamepadInput _input;
     private GamepadDevice gamepad;
     private bool focusing = false;
@@ -97,11 +99,11 @@ public class Player : MonoBehaviour {
                     Shoot();
                 }
                 if (gamepad.GetButton(GamepadButton.DpadLeft)) {
-                    Mine();
+                    this.ItemLeft();
                 }
                 else if (gamepad.GetButton(GamepadButton.DpadRight)) {
 
-                    Focus();
+                    this.ItemRight();
                 }
 
 
@@ -122,13 +124,11 @@ public class Player : MonoBehaviour {
 
 
 
-                if (Input.GetAxis("Scroll Wheel") > 0f) {
-                    Debug.Log(Input.GetAxis("Scroll Wheel"));
-                    Debug.Log("forward");
+                if (Input.GetAxis("Mouse ScrollWheel") > 0f) {
+                    this.ItemRight();
                 }
-                else if (Input.GetAxis("Scroll Wheel") < 0f) {
-                    Debug.Log(Input.GetAxis("Scroll Wheel"));
-                    Debug.Log("backward");
+                else if (Input.GetAxis("Mouse ScrollWheel") < 0f) {
+                    this.ItemLeft();
                 }
 
                 break;
@@ -239,7 +239,9 @@ public class Player : MonoBehaviour {
         if (!focusing) {
             focusing = true;
 
-            GameObject go = Instantiate(projectile, transform.Find("BulletSpawn").position, spriteRenderer.gameObject.transform.rotation) as GameObject;
+            GameObject go = Instantiate(projectiles[this.projectilesIndex].projectile, transform.Find("BulletSpawn").position, spriteRenderer.gameObject.transform.rotation) as GameObject;
+
+            
             go.SetActive(false);
             this.bullet = go.GetComponent<Projectile>();
 
@@ -296,12 +298,20 @@ public class Player : MonoBehaviour {
         this.bullet.gameObject.transform.position = transform.Find("BulletSpawn").position;
         this.bullet.gameObject.transform.rotation = spriteRenderer.gameObject.transform.rotation;
         this.bullet.gameObject.SetActive(true);
+        Debug.Log(this.bullet.gameObject.GetComponent<Collider2D>() + " ignore " + GetComponent<Collider2D>());
+
+        Physics2D.IgnoreCollision(this.bullet.gameObject.GetComponent<Collider2D>(), GetComponent<Collider2D>());
         this.bullet.Shoot(x, y);
 
         this.projectiles[this.projectilesIndex].remaining = this.projectiles[this.projectilesIndex].remaining - 1f;
+
+
+        Debug.Log("Remaining " + this.projectiles[this.projectilesIndex].remaining);
+
         if (this.projectiles[this.projectilesIndex].remaining == 0f) {
             this.projectiles.RemoveAt(this.projectilesIndex);
         }
+
 
 
 
@@ -552,6 +562,9 @@ public class Player : MonoBehaviour {
 
     private void OnTriggerExit() { }*/
 
+    public void PickUpItem(Item item) {
+        this.projectiles.Add(new ProjectileHolder(item.projectile, item.utilization));
+    }
 
 
 

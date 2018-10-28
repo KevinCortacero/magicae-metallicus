@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212792529520470626}
   - component: {fileID: 61338802801723618}
   - component: {fileID: 114038656385542018}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: IceBall Item
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -79,6 +79,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 0}
+  utilization: 0
 --- !u!212 &212792529520470626
 SpriteRenderer:
   m_ObjectHideFlags: 1
