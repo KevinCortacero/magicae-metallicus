@@ -29,6 +29,8 @@ public class Player : MonoBehaviour {
     private int number;
     private float tempsMine;
     private RockScript rockMined;
+    private List<ProjectileHolder> projectiles;
+    private int projectilesIndex = 0;
 
     private float pv;
     public float PV {
@@ -52,6 +54,8 @@ public class Player : MonoBehaviour {
         //this.spriteRenderer.sprite = right;
         this.number = Int32.Parse(gameObject.name.Split(null)[1]) - 1;
         this.pv = 10;
+        this.projectiles = new List<ProjectileHolder>();
+        this.projectiles.Add(new ProjectileHolder(this.projectile, Mathf.Infinity));
     }
 
     // Update is called once per frame
@@ -92,6 +96,15 @@ public class Player : MonoBehaviour {
                     focusing = false;
                     Shoot();
                 }
+                if (gamepad.GetButton(GamepadButton.DpadLeft)) {
+                    Mine();
+                }
+                else if (gamepad.GetButton(GamepadButton.DpadRight)) {
+
+                    Focus();
+                }
+
+
                 break;
             case ControllerType.KEYBORD:
                 if (Input.GetMouseButton(1)) {
@@ -106,9 +119,45 @@ public class Player : MonoBehaviour {
                     focusing = false;
                     Shoot();
                 }
+
+
+
+                if (Input.GetAxis("Scroll Wheel") > 0f) {
+                    Debug.Log(Input.GetAxis("Scroll Wheel"));
+                    Debug.Log("forward");
+                }
+                else if (Input.GetAxis("Scroll Wheel") < 0f) {
+                    Debug.Log(Input.GetAxis("Scroll Wheel"));
+                    Debug.Log("backward");
+                }
+
                 break;
         }
+        
 
+    }
+
+    private void ItemRight() {
+        this.projectilesIndex += 1;
+        this.projectilesIndex = GetSafeValueForItems(projectilesIndex);
+    }
+
+    private void ItemLeft() {
+        this.projectilesIndex -= 1;
+        this.projectilesIndex = GetSafeValueForItems(projectilesIndex);
+    }
+
+    private int GetSafeValueForItems(int value) {
+
+        if (value >= this.projectiles.Count) {
+            return 0;
+        }
+        else if (value < 0) {
+            return this.projectiles.Count - 1;
+        }
+        else {
+            return value;
+        }
     }
 
     public void Damage(float value) {
@@ -165,15 +214,15 @@ public class Player : MonoBehaviour {
             //Debug.Log(bullet);
             //this.bullet.Focus(Time.deltaTime);
         }
-        
+
 
         //this.pickace.GetComponent<Collider2D>().enabled = true;
         //GetComponentInChildren<Rigidbody2D>().velocity = Vector2.zero;
         //GameObject go = Instantiate(this.slash, this.gameObject.transform.position, renderer.gameObject.transform.rotation) as GameObject;
-        
 
 
-        
+
+
 
     }
 
@@ -181,7 +230,7 @@ public class Player : MonoBehaviour {
         //this.pickace.GetComponent<Collider2D>().enabled = false;
         canMove = true;
         mining = false;
-        if(this.rockMined != null) {
+        if (this.rockMined != null) {
             this.rockMined.pv -= 1;
         }
     }
@@ -248,6 +297,13 @@ public class Player : MonoBehaviour {
         this.bullet.gameObject.transform.rotation = spriteRenderer.gameObject.transform.rotation;
         this.bullet.gameObject.SetActive(true);
         this.bullet.Shoot(x, y);
+
+        this.projectiles[this.projectilesIndex].remaining = this.projectiles[this.projectilesIndex].remaining - 1f;
+        if (this.projectiles[this.projectilesIndex].remaining == 0f) {
+            this.projectiles.RemoveAt(this.projectilesIndex);
+        }
+
+
 
 
         //float angle = Mathf.Atan2(x, y);
