@@ -4,8 +4,16 @@ using UnityEngine;
 
 public class FireProjectile : Projectile {
 
-    
+    public override bool IsBurning {
+        get {
+            return true;
+        }
+    }
 
+    protected override void InteractWithItem(Collision2D col) {
+        //Destroy(col.gameObject);
+        //Debug.Log("ITEM");
+    }
 
     protected override void InteractWithPlayer(Collision2D col) {
         Player player = col.gameObject.GetComponent<Player>();
