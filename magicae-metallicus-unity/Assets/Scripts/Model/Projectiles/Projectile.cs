@@ -3,11 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Projectile : MonoBehaviour {
+public abstract class Projectile : MonoBehaviour {
 
-    private float focusTime = 0;
-    private float maxFocusTime = 3;
-    private float maxSpeed = 20;
+    protected float focusTime = 0;
+    protected float maxFocusTime = 3;
+    protected float maxSpeed = 20;
 
 	// Use this for initialization
 	void Start () {
@@ -34,7 +34,7 @@ public class Projectile : MonoBehaviour {
         
     }
 
-    private float GetRatio() {
+    protected float GetRatio() {
         float ratio = this.focusTime / this.maxFocusTime;
 
         ratio = Mathf.Max(0.2f, ratio);
@@ -47,17 +47,24 @@ public class Projectile : MonoBehaviour {
         Debug.Log("OnCollisionEnter2D");
         Debug.Log(col.gameObject.tag);
 
+        
+
         if (col.gameObject.tag == "Rock") {
 
-            RockScript rock = col.gameObject.GetComponent<RockScript>();
-            rock.pv -= GetRatio();
+            this.InteractWithRock(col);
+
+           
         }
         else if (col.gameObject.tag == "Player") {
 
-            Player player = col.gameObject.GetComponent<Player>();
-            player.Damage(GetRatio());
+            this.InteractWithPlayer(col);
+
+            
         }
 
         Destroy(gameObject);
     }
+
+    protected abstract void InteractWithRock(Collision2D col);
+    protected abstract void InteractWithPlayer(Collision2D col);
 }

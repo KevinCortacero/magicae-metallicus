@@ -96,6 +96,15 @@ public class Player : MonoBehaviour {
                     focusing = false;
                     Shoot();
                 }
+                if (gamepad.GetButton(GamepadButton.DpadLeft)) {
+                    Mine();
+                }
+                else if (gamepad.GetButton(GamepadButton.DpadRight)) {
+
+                    Focus();
+                }
+
+
                 break;
             case ControllerType.KEYBORD:
                 if (Input.GetMouseButton(1)) {
@@ -110,20 +119,45 @@ public class Player : MonoBehaviour {
                     focusing = false;
                     Shoot();
                 }
+
+
+
+                if (Input.GetAxis("Scroll Wheel") > 0f) {
+                    Debug.Log(Input.GetAxis("Scroll Wheel"));
+                    Debug.Log("forward");
+                }
+                else if (Input.GetAxis("Scroll Wheel") < 0f) {
+                    Debug.Log(Input.GetAxis("Scroll Wheel"));
+                    Debug.Log("backward");
+                }
+
                 break;
         }
+        
 
+    }
 
-        if (Input.GetAxis("Scroll Wheel") > 0f) {
-            Debug.Log(Input.GetAxis("Scroll Wheel"));
-            Debug.Log("forward");
+    private void ItemRight() {
+        this.projectilesIndex += 1;
+        this.projectilesIndex = GetSafeValueForItems(projectilesIndex);
+    }
+
+    private void ItemLeft() {
+        this.projectilesIndex -= 1;
+        this.projectilesIndex = GetSafeValueForItems(projectilesIndex);
+    }
+
+    private int GetSafeValueForItems(int value) {
+
+        if (value >= this.projectiles.Count) {
+            return 0;
         }
-        else if (Input.GetAxis("Scroll Wheel") < 0f) {
-            Debug.Log(Input.GetAxis("Scroll Wheel"));
-            Debug.Log("backward");
+        else if (value < 0) {
+            return this.projectiles.Count - 1;
         }
-
-
+        else {
+            return value;
+        }
     }
 
     public void Damage(float value) {
