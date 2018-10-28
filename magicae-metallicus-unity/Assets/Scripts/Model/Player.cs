@@ -29,7 +29,8 @@ public class Player : MonoBehaviour {
     private int number;
     private float tempsMine;
     private RockScript rockMined;
-    private Dictionary<GameObject, float> projectiles;
+    private List<ProjectileHolder> projectiles;
+    private int projectilesIndex = 0;
 
     private float pv;
     public float PV {
@@ -53,8 +54,8 @@ public class Player : MonoBehaviour {
         //this.spriteRenderer.sprite = right;
         this.number = Int32.Parse(gameObject.name.Split(null)[1]) - 1;
         this.pv = 10;
-        this.projectiles = new Dictionary<GameObject, float>();
-        this.projectiles.Add(this.projectile, Mathf.Infinity);
+        this.projectiles = new List<ProjectileHolder>();
+        this.projectiles.Add(new ProjectileHolder(this.projectile, Mathf.Infinity));
     }
 
     // Update is called once per frame
@@ -263,9 +264,9 @@ public class Player : MonoBehaviour {
         this.bullet.gameObject.SetActive(true);
         this.bullet.Shoot(x, y);
 
-        this.projectiles[this.projectile] = this.projectiles[this.projectile] - 1;
-        if (this.projectiles[this.projectile] == 0f) {
-            this.projectiles.Remove(this.projectile);
+        this.projectiles[this.projectilesIndex].remaining = this.projectiles[this.projectilesIndex].remaining - 1f;
+        if (this.projectiles[this.projectilesIndex].remaining == 0f) {
+            this.projectiles.RemoveAt(this.projectilesIndex);
         }
 
 
