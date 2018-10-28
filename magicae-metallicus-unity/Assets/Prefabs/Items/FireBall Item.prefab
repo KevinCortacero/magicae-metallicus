@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212888999545464230}
   - component: {fileID: 61399300730388102}
   - component: {fileID: 114810396454967616}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FireBall Item
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -79,6 +79,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 1795849534249258, guid: 273b11b5c82b0be46a1815c0190a52bb, type: 2}
+  utilization: Infinity
 --- !u!212 &212888999545464230
 SpriteRenderer:
   m_ObjectHideFlags: 1

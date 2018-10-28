@@ -9,29 +9,29 @@ public abstract class Projectile : MonoBehaviour {
     protected float maxFocusTime = 3;
     protected float maxSpeed = 20;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start() {
         Physics2D.IgnoreLayerCollision(8, 9);
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
+    // Update is called once per frame
+    void Update() {
+
+    }
 
     public void Focus(float deltaTime) {
         this.focusTime += deltaTime;
     }
 
     public void Shoot(float x, float y) {
-        
+
 
         //Debug.Log("ratio = " + ratio);
         //Debug.Log("velocity = " + new Vector2(x, y) * ratio * maxSpeed);
 
-        GetComponent<Rigidbody2D>().velocity = new Vector2(x, y) * GetRatio() *maxSpeed;
+        GetComponent<Rigidbody2D>().velocity = new Vector2(x, y) * GetRatio() * maxSpeed;
 
-        
+
     }
 
     protected float GetRatio() {
@@ -47,19 +47,29 @@ public abstract class Projectile : MonoBehaviour {
         Debug.Log("OnCollisionEnter2D");
         Debug.Log(col.gameObject.tag);
 
-        
+
+
+
 
         if (col.gameObject.tag == "Rock") {
 
             this.InteractWithRock(col);
 
-           
+
         }
         else if (col.gameObject.tag == "Player") {
 
             this.InteractWithPlayer(col);
 
-            
+
+        }
+        if (col.gameObject.tag == "Arena") {
+
+            Debug.Log(col.collider + " ignore " + GetComponent<Collider2D>());
+            Physics2D.IgnoreCollision(col.collider, GetComponent<Collider2D>());
+            Debug.Log("ignored");
+            return;
+
         }
 
         Destroy(gameObject);
