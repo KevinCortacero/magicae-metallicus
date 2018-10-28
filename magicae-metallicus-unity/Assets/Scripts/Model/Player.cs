@@ -29,6 +29,7 @@ public class Player : MonoBehaviour {
     private int number;
     private float tempsMine;
     private RockScript rockMined;
+    private Dictionary<GameObject, float> projectiles;
 
     private float pv;
     public float PV {
@@ -52,6 +53,8 @@ public class Player : MonoBehaviour {
         //this.spriteRenderer.sprite = right;
         this.number = Int32.Parse(gameObject.name.Split(null)[1]) - 1;
         this.pv = 10;
+        this.projectiles = new Dictionary<GameObject, float>();
+        this.projectiles.Add(this.projectile, Mathf.Infinity);
     }
 
     // Update is called once per frame
@@ -109,6 +112,17 @@ public class Player : MonoBehaviour {
                 break;
         }
 
+
+        if (Input.GetAxis("Scroll Wheel") > 0f) {
+            Debug.Log(Input.GetAxis("Scroll Wheel"));
+            Debug.Log("forward");
+        }
+        else if (Input.GetAxis("Scroll Wheel") < 0f) {
+            Debug.Log(Input.GetAxis("Scroll Wheel"));
+            Debug.Log("backward");
+        }
+
+
     }
 
     public void Damage(float value) {
@@ -165,15 +179,15 @@ public class Player : MonoBehaviour {
             //Debug.Log(bullet);
             //this.bullet.Focus(Time.deltaTime);
         }
-        
+
 
         //this.pickace.GetComponent<Collider2D>().enabled = true;
         //GetComponentInChildren<Rigidbody2D>().velocity = Vector2.zero;
         //GameObject go = Instantiate(this.slash, this.gameObject.transform.position, renderer.gameObject.transform.rotation) as GameObject;
-        
 
 
-        
+
+
 
     }
 
@@ -181,7 +195,7 @@ public class Player : MonoBehaviour {
         //this.pickace.GetComponent<Collider2D>().enabled = false;
         canMove = true;
         mining = false;
-        if(this.rockMined != null) {
+        if (this.rockMined != null) {
             this.rockMined.pv -= 1;
         }
     }
@@ -248,6 +262,13 @@ public class Player : MonoBehaviour {
         this.bullet.gameObject.transform.rotation = spriteRenderer.gameObject.transform.rotation;
         this.bullet.gameObject.SetActive(true);
         this.bullet.Shoot(x, y);
+
+        this.projectiles[this.projectile] = this.projectiles[this.projectile] - 1;
+        if (this.projectiles[this.projectile] == 0f) {
+            this.projectiles.Remove(this.projectile);
+        }
+
+
 
 
         //float angle = Mathf.Atan2(x, y);
