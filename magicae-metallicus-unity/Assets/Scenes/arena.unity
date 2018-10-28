@@ -307,7 +307,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1730821294851840, guid: db6ca9dc895ffe649b0ab7682eb0aef4, type: 2}
       propertyPath: m_Name
-      value: PlayerHUD (1)
+      value: Player2HUD
       objectReference: {fileID: 0}
     - target: {fileID: 224071480465535550, guid: db6ca9dc895ffe649b0ab7682eb0aef4,
         type: 2}
@@ -681,6 +681,10 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1730821294851840, guid: db6ca9dc895ffe649b0ab7682eb0aef4, type: 2}
+      propertyPath: m_Name
+      value: Player1HUD
+      objectReference: {fileID: 0}
     - target: {fileID: 114616053014761276, guid: db6ca9dc895ffe649b0ab7682eb0aef4,
         type: 2}
       propertyPath: player
@@ -735,10 +739,6 @@ Prefab:
         type: 2}
       propertyPath: m_AnchorMax.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1730821294851840, guid: db6ca9dc895ffe649b0ab7682eb0aef4, type: 2}
-      propertyPath: m_Name
-      value: Player1HUD
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db6ca9dc895ffe649b0ab7682eb0aef4, type: 2}
@@ -14504,6 +14504,8 @@ GameObject:
   - component: {fileID: 1406863944}
   - component: {fileID: 1406863946}
   - component: {fileID: 1406863947}
+  - component: {fileID: 1406863948}
+  - component: {fileID: 1406863949}
   m_Layer: 0
   m_Name: ArenaLimits
   m_TagString: Untagged
@@ -14623,6 +14625,56 @@ BoxCollider2D:
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 0.3, y: 0.7}
+  m_EdgeRadius: 0
+--- !u!61 &1406863948
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1406863942}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.6, y: -2.75}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.6, y: 0.35}
+  m_EdgeRadius: 0
+--- !u!61 &1406863949
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1406863942}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.6, y: 2.75}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.6, y: 0.35}
   m_EdgeRadius: 0
 --- !u!1 &1442594817 stripped
 GameObject:
