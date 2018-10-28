@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Rock
   - Arena
+  - Item
+  - Projectile
   layers:
   - Default
   - TransparentFX

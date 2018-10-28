@@ -17,15 +17,31 @@ public class Item : MonoBehaviour {
 
     }
 
-    void OnCollisionEnter2D(Collision2D col) {
+    void OnTriggerEnter2D(Collider2D col) {
+        
+
         if (col.gameObject.tag == "Player") {
 
 
             col.gameObject.GetComponent<Player>().PickUpItem(this);
 
 
+            Destroy(gameObject);
+
+
+        }
+        else if (col.gameObject.tag == "Projectile") {
+
+           
+            if (col.gameObject.GetComponent<Projectile>().IsBurning) {
+
+                Destroy(gameObject);
+            }
+
+
+
+
         }
 
-        Destroy(gameObject);
     }
 }

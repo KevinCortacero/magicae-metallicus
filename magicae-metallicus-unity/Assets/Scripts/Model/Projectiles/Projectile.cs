@@ -9,6 +9,8 @@ public abstract class Projectile : MonoBehaviour {
     protected float maxFocusTime = 3;
     protected float maxSpeed = 20;
 
+    public abstract bool IsBurning { get; }
+
     // Use this for initialization
     void Start() {
         Physics2D.IgnoreLayerCollision(8, 9);
@@ -63,6 +65,12 @@ public abstract class Projectile : MonoBehaviour {
 
 
         }
+        else if (col.gameObject.tag == "Item") {
+
+            this.InteractWithItem(col);
+
+
+        }
         if (col.gameObject.tag == "Arena") {
 
             Debug.Log(col.collider + " ignore " + GetComponent<Collider2D>());
@@ -77,4 +85,5 @@ public abstract class Projectile : MonoBehaviour {
 
     protected abstract void InteractWithRock(Collision2D col);
     protected abstract void InteractWithPlayer(Collision2D col);
+    protected abstract void InteractWithItem(Collision2D col);
 }
