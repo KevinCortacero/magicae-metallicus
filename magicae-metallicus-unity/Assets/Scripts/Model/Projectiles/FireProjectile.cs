@@ -10,10 +10,6 @@ public class FireProjectile : Projectile {
         }
     }
 
-    protected override void InteractWithItem(Collision2D col) {
-        //Destroy(col.gameObject);
-        //Debug.Log("ITEM");
-    }
 
     protected override void InteractWithPlayer(Collision2D col) {
         Player player = col.gameObject.GetComponent<Player>();

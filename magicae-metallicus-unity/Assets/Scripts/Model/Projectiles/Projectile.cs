@@ -65,25 +65,24 @@ public abstract class Projectile : MonoBehaviour {
 
 
         }
-        else if (col.gameObject.tag == "Item") {
-
-            this.InteractWithItem(col);
-
-
-        }
-        if (col.gameObject.tag == "Arena") {
+        /*if (col.gameObject.tag == "Arena") {
 
             Debug.Log(col.collider + " ignore " + GetComponent<Collider2D>());
             Physics2D.IgnoreCollision(col.collider, GetComponent<Collider2D>());
             Debug.Log("ignored");
             return;
 
-        }
+        }*/
 
+        ApplyCollision();
+    }
+
+    protected virtual void ApplyCollision() {
+        Debug.Log("Mother");
         Destroy(gameObject);
+        GetComponent<PixelArsenalProjectileScript>().Collided();
     }
 
     protected abstract void InteractWithRock(Collision2D col);
     protected abstract void InteractWithPlayer(Collision2D col);
-    protected abstract void InteractWithItem(Collision2D col);
 }

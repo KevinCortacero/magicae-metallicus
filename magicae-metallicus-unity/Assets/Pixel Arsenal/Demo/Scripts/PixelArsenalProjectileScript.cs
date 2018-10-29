@@ -20,25 +20,26 @@ public class PixelArsenalProjectileScript : MonoBehaviour {
         }
     }
 
-    void OnCollisionEnter2D(Collision2D hit) {
+    public void Collided() {
+        //Debug.Log("ON DESTROY HERE");
 
 
-        if (hit.gameObject.tag == "Arena") {
+        /*if (hit.gameObject.tag == "Arena") {
 
             Physics2D.IgnoreCollision(hit.gameObject.GetComponent<Collider2D>(), GetComponent<Collider2D>());
             //Debug.Log("ignored");
             return;
 
-        }
+        }*/
 
         if (!hasCollided) {
             hasCollided = true;
             impactParticle = Instantiate(impactParticle, transform.position, Quaternion.FromToRotation(Vector3.up, impactNormal)) as GameObject;
 
-            if (hit.gameObject.tag == "Destructible") // Projectile will destroy objects tagged as Destructible
+            /*if (hit.gameObject.tag == "Destructible") // Projectile will destroy objects tagged as Destructible
             {
                 Destroy(hit.gameObject);
-            }
+            }*/
 
             foreach (GameObject trail in trailParticles) {
                 GameObject curTrail = transform.Find(projectileParticle.name + "/" + trail.name).gameObject;
