@@ -78,7 +78,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7df7a6c57380dd24394ac458b1642150, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 0}
+  projectile: {fileID: 1606260683489300, guid: f9de852711ee666479c54cd644fcb7dd, type: 2}
   utilization: Infinity
 --- !u!212 &212081046251028356
 SpriteRenderer:
