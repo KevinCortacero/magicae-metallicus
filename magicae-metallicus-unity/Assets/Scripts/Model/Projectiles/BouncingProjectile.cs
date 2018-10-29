@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BouncingProjectile : Projectile {
 
-    private int maxCollision = 10;
+    private readonly int maxCollision = 10;
     private int counter = 0;
 
     public override bool IsBurning {
