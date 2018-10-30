@@ -7,7 +7,8 @@ public class RockScript : MonoBehaviour {
     public float pv;
 	// Use this for initialization
 	void Start () {
-        this.pv = 2;
+       
+       
 	}
 	
 	// Update is called once per frame
