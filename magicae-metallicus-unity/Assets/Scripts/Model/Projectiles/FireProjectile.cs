@@ -11,7 +11,7 @@ public class FireProjectile : Projectile {
     }
 
 
-    protected override void InteractWithPlayer(Collision2D col) {
+    /*protected override void InteractWithPlayer(Collision2D col) {
         Player player = col.gameObject.GetComponent<Player>();
         player.Damage(GetRatio()*2);
     }
@@ -20,5 +20,5 @@ public class FireProjectile : Projectile {
     protected override void InteractWithRock(Collision2D col) {
         RockScript rock = col.gameObject.GetComponent<RockScript>();
         rock.pv -= GetRatio()*2;
-    }
+    }*/
 }

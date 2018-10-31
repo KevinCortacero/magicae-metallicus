@@ -4,7 +4,12 @@ using UnityEngine;
 
 public class BouncingProjectile : Projectile {
 
-    private readonly int maxCollision = 10;
+    [SerializeField]
+    private float ratioAfterBouncing;
+    [SerializeField]
+    private float additiveDamage;
+    [SerializeField]
+    private int maxCollision = 10;
     private int counter = 0;
 
     public override bool IsBurning {
@@ -14,7 +19,7 @@ public class BouncingProjectile : Projectile {
     }
 
 
-    protected override void InteractWithPlayer(Collision2D col) {
+    /*protected override void InteractWithPlayer(Collision2D col) {
         Player player = col.gameObject.GetComponent<Player>();
         player.Damage(GetRatio());
     }
@@ -23,14 +28,15 @@ public class BouncingProjectile : Projectile {
     protected override void InteractWithRock(Collision2D col) {
         RockScript rock = col.gameObject.GetComponent<RockScript>();
         rock.pv -= GetRatio();
-    }
+    }*/
 
     protected override void ApplyCollision() {
 
         if (this.counter > this.maxCollision) {
             base.ApplyCollision();
         }
-        GetComponent<Rigidbody2D>().velocity *= 1.2f;
+        GetComponent<Rigidbody2D>().velocity *= ratioAfterBouncing;
+        this.maxDamage += this.additiveDamage;
         this.counter += 1;
     }
 }
