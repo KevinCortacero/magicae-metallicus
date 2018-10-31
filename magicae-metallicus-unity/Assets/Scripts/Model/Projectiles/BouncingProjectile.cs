@@ -30,6 +30,7 @@ public class BouncingProjectile : Projectile {
         if (this.counter > this.maxCollision) {
             base.ApplyCollision();
         }
+        GetComponent<Rigidbody2D>().velocity *= 1.2f;
         this.counter += 1;
     }
 }
