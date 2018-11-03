@@ -6,7 +6,14 @@ using UnityEngine;
 public abstract class Projectile : MonoBehaviour {
 
     protected float focusTime = 0;
+    [SerializeField]
     protected float maxFocusTime = 3;
+    [SerializeField]
+    protected float maxDamage;
+    [SerializeField]
+    protected float ratioToPlayers;
+    [SerializeField]
+    protected float ratioToRocks;
     protected float maxSpeed = 20;
 
     public abstract bool IsBurning { get; }
@@ -83,6 +90,13 @@ public abstract class Projectile : MonoBehaviour {
         GetComponent<PixelArsenalProjectileScript>().Collided();
     }
 
-    protected abstract void InteractWithRock(Collision2D col);
-    protected abstract void InteractWithPlayer(Collision2D col);
+    protected void InteractWithRock(Collision2D col) {
+        RockScript rock = col.gameObject.GetComponent<RockScript>();
+        rock.pv -= GetRatio() * this.maxDamage * this.ratioToRocks;
+    }
+
+    protected void InteractWithPlayer(Collision2D col) {
+        Player player = col.gameObject.GetComponent<Player>();
+        player.Damage(GetRatio()*this.maxDamage*this.ratioToPlayers);
+    }
 }

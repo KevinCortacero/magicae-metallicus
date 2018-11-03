@@ -492,6 +492,12 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 114038656385542018, guid: 914910cdf1ba6d7438ac05fba94d1b7e,
+        type: 2}
+      propertyPath: projectile
+      value: 
+      objectReference: {fileID: 1737567408652196, guid: 71c954b499e670c45bd52c02e2e42a93,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 914910cdf1ba6d7438ac05fba94d1b7e, type: 2}
   m_IsPrefabAsset: 0
@@ -619,7 +625,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4705949982356684, guid: f30c306ca0c1e4c40adb6c732d5174cc, type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 212888999545464230, guid: f30c306ca0c1e4c40adb6c732d5174cc,
         type: 2}
@@ -9953,7 +9959,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1403228636 stripped
 MonoBehaviour:
@@ -10432,35 +10438,6 @@ Prefab:
       propertyPath: m_Name
       value: Player 2
       objectReference: {fileID: 0}
-    - target: {fileID: 4256116498400678, guid: a9b52e6fc7977a543986641714f168a1, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 114291556673721696, guid: a9b52e6fc7977a543986641714f168a1,
-        type: 2}
-      propertyPath: speed
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 58462838037397370, guid: a9b52e6fc7977a543986641714f168a1,
-        type: 2}
-      propertyPath: m_Offset.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 58462838037397370, guid: a9b52e6fc7977a543986641714f168a1,
-        type: 2}
-      propertyPath: m_UsedByEffector
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 58462838037397370, guid: a9b52e6fc7977a543986641714f168a1,
-        type: 2}
-      propertyPath: m_Offset.y
-      value: -0.04
-      objectReference: {fileID: 0}
-    - target: {fileID: 58462838037397370, guid: a9b52e6fc7977a543986641714f168a1,
-        type: 2}
-      propertyPath: m_Radius
-      value: 0.15
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a9b52e6fc7977a543986641714f168a1, type: 2}
   m_IsPrefabAsset: 0
@@ -10775,6 +10752,11 @@ Prefab:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114188284732779620, guid: db6ca9dc895ffe649b0ab7682eb0aef4,
+        type: 2}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 767107644}
+    - target: {fileID: 114616053014761276, guid: db6ca9dc895ffe649b0ab7682eb0aef4,
         type: 2}
       propertyPath: player
       value: 

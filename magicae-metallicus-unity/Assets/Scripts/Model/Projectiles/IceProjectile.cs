@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BasicProjectile : Projectile {
+public class IceProjectile : Projectile {
 
     public override bool IsBurning {
         get {
@@ -13,12 +13,11 @@ public class BasicProjectile : Projectile {
 
     /*protected override void InteractWithPlayer(Collision2D col) {
         Player player = col.gameObject.GetComponent<Player>();
-        player.Damage(GetRatio());
+        player.Damage(GetRatio()*5);
     }
 
 
     protected override void InteractWithRock(Collision2D col) {
-        RockScript rock = col.gameObject.GetComponent<RockScript>();
-        rock.pv -= GetRatio();
+        //Do nothing
     }*/
 }
