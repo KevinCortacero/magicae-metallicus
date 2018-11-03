@@ -15,6 +15,7 @@ public abstract class Projectile : MonoBehaviour {
     [SerializeField]
     protected float ratioToRocks;
     protected float maxSpeed = 20;
+    private bool isColliding = false;
 
     public abstract bool IsBurning { get; }
 
@@ -53,10 +54,11 @@ public abstract class Projectile : MonoBehaviour {
     }
 
     void OnCollisionEnter2D(Collision2D col) {
-        Debug.Log("OnCollisionEnter2D");
-        Debug.Log(col.gameObject.tag);
+        //Debug.Log("OnCollisionEnter2D");
+        //Debug.Log(col.gameObject.tag);
 
-
+        if (isColliding) return;
+        isColliding = true;
 
 
 
@@ -85,7 +87,7 @@ public abstract class Projectile : MonoBehaviour {
     }
 
     protected virtual void ApplyCollision() {
-        Debug.Log("Mother");
+        //Debug.Log("Mother");
         Destroy(gameObject);
         GetComponent<PixelArsenalProjectileScript>().Collided();
     }
