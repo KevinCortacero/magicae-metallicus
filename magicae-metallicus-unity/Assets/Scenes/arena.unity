@@ -130,7 +130,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &207007430
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5484,19 +5484,20 @@ Prefab:
     - target: {fileID: 224670231450902794, guid: db6ca9dc895ffe649b0ab7682eb0aef4,
         type: 2}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224670231450902794, guid: db6ca9dc895ffe649b0ab7682eb0aef4,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 222210811962010648, guid: db6ca9dc895ffe649b0ab7682eb0aef4,
         type: 2}
       propertyPath: m_CullTransparentMesh
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114616053014761276, guid: db6ca9dc895ffe649b0ab7682eb0aef4, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: db6ca9dc895ffe649b0ab7682eb0aef4, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &1254763988
@@ -10753,12 +10754,12 @@ Prefab:
     - target: {fileID: 224670231450902794, guid: db6ca9dc895ffe649b0ab7682eb0aef4,
         type: 2}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224670231450902794, guid: db6ca9dc895ffe649b0ab7682eb0aef4,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114188284732779620, guid: db6ca9dc895ffe649b0ab7682eb0aef4,
         type: 2}
@@ -10770,7 +10771,8 @@ Prefab:
       propertyPath: player
       value: 
       objectReference: {fileID: 767107644}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114616053014761276, guid: db6ca9dc895ffe649b0ab7682eb0aef4, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: db6ca9dc895ffe649b0ab7682eb0aef4, type: 2}
   m_IsPrefabAsset: 0
 --- !u!224 &1835107730 stripped
