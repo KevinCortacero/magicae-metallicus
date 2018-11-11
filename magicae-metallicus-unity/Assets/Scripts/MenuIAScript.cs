@@ -36,8 +36,7 @@ public class MenuIAScript : MonoBehaviour
         }
     }
 
-    public GamepadInput input
-    {
+    public GamepadInput Input {
         get
         {
             if (!_input)
@@ -63,7 +62,7 @@ public class MenuIAScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (input.gamepads.Count < 1)
+        if (Input.gamepads.Count < 1)
         {
             
         }

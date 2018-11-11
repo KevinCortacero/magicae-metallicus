@@ -1969,7 +1969,7 @@ Transform:
   - {fileID: 318576465}
   - {fileID: 1936057569}
   m_Father: {fileID: 336405768}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!58 &149833619
 CircleCollider2D:
@@ -4504,6 +4504,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1419034346}
   - {fileID: 948880207}
   - {fileID: 718001898}
   - {fileID: 1782134038}
@@ -4656,6 +4657,48 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &347460245
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 336405768}
+    m_Modifications:
+    - target: {fileID: 4227339209678452, guid: c8731d5e9941ac5409a0086a15a9486e, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4227339209678452, guid: c8731d5e9941ac5409a0086a15a9486e, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4227339209678452, guid: c8731d5e9941ac5409a0086a15a9486e, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4227339209678452, guid: c8731d5e9941ac5409a0086a15a9486e, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4227339209678452, guid: c8731d5e9941ac5409a0086a15a9486e, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4227339209678452, guid: c8731d5e9941ac5409a0086a15a9486e, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4227339209678452, guid: c8731d5e9941ac5409a0086a15a9486e, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4227339209678452, guid: c8731d5e9941ac5409a0086a15a9486e, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c8731d5e9941ac5409a0086a15a9486e, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &356203237
 GameObject:
   m_ObjectHideFlags: 0
@@ -5951,7 +5994,7 @@ Transform:
   - {fileID: 1669038550}
   - {fileID: 1221332302}
   m_Father: {fileID: 336405768}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!114 &413470754
 MonoBehaviour:
@@ -13200,7 +13243,7 @@ Transform:
   m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_Children: []
   m_Father: {fileID: 336405768}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &642490923
 MonoBehaviour:
@@ -13971,7 +14014,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 336405768}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &718001899
 BoxCollider2D:
@@ -17134,7 +17177,7 @@ Transform:
   - {fileID: 741352537}
   - {fileID: 1108783762}
   m_Father: {fileID: 336405768}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!58 &903030970
 CircleCollider2D:
@@ -17782,7 +17825,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 336405768}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &948880208
 SpriteRenderer:
@@ -28836,7 +28879,7 @@ Transform:
   - {fileID: 2076635020}
   - {fileID: 697936439}
   m_Father: {fileID: 336405768}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!114 &1299840164
 MonoBehaviour:
@@ -30801,6 +30844,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!4 &1419034346 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4227339209678452, guid: c8731d5e9941ac5409a0086a15a9486e,
+    type: 2}
+  m_PrefabInternal: {fileID: 347460245}
 --- !u!1 &1435771472
 GameObject:
   m_ObjectHideFlags: 0
@@ -40879,7 +40927,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 336405768}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1782134039
 BoxCollider2D:
