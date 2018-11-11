@@ -61,6 +61,7 @@ public class MenuIAScript : MonoBehaviour
     {
         if(Time.time - this.delay > 0.5)
         {
+            Focus();
             Shoot();
             this.delay = Time.time;
         }
@@ -101,26 +102,13 @@ public class MenuIAScript : MonoBehaviour
         this.pv -= value;
     }
 
-   
     private void Focus()
     {
-        if (!focusing)
-        {
-            focusing = true;
-
             GameObject go = Instantiate(projectiles[this.projectilesIndex].projectile, transform.Find("BulletSpawn").position, spriteRenderer.gameObject.transform.rotation) as GameObject;
-
 
             go.SetActive(false);
             this.bullet = go.GetComponent<Projectile>();
 
-
-        }
-        else
-        {
-            //Debug.Log(bullet);
-            this.bullet.Focus(Time.deltaTime);
-        }
     }
 
     private void Shoot()
