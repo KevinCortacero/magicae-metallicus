@@ -38,5 +38,7 @@ public class BouncingProjectile : Projectile {
         GetComponent<Rigidbody2D>().velocity *= ratioAfterBouncing;
         this.maxDamage += this.additiveDamage;
         this.counter += 1;
+        isColliding = false;
+        Debug.Log(counter);
     }
 }

@@ -15,7 +15,7 @@ public abstract class Projectile : MonoBehaviour {
     [SerializeField]
     protected float ratioToRocks;
     protected float maxSpeed = 20;
-    private bool isColliding = false;
+    protected bool isColliding = false;
 
     public abstract bool IsBurning { get; }
 
