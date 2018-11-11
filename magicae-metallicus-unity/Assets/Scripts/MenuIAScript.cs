@@ -16,11 +16,6 @@ public class MenuIAScript : MonoBehaviour
     
     public GameObject projectile;
 
-
-
-   
-    private bool focusing = false;
-    private bool mining = false;
     private Projectile bullet;
     private bool canMove;
     private ControllerType type;
@@ -30,6 +25,7 @@ public class MenuIAScript : MonoBehaviour
     private RockScript rockMined;
     private List<ProjectileHolder> projectiles;
     private int projectilesIndex = 0;
+    private GamepadInput _input;
 
     private float pv;
     public float PV
@@ -40,8 +36,16 @@ public class MenuIAScript : MonoBehaviour
         }
     }
 
+    public GamepadInput input
+    {
+        get
+        {
+            if (!_input)
+                _input = GetComponent<GamepadInput>();
+            return _input;
+        }
+    }
 
-   
 
     // Use this for initialization
     void Start()
@@ -59,12 +63,17 @@ public class MenuIAScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Time.time - this.delay > 0.5)
+        if (input.gamepads.Count < 1)
+        {
+            
+        }
+        if (Time.time - this.delay > 0.5)
         {
             Focus();
             Shoot();
             this.delay = Time.time;
         }
+        
         HandleMovement();
     }
 

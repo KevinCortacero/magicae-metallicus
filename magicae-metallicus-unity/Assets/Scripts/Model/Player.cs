@@ -35,6 +35,7 @@ public class Player : MonoBehaviour {
     private int projectilesIndex = 0;
 
     private float pv;
+
     public float PV {
         get {
             return pv;
