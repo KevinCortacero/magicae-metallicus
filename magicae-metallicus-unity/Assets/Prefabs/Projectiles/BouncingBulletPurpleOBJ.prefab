@@ -93,6 +93,7 @@ MonoBehaviour:
   maxDamage: 1
   ratioToPlayers: 1.5
   ratioToRocks: 1
+  maxSpeed: 20
   ratioAfterBouncing: 1.2
   additiveDamage: 0.2
   maxCollision: 10
