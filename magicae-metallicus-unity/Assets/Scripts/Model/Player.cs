@@ -19,7 +19,7 @@ public class Player : MonoBehaviour {
     //public int number = 0;
     public GameObject projectile;
 
-    
+
 
     private GamepadInput _input;
     private GamepadDevice gamepad;
@@ -31,6 +31,7 @@ public class Player : MonoBehaviour {
     private int number;
     private float tempsMine;
     private RockScript rockMined;
+    [SerializeField]
     private List<ProjectileHolder> projectiles;
     private int projectilesIndex = 0;
 
@@ -57,8 +58,9 @@ public class Player : MonoBehaviour {
         //this.spriteRenderer.sprite = right;
         this.number = Int32.Parse(gameObject.name.Split(null)[1]) - 1;
         this.pv = 10;
-        this.projectiles = new List<ProjectileHolder>();
-        this.projectiles.Add(new ProjectileHolder(this.projectile, Mathf.Infinity));
+        //this.projectiles = new List<ProjectileHolder>();
+        //this.projectiles.Add(new ProjectileHolder(this.projectile, Mathf.Infinity));
+        //this.projectiles.Add(new ProjectileHolder(item.projectile, item.utilization));
     }
 
     // Update is called once per frame
@@ -134,18 +136,22 @@ public class Player : MonoBehaviour {
 
                 break;
         }
-        
-
     }
 
     private void ItemRight() {
         this.projectilesIndex += 1;
         this.projectilesIndex = GetSafeValueForItems(projectilesIndex);
+        if (this.projectiles[this.projectilesIndex].remaining == 0) {
+            this.ItemRight();
+        }
     }
 
     private void ItemLeft() {
         this.projectilesIndex -= 1;
         this.projectilesIndex = GetSafeValueForItems(projectilesIndex);
+        if(this.projectiles[this.projectilesIndex].remaining == 0) {
+            this.ItemLeft();
+        }
     }
 
     private int GetSafeValueForItems(int value) {
@@ -167,18 +173,17 @@ public class Player : MonoBehaviour {
 
     private void Mine() {
         if (!mining) {
-            mining = true;
-
-            canMove = false;
-            tempsMine = Time.time;
-
-            GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            
 
             RaycastHit2D hit = Physics2D.Raycast(transform.Find("Pickace").position, transform.Find("Pickace").up);
             Debug.DrawRay(transform.Find("Pickace").position, transform.Find("Pickace").up, Color.green);
 
             // If it hits something...
             if (hit.collider != null) {
+
+                
+
+
                 float distance = Vector3.Distance(hit.point, transform.position);
 
                 //Debug.Log("Got " + distance);
@@ -190,6 +195,15 @@ public class Player : MonoBehaviour {
                 }
 
                 if (rockMined != null) {
+
+                    mining = true;
+
+                    canMove = false;
+                    tempsMine = Time.time;
+
+                    GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+
+
                     GameObject go = Instantiate(this.slash, transform.Find("Pickace").position, transform.Find("Pickace").rotation) as GameObject;
                     Destroy(go, 0.4f);
                 }
@@ -237,16 +251,20 @@ public class Player : MonoBehaviour {
     }
 
     private void Focus() {
+
+        if (this.projectiles[this.projectilesIndex].remaining == 0) {
+            Debug.Log("No more projectile !");
+            return;
+        }
+
         if (!focusing) {
             focusing = true;
 
             GameObject go = Instantiate(projectiles[this.projectilesIndex].projectile, transform.Find("BulletSpawn").position, spriteRenderer.gameObject.transform.rotation) as GameObject;
-
             
             go.SetActive(false);
             this.bullet = go.GetComponent<Projectile>();
-
-
+            
         }
         else {
             //Debug.Log(bullet);
@@ -309,9 +327,9 @@ public class Player : MonoBehaviour {
 
         Debug.Log("Remaining " + this.projectiles[this.projectilesIndex].remaining);
 
-        if (this.projectiles[this.projectilesIndex].remaining == 0f) {
+        /*if (this.projectiles[this.projectilesIndex].remaining == 0f) {
             this.projectiles.RemoveAt(this.projectilesIndex);
-        }
+        }*/
 
 
 
@@ -564,7 +582,12 @@ public class Player : MonoBehaviour {
     private void OnTriggerExit() { }*/
 
     public void PickUpItem(Item item) {
-        this.projectiles.Add(new ProjectileHolder(item.projectile, item.utilization));
+        foreach (ProjectileHolder holder in this.projectiles) {
+            if (holder.projectile.GetComponent<Projectile>().GetType().Equals(item.projectile.GetComponent<Projectile>().GetType())) {
+                holder.remaining += item.utilization;
+            }
+        }
+        //this.projectiles.Add(new ProjectileHolder(item.projectile, item.utilization));
     }
 
 

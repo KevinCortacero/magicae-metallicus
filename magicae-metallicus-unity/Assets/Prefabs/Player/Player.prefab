@@ -11,6 +11,21 @@ Prefab:
   m_SourcePrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1468936312708326}
   m_IsPrefabAsset: 1
+--- !u!1 &1129058124499394
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4116594402599450}
+  m_Layer: 0
+  m_Name: Pickace
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1218952310449894
 GameObject:
   m_ObjectHideFlags: 1
@@ -125,6 +140,19 @@ Transform:
   m_Father: {fileID: 4256116498400678}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4116594402599450
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1129058124499394}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: 0.124, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4256116498400678}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4119706959232140
 Transform:
   m_ObjectHideFlags: 1
@@ -179,6 +207,7 @@ Transform:
   - {fileID: 4957286881064242}
   - {fileID: 4101171163771726}
   - {fileID: 4253827129163584}
+  - {fileID: 4116594402599450}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
@@ -282,6 +311,22 @@ MonoBehaviour:
   speed: 3
   slash: {fileID: 1226439177418918, guid: 2b2bd7574e495ca4c807ac55bdf9dccc, type: 2}
   projectile: {fileID: 1606260683489300, guid: 8787a8af704206b468c6ea0dda321aa9, type: 2}
+  projectiles:
+  - projectile: {fileID: 1606260683489300, guid: 8787a8af704206b468c6ea0dda321aa9,
+      type: 2}
+    remaining: Infinity
+  - projectile: {fileID: 1606260683489300, guid: f9de852711ee666479c54cd644fcb7dd,
+      type: 2}
+    remaining: 0
+  - projectile: {fileID: 1795849534249258, guid: 273b11b5c82b0be46a1815c0190a52bb,
+      type: 2}
+    remaining: 0
+  - projectile: {fileID: 1737567408652196, guid: 71c954b499e670c45bd52c02e2e42a93,
+      type: 2}
+    remaining: 0
+  - projectile: {fileID: 1962330009731926, guid: 74268f6641abb5442833048e4c90dc43,
+      type: 2}
+    remaining: 0
 --- !u!114 &114494311331585918
 MonoBehaviour:
   m_ObjectHideFlags: 1
