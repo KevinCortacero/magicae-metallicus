@@ -43,6 +43,14 @@ public class Player : MonoBehaviour {
         }
     }
 
+    public int CURSOR
+    {
+        get
+        {
+            return this.projectilesIndex;
+        }
+    }
+
 
     public GamepadInput input {
         get {
@@ -136,6 +144,11 @@ public class Player : MonoBehaviour {
 
                 break;
         }
+    }
+
+    public int GetSpellRemaining(int spellID)
+    {
+        return (int) this.projectiles[spellID].remaining;
     }
 
     private void ItemRight() {
