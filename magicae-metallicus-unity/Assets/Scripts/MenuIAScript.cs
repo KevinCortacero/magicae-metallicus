@@ -186,7 +186,7 @@ public class MenuIAScript : MonoBehaviour
 
     private void HandleMovement()
     {
-       if(Time.time - this.delayMovement > 0.2)
+       if(Time.time - this.delayMovement > 0.5)
         {
             float x = 0;
             float y = 0;
@@ -201,6 +201,7 @@ public class MenuIAScript : MonoBehaviour
             }
 
             GetComponentInChildren<Rigidbody2D>().velocity = new Vector2(x, y) * speed;
+            this.delayMovement = Time.time;
         }
             
  
