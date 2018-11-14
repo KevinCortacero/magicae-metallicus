@@ -126,7 +126,10 @@ public class MenuIAScript : MonoBehaviour
 
         float x = 1;
         float y = 0;
-
+        if (this.transform.position.x > 0)
+        {
+            x = -1;
+        }
         if (x + y == 0)
         {   
             x = transform.up.x;
