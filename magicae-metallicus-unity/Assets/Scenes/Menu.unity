@@ -1957,6 +1957,8 @@ GameObject:
   - component: {fileID: 149833620}
   - component: {fileID: 149833619}
   - component: {fileID: 149833621}
+  - component: {fileID: 149833623}
+  - component: {fileID: 149833622}
   m_Layer: 0
   m_Name: Player 1
   m_TagString: Player
@@ -2036,6 +2038,33 @@ MonoBehaviour:
   speed: 3
   slash: {fileID: 1226439177418918, guid: 2b2bd7574e495ca4c807ac55bdf9dccc, type: 2}
   projectile: {fileID: 1606260683489300, guid: 8787a8af704206b468c6ea0dda321aa9, type: 2}
+--- !u!114 &149833622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 149833617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64f3b5231fb044acca971aacf0793bd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gamepadInputMapping: {fileID: 0}
+  keyboardInputMapping: {fileID: 0}
+  mouseInputMapping: {fileID: 0}
+--- !u!114 &149833623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 149833617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4bc7ca6c9568401aa02f1429913a90e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xGamepadLayout: {fileID: 0}
+  unGamepadConfigs: []
 --- !u!1 &152228683
 GameObject:
   m_ObjectHideFlags: 0
@@ -4541,7 +4570,7 @@ Transform:
   - {fileID: 1299840163}
   - {fileID: 642490922}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &347364792
 GameObject:
@@ -4685,6 +4714,48 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &347460245
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4227339209678452, guid: c8731d5e9941ac5409a0086a15a9486e, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4227339209678452, guid: c8731d5e9941ac5409a0086a15a9486e, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4227339209678452, guid: c8731d5e9941ac5409a0086a15a9486e, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4227339209678452, guid: c8731d5e9941ac5409a0086a15a9486e, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4227339209678452, guid: c8731d5e9941ac5409a0086a15a9486e, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4227339209678452, guid: c8731d5e9941ac5409a0086a15a9486e, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4227339209678452, guid: c8731d5e9941ac5409a0086a15a9486e, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4227339209678452, guid: c8731d5e9941ac5409a0086a15a9486e, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c8731d5e9941ac5409a0086a15a9486e, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &356203237
 GameObject:
   m_ObjectHideFlags: 0
@@ -17188,6 +17259,8 @@ GameObject:
   - component: {fileID: 903030971}
   - component: {fileID: 903030970}
   - component: {fileID: 903030972}
+  - component: {fileID: 903030974}
+  - component: {fileID: 903030973}
   m_Layer: 0
   m_Name: Player 2
   m_TagString: Player
@@ -17267,6 +17340,33 @@ MonoBehaviour:
   speed: 3
   slash: {fileID: 1226439177418918, guid: 2b2bd7574e495ca4c807ac55bdf9dccc, type: 2}
   projectile: {fileID: 1606260683489300, guid: 8787a8af704206b468c6ea0dda321aa9, type: 2}
+--- !u!114 &903030973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 903030968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64f3b5231fb044acca971aacf0793bd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gamepadInputMapping: {fileID: 0}
+  keyboardInputMapping: {fileID: 0}
+  mouseInputMapping: {fileID: 0}
+--- !u!114 &903030974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 903030968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4bc7ca6c9568401aa02f1429913a90e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xGamepadLayout: {fileID: 0}
+  unGamepadConfigs: []
 --- !u!1 &924864509
 GameObject:
   m_ObjectHideFlags: 0

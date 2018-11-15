@@ -9,74 +9,74 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1795849534249258}
+  m_RootGameObject: {fileID: 1962330009731926}
   m_IsPrefabAsset: 1
---- !u!1 &1795849534249258
+--- !u!1 &1962330009731926
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4448936854329368}
-  - component: {fileID: 114217320114955222}
-  - component: {fileID: 33450641840605182}
-  - component: {fileID: 50319790385339650}
-  - component: {fileID: 58111232736621202}
-  - component: {fileID: 114637428501506942}
+  - component: {fileID: 4701393782044180}
+  - component: {fileID: 114120764919449470}
+  - component: {fileID: 33379571310763292}
+  - component: {fileID: 58088836269606956}
+  - component: {fileID: 50521833877223574}
+  - component: {fileID: 114560809285876768}
   m_Layer: 9
-  m_Name: FireballRedOBJ
+  m_Name: RocketYellowObj
   m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4448936854329368
+--- !u!4 &4701393782044180
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1795849534249258}
+  m_GameObject: {fileID: 1962330009731926}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.5317307, y: 1.090491, z: 0}
+  m_LocalPosition: {x: -0.11620426, y: -1.0184848, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &33450641840605182
+--- !u!33 &33379571310763292
 MeshFilter:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1795849534249258}
+  m_GameObject: {fileID: 1962330009731926}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!50 &50319790385339650
+--- !u!50 &50521833877223574
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1795849534249258}
+  m_GameObject: {fileID: 1962330009731926}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 0.0001
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!58 &58111232736621202
+--- !u!58 &58088836269606956
 CircleCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1795849534249258}
+  m_GameObject: {fileID: 1962330009731926}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -86,37 +86,37 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.25
---- !u!114 &114217320114955222
+--- !u!114 &114120764919449470
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1795849534249258}
+  m_GameObject: {fileID: 1962330009731926}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0f3cc8b7b878ebb4ab887d9e05be4b77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  impactParticle: {fileID: 107778, guid: e7ce512db4b74334bad6ab71b1e8655e, type: 2}
-  projectileParticle: {fileID: 172510, guid: dcc803728a9f0ec4c83dba45ffbeaeb5, type: 2}
-  muzzleParticle: {fileID: 134674, guid: 24f2ab54fd64dff47a545903bc115f3c, type: 2}
+  impactParticle: {fileID: 161336, guid: b11456a81e43ebf478eedbe50258b3b9, type: 2}
+  projectileParticle: {fileID: 146252, guid: 3ff2cdf1800f3e44b962fb174deb1193, type: 2}
+  muzzleParticle: {fileID: 106568, guid: 5c639f356ed061f4e92a81aa2d4d242b, type: 2}
   trailParticles:
-  - {fileID: 149974, guid: dcc803728a9f0ec4c83dba45ffbeaeb5, type: 2}
-  - {fileID: 118860, guid: dcc803728a9f0ec4c83dba45ffbeaeb5, type: 2}
+  - {fileID: 108664, guid: ca86bc1940ee43b40954827ebcdd39fd, type: 2}
+  - {fileID: 174726, guid: ca86bc1940ee43b40954827ebcdd39fd, type: 2}
   impactNormal: {x: 0, y: 0, z: 0}
---- !u!114 &114637428501506942
+--- !u!114 &114560809285876768
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1795849534249258}
+  m_GameObject: {fileID: 1962330009731926}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eca8f4334cd3a20479119e67bffffc4b, type: 3}
+  m_Script: {fileID: 11500000, guid: 2236829109356044d84ef1d6cb7a6817, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxFocusTime: 1.5
-  maxDamage: 5
-  ratioToPlayers: 1.5
+  maxFocusTime: 3
+  maxDamage: 10
+  ratioToPlayers: 1
   ratioToRocks: 1
   maxSpeed: 20

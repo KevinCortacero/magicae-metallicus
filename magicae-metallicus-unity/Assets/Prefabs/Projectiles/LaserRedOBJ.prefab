@@ -20,9 +20,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4680538157044542}
   - component: {fileID: 114806359668091256}
+  - component: {fileID: 114834587678798196}
   - component: {fileID: 33988580096919174}
   - component: {fileID: 50879644700524014}
-  - component: {fileID: 114231101650748218}
   - component: {fileID: 58524794156600516}
   m_Layer: 0
   m_Name: LaserRedOBJ
@@ -64,7 +64,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 0.0001
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
@@ -86,17 +86,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.25
---- !u!114 &114231101650748218
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1082766206834124}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4eeeb6257fa0bff4a81fb72d34dd9ab7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114806359668091256
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -113,3 +102,18 @@ MonoBehaviour:
   muzzleParticle: {fileID: 132060, guid: 115d45e2aeb621946aff119ab8546d13, type: 2}
   trailParticles: []
   impactNormal: {x: 0, y: 0, z: 0}
+--- !u!114 &114834587678798196
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1082766206834124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2236829109356044d84ef1d6cb7a6817, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxFocusTime: 3
+  maxDamage: 10
+  ratioToPlayers: 1
+  ratioToRocks: 1

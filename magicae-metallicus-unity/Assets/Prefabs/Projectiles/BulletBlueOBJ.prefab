@@ -93,6 +93,7 @@ MonoBehaviour:
   maxDamage: 1
   ratioToPlayers: 1
   ratioToRocks: 1
+  maxSpeed: 20
 --- !u!114 &114856286372046032
 MonoBehaviour:
   m_ObjectHideFlags: 1
