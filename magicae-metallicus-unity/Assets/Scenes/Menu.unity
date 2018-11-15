@@ -160,6 +160,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &7900302
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -301,6 +302,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &26405479
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -442,6 +444,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &28011558
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -583,6 +586,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &28116684
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -724,6 +728,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &40033469
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -865,6 +870,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &56733955
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1006,6 +1012,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &69983066
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1147,6 +1154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &79241957
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1288,6 +1296,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &92871169
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1429,6 +1438,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &101506284
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1570,6 +1580,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &112912751
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1839,6 +1850,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &149197893
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2071,6 +2083,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &152228686
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2212,6 +2225,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &170496544
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2353,6 +2367,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &213939442
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2494,6 +2509,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &217561280
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2635,6 +2651,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &222395870
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2776,6 +2793,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &234335436
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2917,6 +2935,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &239497393
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3058,6 +3077,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &244508826
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3199,6 +3219,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &250221999
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3340,6 +3361,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &270782684
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3481,6 +3503,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &278881319
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3622,6 +3645,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &286065695
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3891,6 +3915,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &314295253
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4101,6 +4126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &320343129
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4242,6 +4268,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &323951755
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4383,6 +4410,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &331557296
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4562,6 +4590,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &347364795
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4767,6 +4796,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &357956433
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4908,6 +4938,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &359757238
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5049,6 +5080,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &365939874
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5254,6 +5286,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &372490927
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5395,6 +5428,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &373200175
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5536,6 +5570,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &374437843
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5677,6 +5712,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &375601830
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5818,6 +5854,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &405681043
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5977,7 +6014,7 @@ MonoBehaviour:
   - {fileID: 1669038551}
   - {fileID: 1221332303}
   speed: 1
-  direction: 0
+  direction: 1
 --- !u!1 &426383380
 GameObject:
   m_ObjectHideFlags: 0
@@ -6025,6 +6062,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &426383383
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6166,6 +6204,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &462887079
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6307,6 +6346,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &487085312
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6571,6 +6611,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &489328496
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6712,6 +6753,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &490396359
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6853,6 +6895,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &503273095
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7058,6 +7101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &533204982
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7199,6 +7243,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &533402061
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7340,6 +7385,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &537929406
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7481,6 +7527,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &545345234
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7622,6 +7669,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &549250295
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7763,6 +7811,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &551596768
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12510,6 +12559,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &575698166
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12651,6 +12701,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &595557267
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12792,6 +12843,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &628952988
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12933,6 +12985,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &632161937
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13074,6 +13127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &636402962
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13215,6 +13269,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 50
+  loots: []
 --- !u!61 &642490924
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13356,6 +13411,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &666834889
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13497,6 +13553,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &667998570
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13638,6 +13695,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &689101452
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13843,6 +13901,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &717977958
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14176,6 +14235,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &722631239
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14386,6 +14446,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &743228689
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14527,6 +14588,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &743261129
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14668,6 +14730,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &745795835
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14809,6 +14872,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &745800051
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14950,6 +15014,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &768922606
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15091,6 +15156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &776635046
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15232,6 +15298,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &777507443
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15373,6 +15440,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &784473487
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15637,6 +15705,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &791554540
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15778,6 +15847,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &802939509
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15919,6 +15989,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &809478261
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16060,6 +16131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &817677202
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16299,6 +16371,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &836304120
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16440,6 +16513,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &852118875
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16581,6 +16655,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &869939926
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16722,6 +16797,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &875809325
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16863,6 +16939,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &885043615
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17004,6 +17081,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &894798815
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17236,6 +17314,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &924864512
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17377,6 +17456,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &931672596
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17518,6 +17598,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &943261758
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17659,6 +17740,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &945098639
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17878,6 +17960,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &953624691
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18019,6 +18102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &959652382
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18160,6 +18244,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &960554877
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18301,6 +18386,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &967329074
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18442,6 +18528,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &974878158
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18583,6 +18670,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &986284574
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18724,6 +18812,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &994052018
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18865,6 +18954,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &994515346
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19006,6 +19096,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &997043879
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19211,6 +19302,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1010590145
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19352,6 +19444,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1013873955
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19493,6 +19586,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1019854446
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19634,6 +19728,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1022630207
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19775,6 +19870,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1025248676
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19916,6 +20012,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1049824236
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20057,6 +20154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1053760762
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20198,6 +20296,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1075757762
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20339,6 +20438,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1080182969
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20557,6 +20657,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1085109487
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20698,6 +20799,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1087946340
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20839,6 +20941,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1089672080
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20980,6 +21083,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1108467752
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -25636,6 +25740,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1122296956
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -25777,6 +25882,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1139090798
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -25963,6 +26069,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1142239364
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -26104,6 +26211,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1169755918
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -26245,6 +26353,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1173024438
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -26386,6 +26495,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1174086891
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -26527,6 +26637,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1180492968
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -26668,6 +26779,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1184278683
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -26946,6 +27058,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1189028822
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -27087,6 +27200,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1193031138
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -27228,6 +27342,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1193961271
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -27369,6 +27484,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1211742929
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -27510,6 +27626,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1213805339
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -27651,6 +27768,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1217454592
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -27856,6 +27974,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1228271542
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -27997,6 +28116,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1229416091
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -28216,6 +28336,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1257163387
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -28357,6 +28478,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1258775362
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -28498,6 +28620,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1275262259
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -28639,6 +28762,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1276227528
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -28910,6 +29034,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1300437861
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -29051,6 +29176,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1308790830
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -29192,6 +29318,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1310102203
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -29333,6 +29460,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1319777905
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -29579,6 +29707,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1333174453
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -29720,6 +29849,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1334997790
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -29861,6 +29991,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1360370124
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -30002,6 +30133,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1378725961
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -30143,6 +30275,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1380069738
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -30284,6 +30417,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1388133280
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -30425,6 +30559,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1389938773
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -30566,6 +30701,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1392475707
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -30707,6 +30843,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1410187394
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -30848,6 +30985,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1435771475
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -30989,6 +31127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1437257798
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -31130,6 +31269,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1467439086
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -31271,6 +31411,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1469505161
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -31412,6 +31553,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1477055251
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -31553,6 +31695,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1487519247
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -31758,6 +31901,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1494260071
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -31899,6 +32043,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1494477723
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -32040,6 +32185,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1496740058
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -32245,6 +32391,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1517049870
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -32386,6 +32533,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1529351167
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -37029,6 +37177,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1543636894
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -37170,6 +37319,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1551737421
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -37380,6 +37530,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1553272672
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -37521,6 +37672,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1563640012
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -37662,6 +37814,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1567828955
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -37803,6 +37956,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1570806385
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -37944,6 +38098,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1571326125
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -38085,6 +38240,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1583741209
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -38226,6 +38382,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1595461875
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -38367,6 +38524,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1617037177
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -38508,6 +38666,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1638386969
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -38649,6 +38808,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 2
+  loots: []
 --- !u!61 &1656274140
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -38790,6 +38950,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1659640134
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -38931,6 +39092,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1662325621
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -39136,6 +39298,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1667919585
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -39341,6 +39504,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1669488057
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -39482,6 +39646,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1669746999
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -39623,6 +39788,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1687623225
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -39764,6 +39930,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1692910121
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -39905,6 +40072,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1693329774
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -40046,6 +40214,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1719326841
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -40187,6 +40356,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1724976369
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -40328,6 +40498,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1726330470
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -40469,6 +40640,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1755272820
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -40610,6 +40782,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1768364345
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -40751,6 +40924,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1777798969
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -41084,6 +41258,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1802959482
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -41225,6 +41400,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1823986796
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -41366,6 +41542,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1839189821
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -41635,6 +41812,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1856367749
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -46382,6 +46560,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1881451513
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -46523,6 +46702,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1885346012
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -46664,6 +46844,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1885951752
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -46805,6 +46986,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1893173528
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -46946,6 +47128,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1897812337
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -47087,6 +47270,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1918283783
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -47228,6 +47412,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1927122679
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -47412,6 +47597,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1940374824
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -47553,6 +47739,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1945432150
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -47694,6 +47881,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1945876654
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -47835,6 +48023,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1945881336
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -47976,6 +48165,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1964444689
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -48117,6 +48307,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1984484665
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -48258,6 +48449,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1990850574
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -48474,6 +48666,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &1996696374
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -48693,6 +48886,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &2021283360
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -48834,6 +49028,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &2026360073
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -48975,6 +49170,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &2027976683
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -49116,6 +49312,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &2028359845
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -49257,6 +49454,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &2040693244
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -49462,6 +49660,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &2055831078
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -49603,6 +49802,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &2074425288
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -49808,6 +50008,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 3
+  loots: []
 --- !u!61 &2092421099
 BoxCollider2D:
   m_ObjectHideFlags: 0
