@@ -156,8 +156,6 @@ public class RockAreaScript : MonoBehaviour {
 						}
 					}
 					
-					
-
 					// Increase the number of buffer turn
 					this.rocks[line][column].increaseBufferNumberOfTurn();
 				}
