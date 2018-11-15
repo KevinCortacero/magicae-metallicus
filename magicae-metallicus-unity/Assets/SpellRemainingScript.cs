@@ -10,7 +10,7 @@ public class SpellRemainingScript : MonoBehaviour {
     public Text spell2Remaining;
     public Text spell3Remaining;
     public Text spell4Remaining;
-    public Image cursor;
+    public Slider cursor;
 
 	// Use this for initialization
 	void Start () {
@@ -24,6 +24,6 @@ public class SpellRemainingScript : MonoBehaviour {
         this.spell3Remaining.text = "x" + this.player.GetSpellRemaining(3);
         this.spell4Remaining.text = "x" + this.player.GetSpellRemaining(4);
 
-        this.cursor.transform.position = new Vector3(-367 + this.player.CURSOR*50, 235, this.cursor.transform.position.z);
+        this.cursor.value = this.player.CURSOR;
     }
 }
