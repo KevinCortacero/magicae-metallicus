@@ -39,6 +39,6 @@ public class BouncingProjectile : Projectile {
         this.maxDamage += this.additiveDamage;
         this.counter += 1;
         isColliding = false;
-        Debug.Log(counter);
+        //Debug.Log(counter);
     }
 }

@@ -98,7 +98,7 @@ public abstract class Projectile : MonoBehaviour {
         RockScript rock = col.gameObject.GetComponent<RockScript>();
 
         float ratio = 1;
-        if ((this.owner == 1 && rock.Direction == -1) || (this.owner == 0 && rock.Direction == 1)) {
+        if ((this.owner == 1 && rock.Sens == -1) || (this.owner == 0 && rock.Sens == 1)) {
             ratio = 0.5f;
         }
 

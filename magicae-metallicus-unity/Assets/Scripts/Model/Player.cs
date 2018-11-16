@@ -35,6 +35,7 @@ public class Player : MonoBehaviour {
     private List<ProjectileHolder> projectiles;
     private int projectilesIndex = 0;
 
+
     private float pv;
 
     public float PV {
@@ -68,6 +69,8 @@ public class Player : MonoBehaviour {
         //this.projectiles.Add(new ProjectileHolder(this.projectile, Mathf.Infinity));
         //this.projectiles.Add(new ProjectileHolder(item.projectile, item.utilization));
     }
+
+    
 
     // Update is called once per frame
     void Update() {
@@ -257,7 +260,7 @@ public class Player : MonoBehaviour {
         mining = false;
         int owner = this.number = Int32.Parse(gameObject.name.Split(null)[1]) - 1;
         if (this.rockMined != null) {
-            if ((owner == 1 && this.rockMined.Direction == -1) || (owner == 0 && this.rockMined.Direction == 1)) {
+            if ((owner == 1 && this.rockMined.Sens == -1) || (owner == 0 && this.rockMined.Sens == 1)) {
                 this.rockMined.pv -= 0.5f;
             }
             else {

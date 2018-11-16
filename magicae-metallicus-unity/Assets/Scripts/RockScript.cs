@@ -7,17 +7,19 @@ public class RockScript : MonoBehaviour {
     public float pv;
 	private Vector3 start;
 	private Vector3 end;
-	private int direction;
+
+    private int sens;
+    private int direction;
 	private float speed;
 	private int nbTurnOfBuffer;
 
-    public int Direction {
+    public int Sens {
         get {
-            return direction;
+            return sens;
         }
 
         set {
-            direction = value;
+            sens = value;
         }
     }
 
@@ -48,6 +50,7 @@ public class RockScript : MonoBehaviour {
 
 	public void setParams(int direction) {
 		this.direction = direction;
+        this.sens = direction;
 	}
 
 	public Vector3 getLocation() {
@@ -70,7 +73,7 @@ public class RockScript : MonoBehaviour {
 	}
 
 	public void resetPv() {
-		this.pv = 3;
+		this.pv = 2;
 	}
 
 	public void increaseBufferNumberOfTurn() {

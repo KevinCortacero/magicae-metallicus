@@ -1,16 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MenuButton : MonoBehaviour {
 
-    public void START_GAME()
-    {
-        Application.LoadLevel("arena");
+    public GameObject credits;
+
+    public void START_GAME() {
+        SceneManager.LoadScene("arena");
     }
 
-    public void QUIT_GAME()
-    {
+    public void QUIT_GAME() {
         Application.Quit();
+    }
+
+    public void SHOW_CREDITS() {
+        credits.SetActive(!credits.active);
+    }
+
+    public void SHOW_HELP() {
+        credits.SetActive(!credits.active);
     }
 }
