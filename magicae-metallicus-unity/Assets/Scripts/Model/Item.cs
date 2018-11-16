@@ -5,7 +5,7 @@ using UnityEngine;
 public class Item : MonoBehaviour {
 
     public GameObject projectile;
-    public float utilization;
+    public int utilization;
 
     // Use this for initialization
     void Start() {
@@ -18,30 +18,18 @@ public class Item : MonoBehaviour {
     }
 
     void OnTriggerEnter2D(Collider2D col) {
-        
-
         if (col.gameObject.tag == "Player") {
-
-
             col.gameObject.GetComponent<Player>().PickUpItem(this);
-
-
             Destroy(gameObject);
-
-
         }
         else if (col.gameObject.tag == "Projectile") {
-
-           
             if (col.gameObject.GetComponent<Projectile>().IsBurning) {
-
                 Destroy(gameObject);
             }
-
-
-
-
         }
+    }
 
+    public void setUtilization(int u) {
+        this.utilization = u;
     }
 }

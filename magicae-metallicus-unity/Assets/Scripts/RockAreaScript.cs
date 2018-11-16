@@ -129,30 +129,26 @@ public class RockAreaScript : MonoBehaviour {
 
 					for(int i = 0; i < iceLocation[layer].Count; ++i) {
 						if((iceLocation[layer])[i] == pos) {
-							for(int j = 0; j < nbOfIceCartridge[layer]; ++j) {
-								Instantiate(loots[0], v, Quaternion.identity);
-							}
+							Item projectileIce = Instantiate(loots[0], v, Quaternion.identity).GetComponent<Item>();
+							projectileIce.setUtilization(nbOfIceCartridge[layer]);
 						}
 					}
 					for(int i = 0; i < fireLocation[layer].Count; ++i) {
 						if((fireLocation[layer])[i] == pos) {
-							for(int j = 0; j < nbOfFireCartridge[layer]; ++j) {
-								Instantiate(loots[1], v, Quaternion.identity);
-							}
+							Item projectileFire = Instantiate(loots[1], v, Quaternion.identity).GetComponent<Item>();
+							projectileFire.setUtilization(nbOfFireCartridge[layer]);
 						}
 					}
 					for(int i = 0; i < boundingLocation[layer].Count; ++i) {
 						if((boundingLocation[layer])[i] == pos) {
-							for(int j = 0; j < nbOfBoundingCartridge[layer]; ++j) {
-								Instantiate(loots[2], v, Quaternion.identity);
-							}
-						}
+							Item projectileBounding = Instantiate(loots[2], v, Quaternion.identity).GetComponent<Item>();
+							projectileBounding.setUtilization(nbOfBoundingCartridge[layer]);
+					}
 					}
 					for(int i = 0; i < laserLocation[layer].Count; ++i) {
 						if((laserLocation[layer])[i] == pos) {
-							for(int j = 0; j < nbOfLaserCartridge[layer]; ++j) {
-								Instantiate(loots[3], v, Quaternion.identity);
-							}
+							Item projectileLaser = Instantiate(loots[3], v, Quaternion.identity).GetComponent<Item>();
+							projectileLaser.setUtilization(nbOfLaserCartridge[layer]);
 						}
 					}
 					
