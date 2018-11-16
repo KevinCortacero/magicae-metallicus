@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class MenuButton : MonoBehaviour {
 
     public GameObject credits;
+    public GameObject help;
 
     public void START_GAME() {
         SceneManager.LoadScene("arena");
@@ -20,6 +21,6 @@ public class MenuButton : MonoBehaviour {
     }
 
     public void SHOW_HELP() {
-        credits.SetActive(!credits.active);
+        help.SetActive(!help.active);
     }
 }
