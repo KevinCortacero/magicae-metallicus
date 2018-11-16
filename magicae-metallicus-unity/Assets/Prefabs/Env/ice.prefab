@@ -21,8 +21,8 @@ GameObject:
   - component: {fileID: 4536760705632672}
   - component: {fileID: 212775143257391530}
   - component: {fileID: 50816327249831212}
-  - component: {fileID: 114689440760709892}
   - component: {fileID: 60158544510563724}
+  - component: {fileID: 114764103661759786}
   m_Layer: 0
   m_Name: ice
   m_TagString: Rock
@@ -110,7 +110,7 @@ PolygonCollider2D:
       - {x: 0.21866666, y: -0.34533334}
       - {x: 0.32133332, y: -0.32333332}
       - {x: 0.34866667, y: -0.29533333}
---- !u!114 &114689440760709892
+--- !u!114 &114764103661759786
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}

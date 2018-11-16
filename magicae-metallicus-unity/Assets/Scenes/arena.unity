@@ -531,6 +531,23 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4256116498400678, guid: a9b52e6fc7977a543986641714f168a1,
     type: 2}
   m_PrefabInternal: {fileID: 1788865579}
+--- !u!1 &698728958 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1727010569998366, guid: 3cd05d61e994f7d49a1a40feb1a2661b,
+    type: 2}
+  m_PrefabInternal: {fileID: 858906013}
+--- !u!114 &698728963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 698728958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f412170eddb93446870af33be97e431, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pv: 30
 --- !u!114 &767107644 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 114291556673721696, guid: a9b52e6fc7977a543986641714f168a1,
@@ -579,7 +596,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -4.1, y: 0}
+  m_Offset: {x: -4.3, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -590,7 +607,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.2, y: 6}
+  m_Size: {x: 1, y: 6}
   m_EdgeRadius: 0
 --- !u!61 &822673328
 BoxCollider2D:
@@ -604,7 +621,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 4.1, y: 0}
+  m_Offset: {x: 4.3, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -615,7 +632,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.2, y: 6}
+  m_Size: {x: 1, y: 6}
   m_EdgeRadius: 0
 --- !u!1001 &858906013
 Prefab:
@@ -661,7 +678,13 @@ Prefab:
       propertyPath: pv
       value: 10
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 114976777809721346, guid: 3cd05d61e994f7d49a1a40feb1a2661b,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114976777809721346, guid: 3cd05d61e994f7d49a1a40feb1a2661b, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 3cd05d61e994f7d49a1a40feb1a2661b, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &858906014 stripped
@@ -10374,6 +10397,11 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114890663624836348, guid: db6ca9dc895ffe649b0ab7682eb0aef4,
+        type: 2}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 440212108}
     - target: {fileID: 114188284732779620, guid: db6ca9dc895ffe649b0ab7682eb0aef4,
         type: 2}
       propertyPath: player
@@ -10398,26 +10426,6 @@ Prefab:
         type: 2}
       propertyPath: m_AnchorMax.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114890663624836348, guid: db6ca9dc895ffe649b0ab7682eb0aef4,
-        type: 2}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 440212108}
-    - target: {fileID: 114652528518541636, guid: db6ca9dc895ffe649b0ab7682eb0aef4,
-        type: 2}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114652528518541636, guid: db6ca9dc895ffe649b0ab7682eb0aef4,
-        type: 2}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114652528518541636, guid: db6ca9dc895ffe649b0ab7682eb0aef4,
-        type: 2}
-      propertyPath: m_Color.b
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db6ca9dc895ffe649b0ab7682eb0aef4, type: 2}

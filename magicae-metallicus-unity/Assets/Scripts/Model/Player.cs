@@ -65,7 +65,7 @@ public class Player : MonoBehaviour {
         this.canMove = true;
         //this.spriteRenderer.sprite = right;
         this.number = Int32.Parse(gameObject.name.Split(null)[1]) - 1;
-        this.pv = 10;
+        this.pv = 50;
         //this.projectiles = new List<ProjectileHolder>();
         //this.projectiles.Add(new ProjectileHolder(this.projectile, Mathf.Infinity));
         //this.projectiles.Add(new ProjectileHolder(item.projectile, item.utilization));
