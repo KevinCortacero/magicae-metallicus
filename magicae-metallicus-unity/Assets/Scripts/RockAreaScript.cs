@@ -68,7 +68,7 @@ public class RockAreaScript : MonoBehaviour {
 		this.nbOfIceCartridge = new int[10] {1, 1, 1, 2, 2, 2, 3, 3, 3, 0};
 		this.nbOfFireCartridge = new int[10] {2, 2, 2, 4, 4, 4, 6, 6, 6, 0};
 		this.nbOfBoundingCartridge = new int[10] {3, 3, 3, 5, 5, 5, 7, 7, 7, 0};
-		this.nbOfLaserCartridge = new int[10] {0, 0, 0, 0, 0, 0, 0, 0, 0, 1};
+		this.nbOfLaserCartridge = new int[10] {0, 0, 0, 0, 0, 0, 0, 0, 0, 50};
 
 		// Init loot location variables
 		this.iceLocation = new List<int>[10];
