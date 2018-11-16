@@ -17,6 +17,7 @@ public abstract class Projectile : MonoBehaviour {
     [SerializeField]
     protected float maxSpeed;
     protected bool isColliding = false;
+    private int owner;
 
     public abstract bool IsBurning { get; }
 
@@ -95,11 +96,21 @@ public abstract class Projectile : MonoBehaviour {
 
     protected void InteractWithRock(Collision2D col) {
         RockScript rock = col.gameObject.GetComponent<RockScript>();
-        rock.pv -= GetRatio() * this.maxDamage * this.ratioToRocks;
+
+        float ratio = 1;
+        if ((this.owner == 1 && rock.Direction == -1) || (this.owner == 0 && rock.Direction == 1)) {
+            ratio = 0.5f;
+        }
+
+        rock.pv -= GetRatio() * this.maxDamage * this.ratioToRocks * ratio;
     }
 
     protected void InteractWithPlayer(Collision2D col) {
         Player player = col.gameObject.GetComponent<Player>();
-        player.Damage(GetRatio()*this.maxDamage*this.ratioToPlayers);
+        player.Damage(GetRatio() * this.maxDamage * this.ratioToPlayers);
+    }
+
+    internal void SetOwner(int owner) {
+        this.owner = owner;
     }
 }

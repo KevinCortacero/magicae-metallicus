@@ -43,10 +43,8 @@ public class Player : MonoBehaviour {
         }
     }
 
-    public int CURSOR
-    {
-        get
-        {
+    public int CURSOR {
+        get {
             return this.projectilesIndex;
         }
     }
@@ -146,9 +144,8 @@ public class Player : MonoBehaviour {
         }
     }
 
-    public int GetSpellRemaining(int spellID)
-    {
-        return (int) this.projectiles[spellID].remaining;
+    public int GetSpellRemaining(int spellID) {
+        return (int)this.projectiles[spellID].remaining;
     }
 
     private void ItemRight() {
@@ -162,7 +159,7 @@ public class Player : MonoBehaviour {
     private void ItemLeft() {
         this.projectilesIndex -= 1;
         this.projectilesIndex = GetSafeValueForItems(projectilesIndex);
-        if(this.projectiles[this.projectilesIndex].remaining == 0) {
+        if (this.projectiles[this.projectilesIndex].remaining == 0) {
             this.ItemLeft();
         }
     }
@@ -186,7 +183,7 @@ public class Player : MonoBehaviour {
 
     private void Mine() {
         if (!mining) {
-            
+
 
             RaycastHit2D hit = Physics2D.Raycast(transform.Find("Pickace").position, transform.Find("Pickace").up);
             Debug.DrawRay(transform.Find("Pickace").position, transform.Find("Pickace").up, Color.green);
@@ -194,7 +191,7 @@ public class Player : MonoBehaviour {
             // If it hits something...
             if (hit.collider != null) {
 
-                
+
 
 
                 float distance = Vector3.Distance(hit.point, transform.position);
@@ -258,8 +255,15 @@ public class Player : MonoBehaviour {
         //this.pickace.GetComponent<Collider2D>().enabled = false;
         canMove = true;
         mining = false;
+        int owner = this.number = Int32.Parse(gameObject.name.Split(null)[1]) - 1;
         if (this.rockMined != null) {
-            this.rockMined.pv -= 1;
+            if ((owner == 1 && this.rockMined.Direction == -1) || (owner == 0 && this.rockMined.Direction == 1)) {
+                this.rockMined.pv -= 0.5f;
+            }
+            else {
+
+                this.rockMined.pv -= 1;
+            }
         }
     }
 
@@ -274,10 +278,10 @@ public class Player : MonoBehaviour {
             focusing = true;
 
             GameObject go = Instantiate(projectiles[this.projectilesIndex].projectile, transform.Find("BulletSpawn").position, spriteRenderer.gameObject.transform.rotation) as GameObject;
-            
+
             go.SetActive(false);
             this.bullet = go.GetComponent<Projectile>();
-            
+
         }
         else {
             //Debug.Log(bullet);
@@ -334,6 +338,7 @@ public class Player : MonoBehaviour {
 
         Physics2D.IgnoreCollision(this.bullet.gameObject.GetComponent<Collider2D>(), GetComponent<Collider2D>());
         this.bullet.Shoot(x, y);
+        this.bullet.SetOwner(this.number = Int32.Parse(gameObject.name.Split(null)[1]) - 1);
 
         this.projectiles[this.projectilesIndex].remaining = this.projectiles[this.projectilesIndex].remaining - 1f;
 

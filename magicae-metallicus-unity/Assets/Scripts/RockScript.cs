@@ -11,8 +11,18 @@ public class RockScript : MonoBehaviour {
 	private float speed;
 	private int nbTurnOfBuffer;
 
-	// Use this for initialization
-	void Start () {
+    public int Direction {
+        get {
+            return direction;
+        }
+
+        set {
+            direction = value;
+        }
+    }
+
+    // Use this for initialization
+    void Start () {
        // Init rock positions
 		start = transform.position;
 		end = transform.position;
