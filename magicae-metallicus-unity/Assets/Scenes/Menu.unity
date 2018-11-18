@@ -22060,7 +22060,7 @@ MonoBehaviour:
 
     AIM: MOUSE CURSOR
 
-    SWITCH SPELL: MOUSE WHEEL'
+    SWITCH SPELL: MOUSE WHEEL or 1/2/3/4/5'
 --- !u!222 &1083181120
 CanvasRenderer:
   m_ObjectHideFlags: 0

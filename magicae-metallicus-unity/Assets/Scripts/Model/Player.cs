@@ -37,6 +37,8 @@ public class Player : MonoBehaviour {
 
 
     private float pv;
+    private bool previousDLeft;
+    private bool previousDRight;
 
     public float PV {
         get {
@@ -70,7 +72,7 @@ public class Player : MonoBehaviour {
         //this.projectiles.Add(new ProjectileHolder(item.projectile, item.utilization));
     }
 
-    
+
 
     // Update is called once per frame
     void Update() {
@@ -110,13 +112,16 @@ public class Player : MonoBehaviour {
                     focusing = false;
                     Shoot();
                 }
-                if (gamepad.GetButton(GamepadButton.DpadLeft)) {
+                if (gamepad.GetButton(GamepadButton.DpadLeft) && !this.previousDLeft) {
                     this.ItemLeft();
                 }
-                else if (gamepad.GetButton(GamepadButton.DpadRight)) {
+                else if (gamepad.GetButton(GamepadButton.DpadRight) && !this.previousDRight) {
 
                     this.ItemRight();
                 }
+
+                this.previousDLeft = gamepad.GetButton(GamepadButton.DpadLeft);
+                this.previousDRight = gamepad.GetButton(GamepadButton.DpadRight);
 
 
                 break;
@@ -141,6 +146,22 @@ public class Player : MonoBehaviour {
                 }
                 else if (Input.GetAxis("Mouse ScrollWheel") < 0f) {
                     this.ItemLeft();
+                }
+
+                if (Input.GetKeyDown(KeyCode.Alpha1)) {
+                    this.projectilesIndex = 0;
+                }
+                else if (Input.GetKeyDown(KeyCode.Alpha2)) {
+                    this.projectilesIndex = 1;
+                }
+                else if (Input.GetKeyDown(KeyCode.Alpha3)) {
+                    this.projectilesIndex = 2;
+                }
+                else if (Input.GetKeyDown(KeyCode.Alpha4)) {
+                    this.projectilesIndex = 3;
+                }
+                else if (Input.GetKeyDown(KeyCode.Alpha5)) {
+                    this.projectilesIndex = 4;
                 }
 
                 break;
