@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class IceRock : RockScript {
 
-    private double start;
+    private double startTime;
     private float maxTime = 25f;
 
     // Use this for initialization
     void Start() {
-        this.start = Time.time;
+        this.startTime = Time.time;
     }
 
     // Update is called once per frame
@@ -17,7 +17,7 @@ public class IceRock : RockScript {
         if (this.pv <= 0) {
             Destroy(gameObject);
         }
-        double elapsed = Time.time - this.start;
+        double elapsed = Time.time - this.startTime;
         float ratio = 1f - (float)(elapsed / this.maxTime);
 
         Debug.Log("elapsed : " + elapsed + " ratio = " + ratio + " my scale = " + GetComponent<Transform>().localScale.x + "= " + GetComponent<Transform>().localScale.x * ratio);

@@ -9,7 +9,7 @@ using System;
 using System.IO;
 using UnityEditor;
 
-[InitializeOnLoad]
+//[InitializeOnLoad]
 public class XGamepadManager : GamepadManager
 {
 	XGamepadDevice[] devices = new XGamepadDevice[4];
