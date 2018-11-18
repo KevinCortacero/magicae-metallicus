@@ -210,6 +210,14 @@ Prefab:
       propertyPath: lineMaterial
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 4253827129163584, guid: a9b52e6fc7977a543986641714f168a1, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 4253827129163584, guid: a9b52e6fc7977a543986641714f168a1, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.05
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a9b52e6fc7977a543986641714f168a1, type: 2}
   m_IsPrefabAsset: 0
@@ -10795,13 +10803,36 @@ Prefab:
         type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 3f9f30a969f60024f80236a66ee0d00e,
+      objectReference: {fileID: 21300000, guid: 0245c4a1ba2c27b478840996fd9fd12a,
         type: 3}
     - target: {fileID: 114291556673721696, guid: a9b52e6fc7977a543986641714f168a1,
         type: 2}
       propertyPath: lineMaterial
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 212478455699601502, guid: a9b52e6fc7977a543986641714f168a1,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 0.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 212478455699601502, guid: a9b52e6fc7977a543986641714f168a1,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 0.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 212478455699601502, guid: a9b52e6fc7977a543986641714f168a1,
+        type: 2}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4253827129163584, guid: a9b52e6fc7977a543986641714f168a1, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 4253827129163584, guid: a9b52e6fc7977a543986641714f168a1, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.05
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a9b52e6fc7977a543986641714f168a1, type: 2}
   m_IsPrefabAsset: 0
