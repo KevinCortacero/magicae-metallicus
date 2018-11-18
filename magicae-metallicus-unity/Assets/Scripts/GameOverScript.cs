@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameOverScript : MonoBehaviour {
 
@@ -42,5 +43,13 @@ public class GameOverScript : MonoBehaviour {
             Destroy(this.player1);
             this.isOver = true;
         }
+    }
+
+    public void AGAIN(){
+	SceneManager.LoadScene("arena");
+    }
+
+    public void MENU(){
+	SceneManager.LoadScene("Menu");
     }
 }

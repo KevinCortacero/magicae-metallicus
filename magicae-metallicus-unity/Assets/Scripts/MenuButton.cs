@@ -12,6 +12,16 @@ public class MenuButton : MonoBehaviour {
 
     public void start(){
 	AudioListener.volume = 1;
+    }
+
+    public void Update(){
+	Image image = soundImage.GetComponent<Image>();
+	if (AudioListener.volume == 0){
+            image.color = new Color(image.color.r, image.color.g, image.color.b, 0.5f);
+	}
+	else{
+	    image.color = new Color(image.color.r, image.color.g, image.color.b, 1f);
+	}
     }	
 
     public void START_GAME() {
@@ -34,12 +44,5 @@ public class MenuButton : MonoBehaviour {
 
     public void SOUND() {
         AudioListener.volume = 1 - AudioListener.volume;
-	Image image = soundImage.GetComponent<Image>();
-	if (AudioListener.volume == 0){
-            image.color = new Color(image.color.r, image.color.g, image.color.b, 0.5f);
-	}
-	else{
-	    image.color = new Color(image.color.r, image.color.g, image.color.b, 1f);
-	}
     }
 }
