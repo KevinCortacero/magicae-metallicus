@@ -63,7 +63,7 @@ public class RockScript : MonoBehaviour {
 	}
 
 	public void moveDirectly(Vector3 d) {
-		transform.position += d;
+		transform.position = end + d;
 		start = transform.position;
 		end = transform.position;
 	}
