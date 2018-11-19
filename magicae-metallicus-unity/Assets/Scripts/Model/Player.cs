@@ -330,7 +330,7 @@ public class Player : MonoBehaviour {
         Debug.Log("DIR = " + dir);*/
 
         this.cooldown = true;
-        StartCoroutine(this.CoolDown(1f));
+        StartCoroutine(this.CoolDown(0.5f));
 
         Vector2 XY = GetXYFromAnyController();
 
