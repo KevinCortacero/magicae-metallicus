@@ -58,7 +58,6 @@ public abstract class Projectile : MonoBehaviour {
     void OnCollisionEnter2D(Collision2D col) {
         //Debug.Log("OnCollisionEnter2D");
         //Debug.Log(col.gameObject.tag);
-
         if (isColliding) return;
         isColliding = true;
 
@@ -66,16 +65,17 @@ public abstract class Projectile : MonoBehaviour {
 
         if (col.gameObject.tag == "Rock") {
 
-            this.InteractWithRock(col);
+            this.InteractWithRock(col.gameObject.GetComponent<RockScript>());
 
 
         }
         else if (col.gameObject.tag == "Player") {
 
-            this.InteractWithPlayer(col);
+            this.InteractWithPlayer(col.gameObject.GetComponent<Player>());
 
 
         }
+
         /*if (col.gameObject.tag == "Arena") {
 
             Debug.Log(col.collider + " ignore " + GetComponent<Collider2D>());
@@ -88,15 +88,13 @@ public abstract class Projectile : MonoBehaviour {
         ApplyCollision();
     }
 
-    protected virtual void ApplyCollision() {
+    public virtual void ApplyCollision() {
         //Debug.Log("Mother");
         Destroy(gameObject);
         GetComponent<PixelArsenalProjectileScript>().Collided();
     }
 
-    protected void InteractWithRock(Collision2D col) {
-        RockScript rock = col.gameObject.GetComponent<RockScript>();
-
+    protected void InteractWithRock(RockScript rock) {
         float ratio = 1;
         if ((this.owner == 1 && rock.Sens == -1) || (this.owner == 0 && rock.Sens == 1)) {
             ratio = 0.5f;
@@ -105,8 +103,7 @@ public abstract class Projectile : MonoBehaviour {
         rock.pv -= GetRatio() * this.maxDamage * this.ratioToRocks * ratio;
     }
 
-    protected void InteractWithPlayer(Collision2D col) {
-        Player player = col.gameObject.GetComponent<Player>();
+    protected void InteractWithPlayer(Player player) {
         player.Damage(GetRatio() * this.maxDamage * this.ratioToPlayers);
     }
 

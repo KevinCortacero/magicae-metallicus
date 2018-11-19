@@ -90,7 +90,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxFocusTime: 3
-  maxDamage: 1
+  maxDamage: 2.5
   ratioToPlayers: 1.5
   ratioToRocks: 1
   maxSpeed: 20

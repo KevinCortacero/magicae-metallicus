@@ -21,7 +21,7 @@ public class IceProjectile : Projectile {
         //Debug.Log("I AM THE ONLY ONE ");
     }
 
-    protected override void ApplyCollision() {
+    public override void ApplyCollision() {
 
         this.SpawnIce();
         base.ApplyCollision();

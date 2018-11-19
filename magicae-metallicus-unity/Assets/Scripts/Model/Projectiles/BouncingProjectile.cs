@@ -30,7 +30,7 @@ public class BouncingProjectile : Projectile {
         rock.pv -= GetRatio();
     }*/
 
-    protected override void ApplyCollision() {
+    public override void ApplyCollision() {
 
         if (this.counter > this.maxCollision) {
             base.ApplyCollision();

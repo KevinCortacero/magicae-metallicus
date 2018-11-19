@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 114810396454967616}
   m_Layer: 0
   m_Name: FireBall Item
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -65,7 +65,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.16, y: 0.16}
+  m_Size: {x: 2, y: 2}
   m_EdgeRadius: 0
 --- !u!114 &114810396454967616
 MonoBehaviour:
@@ -79,7 +79,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 1795849534249258, guid: 273b11b5c82b0be46a1815c0190a52bb, type: 2}
-  utilization: Infinity
+  utilization: 0
 --- !u!212 &212888999545464230
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -30,6 +30,7 @@ public class Player : MonoBehaviour {
     private ControllerType type;
     private int number;
     private float tempsMine;
+    private bool cooldown;
     private RockScript rockMined;
     [SerializeField]
     private List<ProjectileHolder> projectiles;
@@ -201,6 +202,11 @@ public class Player : MonoBehaviour {
         }
     }
 
+    public IEnumerator CoolDown(float coolDown) {
+        yield return new WaitForSeconds(coolDown);
+        cooldown = false;
+    }
+
     public void Damage(float value) {
         this.pv -= value;
     }
@@ -293,6 +299,10 @@ public class Player : MonoBehaviour {
 
     private void Focus() {
 
+        if (this.cooldown) {
+            return;
+        }
+
         if (this.projectiles[this.projectilesIndex].remaining == 0) {
             Debug.Log("No more projectile !");
             return;
@@ -319,6 +329,8 @@ public class Player : MonoBehaviour {
         Vector3 dir = (Input.mousePosition - sp).normalized;
         Debug.Log("DIR = " + dir);*/
 
+        this.cooldown = true;
+        StartCoroutine(this.CoolDown(1f));
 
         Vector2 XY = GetXYFromAnyController();
 

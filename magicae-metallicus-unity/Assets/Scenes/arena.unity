@@ -218,6 +218,21 @@ Prefab:
       propertyPath: m_LocalPosition.y
       value: 0.05
       objectReference: {fileID: 0}
+    - target: {fileID: 114291556673721696, guid: a9b52e6fc7977a543986641714f168a1,
+        type: 2}
+      propertyPath: projectiles.Array.data[4].remaining
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114291556673721696, guid: a9b52e6fc7977a543986641714f168a1,
+        type: 2}
+      propertyPath: projectiles.Array.data[3].remaining
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114291556673721696, guid: a9b52e6fc7977a543986641714f168a1,
+        type: 2}
+      propertyPath: projectiles.Array.data[2].remaining
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a9b52e6fc7977a543986641714f168a1, type: 2}
   m_IsPrefabAsset: 0
@@ -10832,6 +10847,26 @@ Prefab:
     - target: {fileID: 4253827129163584, guid: a9b52e6fc7977a543986641714f168a1, type: 2}
       propertyPath: m_LocalPosition.y
       value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 114291556673721696, guid: a9b52e6fc7977a543986641714f168a1,
+        type: 2}
+      propertyPath: projectiles.Array.data[4].remaining
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114291556673721696, guid: a9b52e6fc7977a543986641714f168a1,
+        type: 2}
+      propertyPath: projectiles.Array.data[1].remaining
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114291556673721696, guid: a9b52e6fc7977a543986641714f168a1,
+        type: 2}
+      propertyPath: projectiles.Array.data[3].remaining
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114291556673721696, guid: a9b52e6fc7977a543986641714f168a1,
+        type: 2}
+      propertyPath: projectiles.Array.data[2].remaining
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a9b52e6fc7977a543986641714f168a1, type: 2}

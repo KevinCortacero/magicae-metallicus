@@ -20,11 +20,11 @@ GameObject:
   m_Component:
   - component: {fileID: 4247170396923080}
   - component: {fileID: 212081046251028356}
-  - component: {fileID: 61994949694107446}
   - component: {fileID: 114381045394167206}
+  - component: {fileID: 61376802823302524}
   m_Layer: 0
   m_Name: Bouncing Item
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36,13 +36,13 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1030277245541008}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.231, y: -1.17, z: -0.049816173}
+  m_LocalPosition: {x: 2.799201, y: -0.91149294, z: -0.049816173}
   m_LocalScale: {x: 0.1, y: 0.1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &61994949694107446
+--- !u!61 &61376802823302524
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -51,7 +51,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -65,7 +65,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.16, y: 0.16}
+  m_Size: {x: 2, y: 2}
   m_EdgeRadius: 0
 --- !u!114 &114381045394167206
 MonoBehaviour:
@@ -79,7 +79,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 1606260683489300, guid: f9de852711ee666479c54cd644fcb7dd, type: 2}
-  utilization: Infinity
+  utilization: 0
 --- !u!212 &212081046251028356
 SpriteRenderer:
   m_ObjectHideFlags: 1
