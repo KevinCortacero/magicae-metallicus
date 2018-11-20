@@ -2,8 +2,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
-public class Player : MonoBehaviour {
+public class Player : NetworkBehaviour {
 
     public SpriteRenderer spriteRenderer;
 
@@ -14,6 +15,8 @@ public class Player : MonoBehaviour {
     //public PickaceCollider pickace;
     public float speed;
     public GameObject slash;
+
+    public Sprite mainSprite;
 
 
     //public int number = 0;
@@ -62,11 +65,16 @@ public class Player : MonoBehaviour {
         }
     }
 
+    public override void OnStartLocalPlayer() {
+        this.spriteRenderer.sprite = this.mainSprite;
+        this.number = 0;
+    }
+
     // Use this for initialization
     void Start() {
         this.canMove = true;
         //this.spriteRenderer.sprite = right;
-        this.number = Int32.Parse(gameObject.name.Split(null)[1]) - 1;
+        //this.number = Int32.Parse(gameObject.name.Split(null)[1]) - 1;
         this.pv = 50;
         //this.projectiles = new List<ProjectileHolder>();
         //this.projectiles.Add(new ProjectileHolder(this.projectile, Mathf.Infinity));
@@ -77,6 +85,11 @@ public class Player : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
+
+        if (!isLocalPlayer) {
+            return;
+        }
+
         if (this.pv <= 0) {
             Destroy(gameObject);
         }
@@ -111,7 +124,7 @@ public class Player : MonoBehaviour {
                 }
                 else if ((gamepad.GetTrigger(GamepadTrigger.Right) <= 0.8) && focusing) {
                     focusing = false;
-                    Shoot();
+                    CmdShoot();
                 }
                 if (gamepad.GetButton(GamepadButton.DpadLeft) && !this.previousDLeft) {
                     this.ItemLeft();
@@ -137,7 +150,7 @@ public class Player : MonoBehaviour {
                 }
                 else if (Input.GetMouseButtonUp(0) && focusing) {
                     focusing = false;
-                    Shoot();
+                    CmdShoot();
                 }
 
 
@@ -285,9 +298,8 @@ public class Player : MonoBehaviour {
         //this.pickace.GetComponent<Collider2D>().enabled = false;
         canMove = true;
         mining = false;
-        int owner = this.number = Int32.Parse(gameObject.name.Split(null)[1]) - 1;
         if (this.rockMined != null) {
-            if ((owner == 1 && this.rockMined.Sens == -1) || (owner == 0 && this.rockMined.Sens == 1)) {
+            if ((this.number == 1 && this.rockMined.Sens == -1) || (this.number == 0 && this.rockMined.Sens == 1)) {
                 this.rockMined.pv -= 0.5f;
             }
             else {
@@ -323,7 +335,8 @@ public class Player : MonoBehaviour {
         }
     }
 
-    private void Shoot() {
+    [Command]
+    private void CmdShoot() {
 
         /*Vector3 sp = Camera.main.WorldToScreenPoint(transform.position);
         Vector3 dir = (Input.mousePosition - sp).normalized;
@@ -374,7 +387,9 @@ public class Player : MonoBehaviour {
 
         Physics2D.IgnoreCollision(this.bullet.gameObject.GetComponent<Collider2D>(), GetComponent<Collider2D>());
         this.bullet.Shoot(x, y);
-        this.bullet.SetOwner(this.number = Int32.Parse(gameObject.name.Split(null)[1]) - 1);
+        this.bullet.SetOwner(this.number);
+
+        NetworkServer.Spawn(this.bullet.gameObject);
 
         this.projectiles[this.projectilesIndex].remaining = this.projectiles[this.projectilesIndex].remaining - 1f;
 
