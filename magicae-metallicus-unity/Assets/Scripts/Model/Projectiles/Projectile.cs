@@ -2,8 +2,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
-public abstract class Projectile : MonoBehaviour {
+public abstract class Projectile : NetworkBehaviour {
 
     protected float focusTime = 0;
     [SerializeField]
@@ -18,6 +19,15 @@ public abstract class Projectile : MonoBehaviour {
     protected float maxSpeed;
     protected bool isColliding = false;
     private int owner;
+
+    [SyncVar]
+    public NetworkInstanceId spawnedBy;
+    // Set collider for all clients.
+    public override void OnStartClient() {
+        GameObject obj = ClientScene.FindLocalObject(spawnedBy);
+        Physics2D.IgnoreCollision(GetComponent<Collider2D>(), obj.GetComponent<Collider2D>());
+    }
+
 
     public abstract bool IsBurning { get; }
 

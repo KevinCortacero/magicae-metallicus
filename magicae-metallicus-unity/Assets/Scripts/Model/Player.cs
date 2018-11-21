@@ -389,6 +389,7 @@ public class Player : NetworkBehaviour {
         this.bullet.Shoot(x, y);
         this.bullet.SetOwner(this.number);
 
+        this.bullet.spawnedBy = this.netId;
         NetworkServer.Spawn(this.bullet.gameObject);
 
         this.projectiles[this.projectilesIndex].remaining = this.projectiles[this.projectilesIndex].remaining - 1f;
