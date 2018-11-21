@@ -655,7 +655,7 @@ MonoBehaviour:
   player2HUD: {fileID: 1564357698}
   rockAreaLeft: {fileID: 2073961597}
   rockAreaRight: {fileID: 2126305845}
-  rockArea: {fileID: 0}
+  rockArea: {fileID: 1738596628913634, guid: 9f1bb4bb6d336cc48a07cdd903179ed0, type: 2}
 --- !u!4 &836405162
 Transform:
   m_ObjectHideFlags: 0
@@ -11284,7 +11284,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2073961598
 Transform:
   m_ObjectHideFlags: 0
@@ -11296,7 +11296,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2136818472}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2126305845
 GameObject:
@@ -11312,7 +11312,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2126305846
 Transform:
   m_ObjectHideFlags: 0
@@ -11356,8 +11356,8 @@ Transform:
   - {fileID: 1406863943}
   - {fileID: 822673326}
   - {fileID: 1735326884}
-  - {fileID: 858906014}
   - {fileID: 2073961598}
+  - {fileID: 858906014}
   - {fileID: 2126305846}
   - {fileID: 1446368685}
   m_Father: {fileID: 0}
@@ -11394,7 +11394,7 @@ MonoBehaviour:
   manager: {fileID: 0}
   showGUI: 1
   offsetX: 0
-  offsetY: 0
+  offsetY: 400
 --- !u!114 &2140259552
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11423,6 +11423,7 @@ MonoBehaviour:
   m_OnlineScene: 
   m_SpawnPrefabs:
   - {fileID: 1606260683489300, guid: 8787a8af704206b468c6ea0dda321aa9, type: 2}
+  - {fileID: 1479965719613962, guid: 0aabd09544ec44648b6922266ff100a3, type: 2}
   m_CustomConfig: 0
   m_MaxConnections: 4
   m_ConnectionConfig:
