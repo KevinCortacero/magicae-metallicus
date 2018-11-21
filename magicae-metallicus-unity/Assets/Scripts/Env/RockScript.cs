@@ -1,16 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
-public class RockScript : MonoBehaviour {
+public class RockScript : NetworkBehaviour {
 
+    [SyncVar]
     public float pv;
-	private Vector3 start;
-	private Vector3 end;
+    [SyncVar]
+    private Vector3 start;
+    [SyncVar]
+    private Vector3 end;
 
     private int sens;
+    [SyncVar]
     private int direction;
-	private float speed;
+    [SyncVar]
+    private float speed;
 	private int nbTurnOfBuffer;
 
     public int Sens {
@@ -38,12 +44,14 @@ public class RockScript : MonoBehaviour {
 		this.start = transform.position;
 		if (direction == 1) {
 			if (start[0] < end[0]) {
+                Debug.Log("truc chelou 1");
 				transform.position += new Vector3 (speed * Time.deltaTime, 0.0f, 0.0f);
 			}
 		}
 		else {
 			if (start[0] > end[0]) {
-				transform.position -= new Vector3 (speed * Time.deltaTime, 0.0f, 0.0f);
+                Debug.Log("truc chelou 2");
+                transform.position -= new Vector3 (speed * Time.deltaTime, 0.0f, 0.0f);
 			}
 		}
 	}
@@ -58,11 +66,13 @@ public class RockScript : MonoBehaviour {
 	}
 
 	public void move(Vector3 d, int direction) {
-		this.direction = direction;
+        Debug.Log("Moving");
+        this.direction = direction;
 		this.end += d;
 	}
 
 	public void moveDirectly(Vector3 d) {
+        Debug.Log("Moving directly");
 		transform.position = end + d;
 		start = transform.position;
 		end = transform.position;
@@ -73,7 +83,8 @@ public class RockScript : MonoBehaviour {
 	}
 
 	public void resetPv() {
-		this.pv = 2;
+        Debug.Log("reset");
+        this.pv = 2;
 	}
 
 	public void increaseBufferNumberOfTurn() {

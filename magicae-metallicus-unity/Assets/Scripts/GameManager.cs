@@ -1,11 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
-public class GameManager : MonoBehaviour {
+public class GameManager : NetworkBehaviour {
 
     public GameObject player1HUD;
     public GameObject player2HUD;
+    public GameObject rockAreaLeft;
+    public GameObject rockAreaRight;
+    public GameObject rockArea;
 
     public static GameManager instance = null;
 
@@ -40,5 +44,25 @@ public class GameManager : MonoBehaviour {
     public void SetPlayer2(Player player) {
         this.player2HUD.GetComponentInChildren<HUDPlayerScript>().player = player;
         this.player2HUD.GetComponentInChildren<SpellRemainingScript>().player = player;
+    }
+
+    public void BuildArena() {
+
+        Debug.Log("building");
+
+        GameObject left = Instantiate(this.rockArea, rockAreaLeft.transform.position, Quaternion.identity);
+
+        Debug.Log(left);
+        left.GetComponent<RockAreaScript>().direction = -1;
+        GameObject right = Instantiate(this.rockArea, rockAreaRight.transform.position, Quaternion.identity);
+        right.GetComponent<RockAreaScript>().direction = 1;
+
+        left.transform.parent = rockAreaLeft.transform;
+        right.transform.parent = rockAreaRight.transform;
+    }
+
+    public override void OnStartServer() {
+        Debug.Log("OnStartServer");
+        this.BuildArena();
     }
 }

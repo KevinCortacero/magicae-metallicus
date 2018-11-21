@@ -20,12 +20,12 @@ public class IceRock : RockScript {
         double elapsed = Time.time - this.startTime;
         float ratio = 1f - (float)(elapsed / this.maxTime);
 
-        Debug.Log("elapsed : " + elapsed + " ratio = " + ratio + " my scale = " + GetComponent<Transform>().localScale.x + "= " + GetComponent<Transform>().localScale.x * ratio);
+        //Debug.Log("elapsed : " + elapsed + " ratio = " + ratio + " my scale = " + GetComponent<Transform>().localScale.x + "= " + GetComponent<Transform>().localScale.x * ratio);
 
         GetComponent<Transform>().localScale = new Vector3(ratio, ratio, 0);
-        Debug.Log("scale = " + new Vector3(ratio, ratio, 0));
+        //Debug.Log("scale = " + new Vector3(ratio, ratio, 0));
         if (elapsed > 20) {
-            Debug.Log("destroy");
+            //Debug.Log("destroy");
             Destroy(gameObject);
         }
     }

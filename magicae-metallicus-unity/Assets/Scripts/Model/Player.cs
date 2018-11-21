@@ -70,7 +70,18 @@ public class Player : NetworkBehaviour {
     public override void OnStartLocalPlayer() {
         this.spriteRenderer.sprite = this.mainSprite;
         this.number = 0;
+        if (isServer) {
+            GameManager.instance.BuildArena();
+        }
     }
+
+
+
+    public override void OnStartServer() {
+        
+    }
+
+
 
     // Use this for initialization
     void Start() {
@@ -319,13 +330,22 @@ public class Player : NetworkBehaviour {
         mining = false;
         if (this.rockMined != null) {
             if ((this.number == 1 && this.rockMined.Sens == -1) || (this.number == 0 && this.rockMined.Sens == 1)) {
-                this.rockMined.pv -= 0.5f;
+                //this.rockMined.pv -= 0.5f;
+                this.CmdDamageRock(this.rockMined.gameObject, 0.5f);
+                Debug.Log("-0.5");
             }
             else {
 
-                this.rockMined.pv -= 1;
+                //this.rockMined.pv -= 1;
+                this.CmdDamageRock(this.rockMined.gameObject, 1);
+                Debug.Log("-1");
             }
         }
+    }
+
+    [Command]
+    private void CmdDamageRock(GameObject rock, float value) {
+        rock.GetComponent<RockScript>().pv -= value;
     }
 
     private void Focus() {
