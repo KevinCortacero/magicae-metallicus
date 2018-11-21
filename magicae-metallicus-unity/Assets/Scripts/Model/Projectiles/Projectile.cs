@@ -23,10 +23,15 @@ public abstract class Projectile : NetworkBehaviour {
     [SyncVar]
     public NetworkInstanceId spawnedBy;
     // Set collider for all clients.
-    public override void OnStartClient() {
+    /*public override void OnStartClient() {
+        this.IgnoreSpawner();
+    }*/
+
+    private void IgnoreSpawner() {
         GameObject obj = ClientScene.FindLocalObject(spawnedBy);
         Physics2D.IgnoreCollision(GetComponent<Collider2D>(), obj.GetComponent<Collider2D>());
     }
+
 
 
     public abstract bool IsBurning { get; }
@@ -34,6 +39,7 @@ public abstract class Projectile : NetworkBehaviour {
     // Use this for initialization
     void Start() {
         //Physics2D.IgnoreLayerCollision(8, 9);
+        this.IgnoreSpawner();
     }
 
     // Update is called once per frame
@@ -41,8 +47,8 @@ public abstract class Projectile : NetworkBehaviour {
 
     }
 
-    public void Focus(float deltaTime) {
-        this.focusTime += deltaTime;
+    public void SetFocus(float deltaTime) {
+        this.focusTime = deltaTime;
     }
 
     public void Shoot(float x, float y) {

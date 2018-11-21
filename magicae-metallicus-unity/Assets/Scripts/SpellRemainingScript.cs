@@ -19,6 +19,10 @@ public class SpellRemainingScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        if (player == null) {
+            //Debug.Log("player not loaded");
+            return;
+        }
         this.spell1Remaining.text = "x" + this.player.GetSpellRemaining(1);
         this.spell2Remaining.text = "x" + this.player.GetSpellRemaining(2);
         this.spell3Remaining.text = "x" + this.player.GetSpellRemaining(3);

@@ -27,6 +27,7 @@ public class Player : NetworkBehaviour {
     private GamepadInput _input;
     private GamepadDevice gamepad;
     private bool focusing = false;
+    private float timeElapsed;
     private bool mining = false;
     private Projectile bullet;
     private bool canMove;
@@ -65,6 +66,7 @@ public class Player : NetworkBehaviour {
         }
     }
 
+
     public override void OnStartLocalPlayer() {
         this.spriteRenderer.sprite = this.mainSprite;
         this.number = 0;
@@ -79,6 +81,27 @@ public class Player : NetworkBehaviour {
         //this.projectiles = new List<ProjectileHolder>();
         //this.projectiles.Add(new ProjectileHolder(this.projectile, Mathf.Infinity));
         //this.projectiles.Add(new ProjectileHolder(item.projectile, item.utilization));
+
+
+        GameObject[] respawns = GameObject.FindGameObjectsWithTag("Respawn");
+        //Debug.Log(respawns);
+        //Debug.Log(this.transform.position);
+        foreach (GameObject respawn in respawns) {
+            //Debug.Log(respawn);
+            //Debug.Log(respawn.GetComponent<SpawnHolder>().playerNumber);
+            if (respawn.transform.position.Equals(this.transform.position)) {
+                //Debug.Log("ça equals");
+                if (respawn.GetComponent<SpawnHolder>().playerNumber == 1) {
+                    GameManager.instance.SetPlayer1(this);
+                    //Debug.Log("uno");
+                }
+                else if (respawn.GetComponent<SpawnHolder>().playerNumber == 2) {
+                    GameManager.instance.SetPlayer2(this);
+                    //Debug.Log("deuxio");
+                }
+            }
+        }
+
     }
 
 
@@ -124,7 +147,7 @@ public class Player : NetworkBehaviour {
                 }
                 else if ((gamepad.GetTrigger(GamepadTrigger.Right) <= 0.8) && focusing) {
                     focusing = false;
-                    CmdShoot();
+                    Shoot();
                 }
                 if (gamepad.GetButton(GamepadButton.DpadLeft) && !this.previousDLeft) {
                     this.ItemLeft();
@@ -150,7 +173,10 @@ public class Player : NetworkBehaviour {
                 }
                 else if (Input.GetMouseButtonUp(0) && focusing) {
                     focusing = false;
-                    CmdShoot();
+                    Debug.Log("Je veux shoot");
+                    Shoot();
+
+                    Debug.Log("Je'ai shoot");
                 }
 
 
@@ -234,9 +260,6 @@ public class Player : NetworkBehaviour {
             // If it hits something...
             if (hit.collider != null) {
 
-
-
-
                 float distance = Vector3.Distance(hit.point, transform.position);
 
                 //Debug.Log("Got " + distance);
@@ -287,11 +310,7 @@ public class Player : NetworkBehaviour {
         //this.pickace.GetComponent<Collider2D>().enabled = true;
         //GetComponentInChildren<Rigidbody2D>().velocity = Vector2.zero;
         //GameObject go = Instantiate(this.slash, this.gameObject.transform.position, renderer.gameObject.transform.rotation) as GameObject;
-
-
-
-
-
+        
     }
 
     private void StopMine() {
@@ -323,20 +342,33 @@ public class Player : NetworkBehaviour {
         if (!focusing) {
             focusing = true;
 
-            GameObject go = Instantiate(projectiles[this.projectilesIndex].projectile, transform.Find("BulletSpawn").position, spriteRenderer.gameObject.transform.rotation) as GameObject;
+            this.timeElapsed = 0;
 
-            go.SetActive(false);
-            this.bullet = go.GetComponent<Projectile>();
+            
+            //go.SetActive(false);
+            //this.bullet = go.GetComponent<Projectile>();
 
         }
         else {
             //Debug.Log(bullet);
-            this.bullet.Focus(Time.deltaTime);
+            this.timeElapsed += Time.deltaTime;
+            //this.bullet.Focus(Time.deltaTime);
         }
     }
 
     [Command]
-    private void CmdShoot() {
+    private void CmdShoot(GameObject projectile, Vector3 position, Quaternion rotation, float focus, NetworkInstanceId netID, float x, float y) {
+        GameObject go = Instantiate(projectiles[this.projectilesIndex].projectile, transform.Find("BulletSpawn").position, spriteRenderer.gameObject.transform.rotation) as GameObject;
+        Projectile p = go.GetComponent<Projectile>();
+        p.SetFocus(focus);
+        p.spawnedBy = netId;
+        p.Shoot(x, y);
+
+        NetworkServer.Spawn(go);
+    }
+    private void Shoot() {
+
+        Debug.Log("Je shoot");
 
         /*Vector3 sp = Camera.main.WorldToScreenPoint(transform.position);
         Vector3 dir = (Input.mousePosition - sp).normalized;
@@ -380,22 +412,23 @@ public class Player : NetworkBehaviour {
         y = Mathf.Sin(angle);*/
 
 
-        this.bullet.gameObject.transform.position = transform.Find("BulletSpawn").position;
-        this.bullet.gameObject.transform.rotation = spriteRenderer.gameObject.transform.rotation;
-        this.bullet.gameObject.SetActive(true);
-        Debug.Log(this.bullet.gameObject.GetComponent<Collider2D>() + " ignore " + GetComponent<Collider2D>());
+        //this.bullet.gameObject.transform.position = transform.Find("BulletSpawn").position;
+        //this.bullet.gameObject.transform.rotation = spriteRenderer.gameObject.transform.rotation;
+        //this.bullet.gameObject.SetActive(true);
+        //Debug.Log(this.bullet.gameObject.GetComponent<Collider2D>() + " ignore " + GetComponent<Collider2D>());
 
-        Physics2D.IgnoreCollision(this.bullet.gameObject.GetComponent<Collider2D>(), GetComponent<Collider2D>());
-        this.bullet.Shoot(x, y);
-        this.bullet.SetOwner(this.number);
+        //Physics2D.IgnoreCollision(this.bullet.gameObject.GetComponent<Collider2D>(), GetComponent<Collider2D>());
+        //this.bullet.Shoot(x, y);
+        //this.bullet.SetOwner(this.number);
 
-        this.bullet.spawnedBy = this.netId;
-        NetworkServer.Spawn(this.bullet.gameObject);
+        //this.bullet.spawnedBy = this.netId;
 
         this.projectiles[this.projectilesIndex].remaining = this.projectiles[this.projectilesIndex].remaining - 1f;
 
 
         Debug.Log("Remaining " + this.projectiles[this.projectilesIndex].remaining);
+
+        this.CmdShoot(this.projectiles[this.projectilesIndex].projectile, transform.Find("BulletSpawn").position, spriteRenderer.gameObject.transform.rotation, this.timeElapsed, this.netId, x, y);
 
         /*if (this.projectiles[this.projectilesIndex].remaining == 0f) {
             this.projectiles.RemoveAt(this.projectilesIndex);
