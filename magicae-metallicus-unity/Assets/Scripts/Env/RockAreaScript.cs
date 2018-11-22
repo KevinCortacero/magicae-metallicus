@@ -136,26 +136,34 @@ public class RockAreaScript : NetworkBehaviour {
 
                     for (int i = 0; i < iceLocation[layer].Count; ++i) {
                         if ((iceLocation[layer])[i] == pos) {
-                            Item projectileIce = Instantiate(loots[0], v, Quaternion.identity).GetComponent<Item>();
+                            GameObject go = Instantiate(loots[0], v, Quaternion.identity);
+                            Item projectileIce = go.GetComponent<Item>();
                             projectileIce.setUtilization(nbOfIceCartridge[layer]);
+                            NetworkServer.Spawn(go);
                         }
                     }
                     for (int i = 0; i < fireLocation[layer].Count; ++i) {
                         if ((fireLocation[layer])[i] == pos) {
-                            Item projectileFire = Instantiate(loots[1], v, Quaternion.identity).GetComponent<Item>();
+                            GameObject go = Instantiate(loots[1], v, Quaternion.identity);
+                            Item projectileFire = go.GetComponent<Item>();
                             projectileFire.setUtilization(nbOfFireCartridge[layer]);
+                            NetworkServer.Spawn(go);
                         }
                     }
                     for (int i = 0; i < boundingLocation[layer].Count; ++i) {
                         if ((boundingLocation[layer])[i] == pos) {
-                            Item projectileBounding = Instantiate(loots[2], v, Quaternion.identity).GetComponent<Item>();
+                            GameObject go = Instantiate(loots[2], v, Quaternion.identity);
+                            Item projectileBounding = go.GetComponent<Item>();
                             projectileBounding.setUtilization(nbOfBoundingCartridge[layer]);
+                            NetworkServer.Spawn(go);
                         }
                     }
                     for (int i = 0; i < laserLocation[layer].Count; ++i) {
                         if ((laserLocation[layer])[i] == pos) {
-                            Item projectileLaser = Instantiate(loots[3], v, Quaternion.identity).GetComponent<Item>();
+                            GameObject go = Instantiate(loots[3], v, Quaternion.identity);
+                            Item projectileLaser = go.GetComponent<Item>();
                             projectileLaser.setUtilization(nbOfLaserCartridge[layer]);
+                            NetworkServer.Spawn(go);
                         }
                     }
 

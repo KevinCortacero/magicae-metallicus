@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4057021945378162}
   - component: {fileID: 114492541769182508}
   - component: {fileID: 33552978972596152}
+  - component: {fileID: 114931465390891456}
   m_Layer: 0
   m_Name: PlasmaRedOBJ
   m_TagString: Untagged
@@ -64,3 +65,35 @@ MonoBehaviour:
   muzzleParticle: {fileID: 169396, guid: 9971eebea0c4b6544a1cdcc5f56f4d3f, type: 2}
   trailParticles: []
   impactNormal: {x: 0, y: 0, z: 0}
+--- !u!114 &114931465390891456
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1226439177418918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 43
+    i1: 43
+    i2: 215
+    i3: 87
+    i4: 78
+    i5: 73
+    i6: 92
+    i7: 164
+    i8: 200
+    i9: 7
+    i10: 172
+    i11: 85
+    i12: 189
+    i13: 249
+    i14: 220
+    i15: 204
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 0

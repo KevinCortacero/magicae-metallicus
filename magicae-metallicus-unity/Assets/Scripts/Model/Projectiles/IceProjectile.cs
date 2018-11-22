@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.Networking;
 
 public class IceProjectile : Projectile {
 
@@ -16,14 +16,16 @@ public class IceProjectile : Projectile {
         }
     }
 
-    private void SpawnIce() {
+    [Command]
+    private void CmdSpawnIce() {
         GameObject go = Instantiate(this.ice, transform.position, transform.rotation) as GameObject;
+        NetworkServer.Spawn(go);
         //Debug.Log("I AM THE ONLY ONE ");
     }
 
     public override void ApplyCollision() {
 
-        this.SpawnIce();
+        this.CmdSpawnIce();
         base.ApplyCollision();
     }
 

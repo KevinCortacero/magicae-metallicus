@@ -291,8 +291,7 @@ public class Player : NetworkBehaviour {
                     GetComponent<Rigidbody2D>().velocity = Vector2.zero;
 
 
-                    GameObject go = Instantiate(this.slash, transform.Find("Pickace").position, transform.Find("Pickace").rotation) as GameObject;
-                    Destroy(go, 0.4f);
+                    this.CmdSlash();
                 }
 
                 //Debug.Log(this.rockMined);
@@ -322,6 +321,13 @@ public class Player : NetworkBehaviour {
         //GetComponentInChildren<Rigidbody2D>().velocity = Vector2.zero;
         //GameObject go = Instantiate(this.slash, this.gameObject.transform.position, renderer.gameObject.transform.rotation) as GameObject;
         
+    }
+
+    [Command]
+    private void CmdSlash() {
+        GameObject go = Instantiate(this.slash, transform.Find("Pickace").position, transform.Find("Pickace").rotation) as GameObject;
+        NetworkServer.Spawn(go);
+        Destroy(go, 0.4f);
     }
 
     private void StopMine() {
