@@ -24,6 +24,8 @@ GameObject:
   - component: {fileID: 50319790385339650}
   - component: {fileID: 58111232736621202}
   - component: {fileID: 114637428501506942}
+  - component: {fileID: 114581309781226326}
+  - component: {fileID: 114717817722917530}
   m_Layer: 9
   m_Name: FireballRedOBJ
   m_TagString: Projectile
@@ -104,6 +106,38 @@ MonoBehaviour:
   - {fileID: 149974, guid: dcc803728a9f0ec4c83dba45ffbeaeb5, type: 2}
   - {fileID: 118860, guid: dcc803728a9f0ec4c83dba45ffbeaeb5, type: 2}
   impactNormal: {x: 0, y: 0, z: 0}
+--- !u!114 &114581309781226326
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1795849534249258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 39
+    i1: 59
+    i2: 17
+    i3: 181
+    i4: 200
+    i5: 43
+    i6: 11
+    i7: 228
+    i8: 106
+    i9: 24
+    i10: 21
+    i11: 192
+    i12: 25
+    i13: 10
+    i14: 82
+    i15: 187
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 0
 --- !u!114 &114637428501506942
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -120,3 +154,24 @@ MonoBehaviour:
   ratioToPlayers: 1
   ratioToRocks: 1.5
   maxSpeed: 20
+--- !u!114 &114717817722917530
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1795849534249258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1768714887, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TransformSyncMode: 2
+  m_SendInterval: 0.1
+  m_SyncRotationAxis: 3
+  m_RotationSyncCompression: 0
+  m_SyncSpin: 0
+  m_MovementTheshold: 0.001
+  m_VelocityThreshold: 0.0001
+  m_SnapThreshold: 5
+  m_InterpolateRotation: 1
+  m_InterpolateMovement: 1

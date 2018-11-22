@@ -22,6 +22,8 @@ GameObject:
   - component: {fileID: 212888999545464230}
   - component: {fileID: 61399300730388102}
   - component: {fileID: 114810396454967616}
+  - component: {fileID: 114806430170580714}
+  - component: {fileID: 114518139172540242}
   m_Layer: 0
   m_Name: FireBall Item
   m_TagString: Item
@@ -67,6 +69,59 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2, y: 2}
   m_EdgeRadius: 0
+--- !u!114 &114518139172540242
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1595405645433712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1768714887, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TransformSyncMode: 1
+  m_SendInterval: 0.1
+  m_SyncRotationAxis: 7
+  m_RotationSyncCompression: 0
+  m_SyncSpin: 0
+  m_MovementTheshold: 0.001
+  m_VelocityThreshold: 0.0001
+  m_SnapThreshold: 5
+  m_InterpolateRotation: 1
+  m_InterpolateMovement: 1
+--- !u!114 &114806430170580714
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1595405645433712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 243
+    i1: 12
+    i2: 48
+    i3: 108
+    i4: 160
+    i5: 193
+    i6: 228
+    i7: 196
+    i8: 10
+    i9: 219
+    i10: 108
+    i11: 115
+    i12: 45
+    i13: 81
+    i14: 116
+    i15: 204
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 0
 --- !u!114 &114810396454967616
 MonoBehaviour:
   m_ObjectHideFlags: 1

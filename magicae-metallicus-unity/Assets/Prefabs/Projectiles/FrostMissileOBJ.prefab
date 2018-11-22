@@ -24,8 +24,8 @@ GameObject:
   - component: {fileID: 114728398800154666}
   - component: {fileID: 50444671010454902}
   - component: {fileID: 58817826516291886}
-  - component: {fileID: 58353822504042434}
-  - component: {fileID: 60855236046075614}
+  - component: {fileID: 114118888263533056}
+  - component: {fileID: 114701566845863206}
   m_Layer: 9
   m_Name: FrostMissileOBJ
   m_TagString: Projectile
@@ -73,21 +73,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!58 &58353822504042434
-CircleCollider2D:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1737567408652196}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 3.2
 --- !u!58 &58817826516291886
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -103,53 +88,38 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.2
---- !u!60 &60855236046075614
-PolygonCollider2D:
+--- !u!114 &114118888263533056
+MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1737567408652196}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 6.4, y: 6.4}
-    newSize: {x: 2.5142858, y: 2.4857142}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 2.7949998, y: -1.8199999}
-      - {x: 2.7949998, y: 1.0849999}
-      - {x: 1.64, y: 2.23}
-      - {x: 0.53999996, y: 2.6}
-      - {x: -0.505, y: 2.6}
-      - {x: -1.245, y: 2.4099998}
-      - {x: -1.255, y: 2.3999999}
-      - {x: -1.63, y: 2.215}
-      - {x: -1.64, y: 2.205}
-      - {x: -1.8249999, y: 2.0249999}
-      - {x: -2.095, y: 1.925}
-      - {x: -2.49, y: 1.53}
-      - {x: -2.7949998, y: 0.48}
-      - {x: -2.7949998, y: -0.285}
-      - {x: -2.7849998, y: -0.295}
-      - {x: -2.6, y: -0.295}
-      - {x: -2.6, y: -2.205}
-      - {x: -2.595, y: -2.225}
-      - {x: -2.24, y: -2.6}
-      - {x: 1.63, y: -2.6}
-      - {x: 1.64, y: -2.59}
-      - {x: 2.4099998, y: -2.425}
-      - {x: 2.615, y: -2.215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 113
+    i1: 201
+    i2: 84
+    i3: 180
+    i4: 153
+    i5: 230
+    i6: 112
+    i7: 196
+    i8: 91
+    i9: 213
+    i10: 44
+    i11: 2
+    i12: 226
+    i13: 228
+    i14: 42
+    i15: 147
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 0
 --- !u!114 &114120520774721858
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -168,6 +138,27 @@ MonoBehaviour:
   - {fileID: 170720, guid: d8899553ad8fb284faef94a23380f66f, type: 2}
   - {fileID: 156234, guid: d8899553ad8fb284faef94a23380f66f, type: 2}
   impactNormal: {x: 0, y: 0, z: 0}
+--- !u!114 &114701566845863206
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1737567408652196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1768714887, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TransformSyncMode: 2
+  m_SendInterval: 0.1
+  m_SyncRotationAxis: 3
+  m_RotationSyncCompression: 0
+  m_SyncSpin: 0
+  m_MovementTheshold: 0.001
+  m_VelocityThreshold: 0.0001
+  m_SnapThreshold: 5
+  m_InterpolateRotation: 1
+  m_InterpolateMovement: 1
 --- !u!114 &114728398800154666
 MonoBehaviour:
   m_ObjectHideFlags: 1

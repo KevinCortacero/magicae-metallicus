@@ -11424,6 +11424,16 @@ MonoBehaviour:
   m_SpawnPrefabs:
   - {fileID: 1606260683489300, guid: 8787a8af704206b468c6ea0dda321aa9, type: 2}
   - {fileID: 1479965719613962, guid: 0aabd09544ec44648b6922266ff100a3, type: 2}
+  - {fileID: 1962330009731926, guid: 74268f6641abb5442833048e4c90dc43, type: 2}
+  - {fileID: 1737567408652196, guid: 71c954b499e670c45bd52c02e2e42a93, type: 2}
+  - {fileID: 1795849534249258, guid: 273b11b5c82b0be46a1815c0190a52bb, type: 2}
+  - {fileID: 1606260683489300, guid: f9de852711ee666479c54cd644fcb7dd, type: 2}
+  - {fileID: 1727010569998366, guid: 3cd05d61e994f7d49a1a40feb1a2661b, type: 2}
+  - {fileID: 1479965719613962, guid: 555cd7dac8930ab418bdd673879a0e32, type: 2}
+  - {fileID: 1030277245541008, guid: d93e76f5a59106f40b22aa08c455ccff, type: 2}
+  - {fileID: 1348091507328832, guid: 914910cdf1ba6d7438ac05fba94d1b7e, type: 2}
+  - {fileID: 1595405645433712, guid: f30c306ca0c1e4c40adb6c732d5174cc, type: 2}
+  - {fileID: 1348091507328832, guid: 211b9dd4f5b4d06409e44eb36dba34c1, type: 2}
   m_CustomConfig: 0
   m_MaxConnections: 4
   m_ConnectionConfig:

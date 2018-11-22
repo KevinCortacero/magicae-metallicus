@@ -22,6 +22,8 @@ GameObject:
   - component: {fileID: 212081046251028356}
   - component: {fileID: 114381045394167206}
   - component: {fileID: 61376802823302524}
+  - component: {fileID: 114261946067339168}
+  - component: {fileID: 114182584303384326}
   m_Layer: 0
   m_Name: Bouncing Item
   m_TagString: Item
@@ -67,6 +69,59 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2, y: 2}
   m_EdgeRadius: 0
+--- !u!114 &114182584303384326
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1030277245541008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1768714887, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TransformSyncMode: 1
+  m_SendInterval: 0.1
+  m_SyncRotationAxis: 7
+  m_RotationSyncCompression: 0
+  m_SyncSpin: 0
+  m_MovementTheshold: 0.001
+  m_VelocityThreshold: 0.0001
+  m_SnapThreshold: 5
+  m_InterpolateRotation: 1
+  m_InterpolateMovement: 1
+--- !u!114 &114261946067339168
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1030277245541008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 217
+    i1: 62
+    i2: 118
+    i3: 245
+    i4: 165
+    i5: 145
+    i6: 6
+    i7: 244
+    i8: 11
+    i9: 34
+    i10: 170
+    i11: 8
+    i12: 196
+    i13: 85
+    i14: 204
+    i15: 255
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 0
 --- !u!114 &114381045394167206
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -23,6 +23,8 @@ GameObject:
   - component: {fileID: 58878041107982950}
   - component: {fileID: 50998395601857452}
   - component: {fileID: 114810577586950318}
+  - component: {fileID: 114678929903739112}
+  - component: {fileID: 114682266142767484}
   m_Layer: 9
   m_Name: BouncingBulletPurpleOBJ
   m_TagString: Projectile
@@ -78,6 +80,59 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.1
+--- !u!114 &114678929903739112
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1606260683489300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 249
+    i1: 222
+    i2: 133
+    i3: 39
+    i4: 17
+    i5: 238
+    i6: 102
+    i7: 100
+    i8: 121
+    i9: 197
+    i10: 76
+    i11: 214
+    i12: 68
+    i13: 252
+    i14: 183
+    i15: 221
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 0
+--- !u!114 &114682266142767484
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1606260683489300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1768714887, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TransformSyncMode: 2
+  m_SendInterval: 0.1
+  m_SyncRotationAxis: 3
+  m_RotationSyncCompression: 0
+  m_SyncSpin: 0
+  m_MovementTheshold: 0.001
+  m_VelocityThreshold: 0.0001
+  m_SnapThreshold: 5
+  m_InterpolateRotation: 1
+  m_InterpolateMovement: 1
 --- !u!114 &114810577586950318
 MonoBehaviour:
   m_ObjectHideFlags: 1
